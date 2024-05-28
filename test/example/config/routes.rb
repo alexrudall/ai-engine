@@ -1,6 +1,8 @@
 require "sidekiq/web"
 
 Rails.application.routes.draw do
+  mount Sidekiq::Web, at: "sidekiq"
+
   resources :pipelines
   resources :messages
   resources :chats do
@@ -21,6 +23,4 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   root "assistants#index"
-
-  mount Sidekiq::Web, at: "sidekiq"
 end
