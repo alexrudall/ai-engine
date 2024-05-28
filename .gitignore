@@ -11,40 +11,40 @@
 
 # Ignore bundler config.
 /.bundle
-/test/example//.bundle
+/test/dummy//.bundle
 
 # Ignore all environment files (except templates).
 /.env*
 !/.env*.example
 
 # Ignore all logfiles and tempfiles.
-/test/example/log/*
-/test/example/tmp/*
-!/test/example/log/.keep
-!/test/example/tmp/.keep
+/test/dummy/log/*
+/test/dummy/tmp/*
+!/test/dummy/log/.keep
+!/test/dummy/tmp/.keep
 
 # Ignore pidfiles, but keep the directory.
-/test/example/tmp/pids/*
-!/test/example/tmp/pids/
-!/test/example/tmp/pids/.keep
+/test/dummy/tmp/pids/*
+!/test/dummy/tmp/pids/
+!/test/dummy/tmp/pids/.keep
 
 # Ignore storage (uploaded files in development and any SQLite databases).
-/test/example/storage/*
-!/test/example/storage/.keep
-/test/example/tmp/storage/*
-!/test/example/tmp/storage/
-!/test/example/tmp/storage/.keep
+/test/dummy/storage/*
+!/test/dummy/storage/.keep
+/test/dummy/tmp/storage/*
+!/test/dummy/tmp/storage/
+!/test/dummy/tmp/storage/.keep
 
-/test/example/public/assets
+/test/dummy/public/assets
 
 # Ignore javascript vendor code
-/test/example/vendor/*
+/test/dummy/vendor/*
 
 # Ignore master key for decrypting credentials and more.
-/test/example/config/master.key
+/test/dummy/config/master.key
 
-/test/example/app/assets/builds/*
-!/test/example/app/assets/builds/.keep
+/test/dummy/app/assets/builds/*
+!/test/dummy/app/assets/builds/.keep
 
 # Ignore redis binary dump (dump.rdb) files
-/test/example/*.rdb
+/test/dummy/*.rdb
