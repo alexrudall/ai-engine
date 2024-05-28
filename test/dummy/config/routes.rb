@@ -1,3 +1,3 @@
 Rails.application.routes.draw do
-  mount Test::Engine::Engine => "/test-engine"
+  mount AI::Engine::Engine => "/test-engine"
 end
