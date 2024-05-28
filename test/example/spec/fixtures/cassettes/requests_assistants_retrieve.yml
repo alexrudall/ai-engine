@@ -1,0 +1,80 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.openai.com/v1/assistants/asst_QYmXPmzpcaAqbC8AgKvF8OGb
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Content-Type:
+      - application/json
+      Authorization:
+      - Bearer <OPENAI_ACCESS_TOKEN>
+      Openai-Organization:
+      - "<OPENAI_ORGANIZATION_ID>"
+      Openai-Beta:
+      - assistants=v2
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 14 May 2024 11:55:49 GMT
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Openai-Version:
+      - '2020-10-01'
+      Openai-Organization:
+      - user-jxm65ijkzc1qrfhc0ij8moic
+      X-Request-Id:
+      - req_5f425fa0439eda516a186acf5478a937
+      Openai-Processing-Ms:
+      - '28'
+      Strict-Transport-Security:
+      - max-age=15724800; includeSubDomains
+      Cf-Cache-Status:
+      - DYNAMIC
+      Set-Cookie:
+      - __cf_bm=vsqwPXbgpNtqKYFi3vcA5B.38o14DS8VIR0Hzd_laDk-1715687749-1.0.1.1-FDM0F0cbi7mzIr9Oy0vxlyUopZnmLTJPS_RzWVQuJeJDFaZkT72t588kB6CILouwEZiTgPBKUeKSfAfBOUsPDw;
+        path=/; expires=Tue, 14-May-24 12:25:49 GMT; domain=.api.openai.com; HttpOnly;
+        Secure; SameSite=None
+      - _cfuvid=JyjBJwrVrUi2dcmjFOLnn5c7JH59ppBxqoF2lexaT6s-1715687749163-0.0.1.1-604800000;
+        path=/; domain=.api.openai.com; HttpOnly; Secure; SameSite=None
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 883ab38f4fe963b8-LHR
+      Alt-Svc:
+      - h3=":443"; ma=86400
+    body:
+      encoding: ASCII-8BIT
+      string: |-
+        {
+          "id": "asst_QYmXPmzpcaAqbC8AgKvF8OGb",
+          "object": "assistant",
+          "created_at": 1715677759,
+          "name": "core",
+          "description": "Decentralized systematic implementation",
+          "model": "gpt-3.5-turbo",
+          "instructions": "Design a big hat",
+          "tools": [],
+          "top_p": 1.0,
+          "temperature": 1.0,
+          "tool_resources": {},
+          "metadata": {},
+          "response_format": "auto"
+        }
+  recorded_at: Tue, 14 May 2024 11:55:49 GMT
+recorded_with: VCR 6.2.0

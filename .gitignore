@@ -11,7 +11,7 @@
 
 # Ignore bundler config.
 /.bundle
-/test/dummy//.bundle
+/test/dummy/.bundle
 
 # Ignore all environment files (except templates).
 /.env*
@@ -48,3 +48,38 @@
 
 # Ignore redis binary dump (dump.rdb) files
 /test/dummy/*.rdb
+
+# Ignore bundler config.
+/test/example/.bundle
+
+# Ignore all logfiles and tempfiles.
+/test/example/log/*
+/test/example/tmp/*
+!/test/example/log/.keep
+!/test/example/tmp/.keep
+
+# Ignore pidfiles, but keep the directory.
+/test/example/tmp/pids/*
+!/test/example/tmp/pids/
+!/test/example/tmp/pids/.keep
+
+# Ignore storage (uploaded files in development and any SQLite databases).
+/test/example/storage/*
+!/test/example/storage/.keep
+/test/example/tmp/storage/*
+!/test/example/tmp/storage/
+!/test/example/tmp/storage/.keep
+
+/test/example/public/assets
+
+# Ignore javascript vendor code
+/test/example/vendor/*
+
+# Ignore master key for decrypting credentials and more.
+/test/example/config/master.key
+
+/test/example/app/assets/builds/*
+!/test/example/app/assets/builds/.keep
+
+# Ignore redis binary dump (dump.rdb) files
+/test/example/*.rdb
