@@ -26,6 +26,16 @@ Or install it yourself as:
 $ gem install ai-engine
 ```
 
+## Tests
+
+Run the tests with `rspec`.
+
+### VCR
+
+AI::Engine uses VCR to record HTTP requests and responses. By default, specs are run against recorded 'cassette' fixtures.
+
+Set OPENAI_ACCESS_TOKEN= in your .env file to run the specs against a live API and re-record all cassettes - this will cost you money!
+
 ## Contributing
 
 Contribution directions go here.
