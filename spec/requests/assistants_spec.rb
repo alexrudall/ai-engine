@@ -5,9 +5,9 @@ module AI::Engine
   RSpec.describe AssistantsController, type: :request do
     include Engine.routes.url_helpers
 
-    let(:valid_attributes) {
-      {name: "Test Assistant"}
-    }
+    let(:valid_attributes) do
+      build(:assistant).attributes.except("id", "created_at", "updated_at")
+    end
 
     describe "POST /create" do
       context "with valid parameters" do
