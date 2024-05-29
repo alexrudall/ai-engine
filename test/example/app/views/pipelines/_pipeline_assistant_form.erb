@@ -1,8 +1,0 @@
-<div data-sortable-id="<%= form.object.id %>" class="nested-form-wrapper" data-new-record="<%= form.object.new_record? %>">
-  <%= form.select :assistant_id, pipeline_assistant_options(pipeline_assistant: form.object), class: "block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-full" %>
-    <button type="button" data-action="nested-form#remove">Remove</button>
-
-  <%= form.hidden_field :id %>
-  <%= form.hidden_field :row_order_position, data: { target: 'sortable.rowOrderPosition' } %>
-  <%= form.hidden_field :_destroy %>
-</div>
