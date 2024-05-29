@@ -23,46 +23,21 @@ module AI::Engine
     # POST /assistants or /assistants.json
     def create
       @assistant = Assistant.new(assistant_params)
-      @assistant.remote_id = OpenAI::Assistants::Create.call(
-        name: assistant_params[:name],
-        model: assistant_params[:model],
-        description: assistant_params[:description],
-        instructions: assistant_params[:instructions]
-      )
+      create_remote_assistant
 
-      respond_to do |format|
-        if @assistant.save
-          format.html { redirect_to assistant_url(@assistant), notice: "Assistant was successfully created." }
-          format.json { render :show, status: :created, location: @assistant }
-        else
-          format.html { render :new, status: :unprocessable_entity }
-          format.json { render json: @assistant.errors, status: :unprocessable_entity }
-        end
+      if @assistant.errors.empty? && @assistant.save
+        redirect_to @assistant, notice: "Assistant was successfully created."
+      else
+        render :new, status: :unprocessable_entity, alert: "Failed to create assistant: #{@assistant.errors.full_messages.to_sentence}"
       end
     end
 
     # PATCH/PUT /assistants/1 or /assistants/1.json
     def update
-      result = Assistant.transaction do
-        # OpenAI::Assistants::Update.call(
-        #   remote_id: @assistant.remote_id,
-        #   name: assistant_params[:name],
-        #   model: assistant_params[:model],
-        #   description: assistant_params[:description],
-        #   instructions: assistant_params[:instructions]
-        # )
-
-        @assistant.update(assistant_params)
-      end
-
-      respond_to do |format|
-        if result
-          format.html { redirect_to assistant_url(@assistant), notice: "Assistant was successfully updated." }
-          format.json { render :show, status: :ok, location: @assistant }
-        else
-          format.html { render :edit, status: :unprocessable_entity }
-          format.json { render json: @assistant.errors, status: :unprocessable_entity }
-        end
+      if update_remote_assistant && @assistant.update(assistant_params)
+        redirect_to @assistant, notice: "Assistant was successfully updated."
+      else
+        render :edit, status: :unprocessable_entity
       end
     end
 
@@ -81,6 +56,30 @@ module AI::Engine
     # Use callbacks to share common setup or constraints between actions.
     def set_assistant
       @assistant = Assistant.find(params[:id])
+    end
+
+    def create_remote_assistant
+      @assistant.remote_id = OpenAI::Assistants::Create.call(
+        name: assistant_params[:name],
+        model: assistant_params[:model],
+        description: assistant_params[:description],
+        instructions: assistant_params[:instructions]
+      )
+    rescue Faraday::Error => e
+      @assistant.errors.add(:base, "Failed to create assistant: #{e.response&.dig(:body, "error", "message") || e.message}")
+    end
+
+    def update_remote_assistant
+      OpenAI::Assistants::Update.call(
+        remote_id: @assistant.remote_id,
+        name: assistant_params[:name],
+        model: assistant_params[:model],
+        description: assistant_params[:description],
+        instructions: assistant_params[:instructions]
+      )
+    rescue Faraday::Error => e
+      @assistant.errors.add(:base, "Failed to update assistant: #{e.response&.dig(:body, "error", "message") || e.message}")
+      false
     end
 
     # Only allow a list of trusted parameters through.

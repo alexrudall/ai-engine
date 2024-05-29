@@ -26,9 +26,17 @@ Or install it yourself as:
 $ gem install ai-engine
 ```
 
+## ENV
+
+The dummy app needs a .env file in the root of the engine for manual and RSpec testing - see .env.example.
+
+## Dummy app
+
+Run the dummy app from the root of the project with `bin/rails s`.
+
 ## Tests
 
-Run the tests with `rspec`.
+Run the tests from the root of the project with `rspec`.
 
 ### VCR
 

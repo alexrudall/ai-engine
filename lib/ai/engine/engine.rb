@@ -1,5 +1,3 @@
-require "dotenv/load"
-
 module AI
   module Engine
     class Engine < ::Rails::Engine
