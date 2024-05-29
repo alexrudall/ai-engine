@@ -13,6 +13,7 @@ module AI::Engine
         expect {
           post assistants_url, params: {assistant: valid_attributes}
         }.to change(Assistant, :count).by(1)
+        expect(response).to redirect_to(assistant_url(Assistant.last))
       end
       Assistant.last
     end
@@ -21,12 +22,7 @@ module AI::Engine
       context "with valid parameters" do
         it "creates a new Assistant" do
           expect(assistant.name).to eq(valid_attributes["name"])
-          # expect(assistant.remote_id).to be_present
-        end
-
-        it "redirects to the created assistant" do
-          post assistants_url, params: { assistant: valid_attributes }
-          expect(response).to redirect_to(assistant_url(Assistant.last))
+          expect(assistant.remote_id).to be_present
         end
       end
     end

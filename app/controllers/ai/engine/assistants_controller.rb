@@ -23,12 +23,12 @@ module AI::Engine
     # POST /assistants or /assistants.json
     def create
       @assistant = Assistant.new(assistant_params)
-      # @assistant.remote_id = OpenAI::Assistants::Create.call(
-      #   name: assistant_params[:name],
-      #   model: assistant_params[:model],
-      #   description: assistant_params[:description],
-      #   instructions: assistant_params[:instructions]
-      # )
+      @assistant.remote_id = OpenAI::Assistants::Create.call(
+        name: assistant_params[:name],
+        model: assistant_params[:model],
+        description: assistant_params[:description],
+        instructions: assistant_params[:instructions]
+      )
 
       respond_to do |format|
         if @assistant.save

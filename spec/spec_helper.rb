@@ -14,12 +14,15 @@
 #
 # See https://rubydoc.info/gems/rspec-core/RSpec/Core/Configuration
 require "vcr"
+require "dotenv/load"
+
 VCR.configure do |c|
   c.hook_into :webmock
   c.cassette_library_dir = "spec/fixtures/cassettes"
   # Record new episodes if the access token is present.
   c.default_cassette_options = {
     record: ENV.fetch("OPENAI_ACCESS_TOKEN", nil) ? :all : :new_episodes,
+    match_requests_on: [:method, :uri]
   }
   c.filter_sensitive_data("<OPENAI_ACCESS_TOKEN>") { OpenAI.configuration.access_token }
   c.filter_sensitive_data("<OPENAI_ORGANIZATION_ID>") { OpenAI.configuration.organization_id }
@@ -38,6 +41,16 @@ RSpec.configure do |config|
     # ...rather than:
     #     # => "be bigger than 2"
     expectations.include_chain_clauses_in_custom_matcher_descriptions = true
+  end
+
+  if ENV.fetch("OPENAI_ACCESS_TOKEN", nil)
+    warning = "WARNING! Specs are hitting the OpenAI API using your OPENAI_ACCESS_TOKEN! This
+costs at least 2 cents per run and is very slow! If you don't want this, unset
+OPENAI_ACCESS_TOKEN to just run against the stored VCR responses.".freeze
+    warning = RSpec::Core::Formatters::ConsoleCodes.wrap(warning, :bold_red)
+
+    config.before(:suite) { RSpec.configuration.reporter.message(warning) }
+    config.after(:suite) { RSpec.configuration.reporter.message(warning) }
   end
 
   # rspec-mocks config goes here. You can use an alternate test double
