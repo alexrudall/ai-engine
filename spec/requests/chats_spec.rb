@@ -9,7 +9,7 @@ RSpec.describe ChatsController, type: :request do
     end
   end
   let(:pipeline) { create(:pipeline, users: [current_user], assistants: [assistant]) }
-  let(:valid_attributes) { {assistable_id: pipeline.to_global_id} }
+  let(:valid_attributes) { {} }
 
   before do
     sign_in current_user
@@ -21,15 +21,11 @@ RSpec.describe ChatsController, type: :request do
         VCR.use_cassette("requests_chats_create") do
           expect {
             post chats_url, params: {chat: valid_attributes}
-          }.to change(Chat, :count).by(1)
-            .and change(UserChat, :count).by(1)
+          }.to change(current_user.chats, :count).by(1)
         end
 
-        expect(UserChat.last.user).to eq(current_user)
-        expect(UserChat.last.chat).to eq(Chat.last)
-        expect(Chat.last.assistable).to eq(pipeline)
-        expect(Chat.last.remote_id).to be_present
-        expect(response).to redirect_to(chat_url(Chat.last))
+        expect(AI::Engine::Chat.last.remote_id).to be_present
+        expect(response).to redirect_to(chat_url(AI::Engine::Chat.last))
       end
     end
   end

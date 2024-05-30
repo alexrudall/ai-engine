@@ -3,7 +3,7 @@ class ChatsController < ApplicationController
 
   # GET /chats or /chats.json
   def index
-    @chats = Chat.all.order(created_at: :desc)
+    @chats = current_user.chats.all.order(created_at: :desc)
   end
 
   # GET /chats/1 or /chats/1.json
@@ -12,7 +12,7 @@ class ChatsController < ApplicationController
 
   # GET /chats/new
   def new
-    @chat = Chat.new
+    @chat = current_user.chats.new
   end
 
   # GET /chats/1/edit
@@ -21,12 +21,11 @@ class ChatsController < ApplicationController
 
   # POST /chats or /chats.json
   def create
-    @chat = Chat.new(chat_params)
-    @chat.assistable = GlobalID::Locator.locate(chat_params[:assistable_id])
-    @chat.remote_id = OpenAI::Threads::Create.call
+    @chat = current_user.chats.new
+    @chat.remote_id = AI::Engine::OpenAI::Threads::Create.call
 
     respond_to do |format|
-      if current_user.chats << @chat
+      if @chat.save
         format.html { redirect_to chat_url(@chat), notice: "Chat was successfully created." }
         format.json { render :show, status: :created, location: @chat }
       else
@@ -38,9 +37,6 @@ class ChatsController < ApplicationController
 
   # PATCH/PUT /chats/1 or /chats/1.json
   def update
-    @chat.assign_attributes(chat_params)
-    @chat.assistable = GlobalID::Locator.locate(chat_params[:assistable_id])
-
     respond_to do |format|
       if @chat.save
         format.html { redirect_to chat_url(@chat), notice: "Chat was successfully updated." }
@@ -66,11 +62,6 @@ class ChatsController < ApplicationController
 
   # Use callbacks to share common setup or constraints between actions.
   def set_chat
-    @chat = Chat.find(params[:id])
-  end
-
-  # Only allow a list of trusted parameters through.
-  def chat_params
-    params.require(:chat).permit(:assistable_type, :assistable_id)
+    @chat = current_user.chats.find(params[:id])
   end
 end

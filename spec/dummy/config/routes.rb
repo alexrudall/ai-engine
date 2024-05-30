@@ -1,12 +1,11 @@
 require "sidekiq/web"
 
 Rails.application.routes.draw do
-  resources :pipelines
   resources :messages
   resources :chats do
     resources :messages, only: %i[create]
   end
-  resources :assistants
+  resources :storytellers
 
   devise_for :users, controllers: {
     omniauth_callbacks: "users/omniauth_callbacks",
@@ -20,7 +19,7 @@ Rails.application.routes.draw do
   get "up" => "rails/health#show", :as => :rails_health_check
 
   # Defines the root path route ("/")
-  root "assistants#index"
+  root "storytellers#index"
 
   mount Sidekiq::Web, at: "sidekiq"
 end

@@ -14,6 +14,25 @@ class CreateMessageAndRun < SidekiqJob
 
   private
 
+  # Need to broad cast now
+  # def broadcast_created
+  #   broadcast_append_later_to(
+  #     "#{dom_id(chat)}_messages",
+  #     partial: "messages/message",
+  #     locals: {message: self, scroll_to: true},
+  #     target: "#{dom_id(chat)}_messages"
+  #   )
+  # end
+
+  # def broadcast_updated
+  #   broadcast_append_to(
+  #     "#{dom_id(chat)}_messages",
+  #     partial: "messages/message",
+  #     locals: {message: self, scroll_to: true},
+  #     target: "#{dom_id(chat)}_messages"
+  #   )
+  # end
+
   def create_message(message:)
     remote_id = OpenAI::Client.new.messages.create(
       thread_id: message.chat.remote_id,

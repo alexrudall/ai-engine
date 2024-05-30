@@ -54,10 +54,6 @@ gem "omniauth-rails_csrf_protection", "~> 1.0.1"
 # https://github.com/kpumuk/meta-tags
 gem "meta-tags", "~> 2.21.0"
 
-# An acts_as_sortable/acts_as_list replacement
-# https://github.com/brendon/ranked-model
-gem "ranked-model", "~> 0.4.9"
-
 # The safe Markdown parser.
 # https://github.com/vmg/redcarpet
 gem "redcarpet", "~> 3.6"

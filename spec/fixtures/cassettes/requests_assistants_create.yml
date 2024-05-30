@@ -5,8 +5,8 @@ http_interactions:
     uri: https://api.openai.com/v1/assistants
     body:
       encoding: UTF-8
-      string: '{"name":"Multi-lateral","model":"gpt-3.5-turbo","description":"Switchable
-        hybrid collaboration","instructions":"expedite cross-media synergies"}'
+      string: '{"name":"focus group","model":"gpt-4o","description":"Function-based
+        multi-state capability","instructions":"productize leading-edge mindshare"}'
     headers:
       Content-Type:
       - application/json
@@ -28,7 +28,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Thu, 30 May 2024 13:28:53 GMT
+      - Thu, 30 May 2024 13:45:11 GMT
       Content-Type:
       - application/json
       Transfer-Encoding:
@@ -40,36 +40,36 @@ http_interactions:
       Openai-Organization:
       - user-jxm65ijkzc1qrfhc0ij8moic
       X-Request-Id:
-      - req_d1fe37b0037a50052605eb198bd613b6
+      - req_12b69227011fd2478d6d00e0b0c00361
       Openai-Processing-Ms:
-      - '87'
+      - '57'
       Strict-Transport-Security:
       - max-age=15724800; includeSubDomains
       Cf-Cache-Status:
       - DYNAMIC
       Set-Cookie:
-      - __cf_bm=ulPd1INIpm4uoo9CGOibHLQVejeIbQms.rNhaD3OLWk-1717075733-1.0.1.1-Px.wDuG_ktuKANqXi6VbsZZZJloTNQwErs5lNqjboZUR2dpi0QrA5cKYSDs.OxsfXPdOxMcDB0YFHxdZ6s_Etg;
-        path=/; expires=Thu, 30-May-24 13:58:53 GMT; domain=.api.openai.com; HttpOnly;
+      - __cf_bm=n6MnYrL4PXRMpcfT.2xpSZmV0Kx.lwlV8fNjf93fp2E-1717076711-1.0.1.1-gH5wSna49oITkpG51lxjqNW2XL7eGx3sBC3bQygnIfjDxvlEmtBvywp.mGx3eSFQac5Y2Dy1Z..jiatsy7oyIw;
+        path=/; expires=Thu, 30-May-24 14:15:11 GMT; domain=.api.openai.com; HttpOnly;
         Secure; SameSite=None
-      - _cfuvid=FQP8Mfdx3v8nUzsDnjKsgJu_tiAR4A5nmW.JCHvgKco-1717075733505-0.0.1.1-604800000;
+      - _cfuvid=8qcQfTWX59abAS2.LzBeczE8N3AqhJL5nuTicUjNLpg-1717076711764-0.0.1.1-604800000;
         path=/; domain=.api.openai.com; HttpOnly; Secure; SameSite=None
       Server:
       - cloudflare
       Cf-Ray:
-      - 88bf11e508ee94bb-LHR
+      - 88bf29c758f56367-LHR
       Alt-Svc:
       - h3=":443"; ma=86400
     body:
       encoding: ASCII-8BIT
       string: |-
         {
-          "id": "asst_SwH3ArU8GNyaBMiuroi4cLQU",
+          "id": "asst_fRHgM1AWloQQ5leEdzIqnRkw",
           "object": "assistant",
-          "created_at": 1717075733,
-          "name": "Multi-lateral",
-          "description": "Switchable hybrid collaboration",
-          "model": "gpt-3.5-turbo",
-          "instructions": "expedite cross-media synergies",
+          "created_at": 1717076711,
+          "name": "focus group",
+          "description": "Function-based multi-state capability",
+          "model": "gpt-4o",
+          "instructions": "productize leading-edge mindshare",
           "tools": [],
           "top_p": 1.0,
           "temperature": 1.0,
@@ -77,14 +77,14 @@ http_interactions:
           "metadata": {},
           "response_format": "auto"
         }
-  recorded_at: Thu, 30 May 2024 13:28:53 GMT
+  recorded_at: Thu, 30 May 2024 13:45:11 GMT
 - request:
     method: post
     uri: https://api.openai.com/v1/assistants
     body:
       encoding: UTF-8
-      string: '{"name":"national","model":"gpt-4o","description":"Virtual bi-directional
-        knowledge base","instructions":"innovate leading-edge networks"}'
+      string: '{"name":"capability","model":"gpt-4-turbo","description":"Secured motivating
+        access","instructions":"enhance impactful e-commerce"}'
     headers:
       Content-Type:
       - application/json
@@ -106,7 +106,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Thu, 30 May 2024 13:28:56 GMT
+      - Thu, 30 May 2024 13:45:28 GMT
       Content-Type:
       - application/json
       Transfer-Encoding:
@@ -118,36 +118,36 @@ http_interactions:
       Openai-Organization:
       - user-jxm65ijkzc1qrfhc0ij8moic
       X-Request-Id:
-      - req_b8fbe4d8ca4f59812b7711987d478550
+      - req_fc42ea140d75d2dd166d238b6d73410b
       Openai-Processing-Ms:
-      - '61'
+      - '57'
       Strict-Transport-Security:
       - max-age=15724800; includeSubDomains
       Cf-Cache-Status:
       - DYNAMIC
       Set-Cookie:
-      - __cf_bm=FXCfwRaX9mf655Qj3VbxKSngUDQcVk6dNFVa.OBnSZo-1717075736-1.0.1.1-mpdUt1Gj63ElFx2pKoveTOhBI8NuGV..eK16zrVDZHBiqdbMFFWWLGnHwXWxDCWiUvoKvW0K7OFtUUxCGoIXIw;
-        path=/; expires=Thu, 30-May-24 13:58:56 GMT; domain=.api.openai.com; HttpOnly;
+      - __cf_bm=G5VZi_Zm2LRl3KczGbjW9yTD31ht8WsX3kAt4kzhaCs-1717076728-1.0.1.1-0mCFWOCG.xXTeCxXKTpdZ1orVCT.PufswsJh569ayFTrSwgwml4fVRW3r6c0J3FXpLqRM.NFYgkmFldhy4UHeg;
+        path=/; expires=Thu, 30-May-24 14:15:28 GMT; domain=.api.openai.com; HttpOnly;
         Secure; SameSite=None
-      - _cfuvid=KmLmM.5t0gC_tX9.jhfXqmTWWLFUQImzHJQ_Bk3nVG0-1717075736056-0.0.1.1-604800000;
+      - _cfuvid=ePSsP6FIQmpK1tYyFESp3Yyzaly8NPJ4wN1qMOKoq0A-1717076728504-0.0.1.1-604800000;
         path=/; domain=.api.openai.com; HttpOnly; Secure; SameSite=None
       Server:
       - cloudflare
       Cf-Ray:
-      - 88bf11f50c0f9535-LHR
+      - 88bf2a2ffa656406-LHR
       Alt-Svc:
       - h3=":443"; ma=86400
     body:
       encoding: ASCII-8BIT
       string: |-
         {
-          "id": "asst_innzxfC9bMajk058rSthT6gF",
+          "id": "asst_EptVv3XMqCahAgrjcbt6Y0UI",
           "object": "assistant",
-          "created_at": 1717075735,
-          "name": "national",
-          "description": "Virtual bi-directional knowledge base",
-          "model": "gpt-4o",
-          "instructions": "innovate leading-edge networks",
+          "created_at": 1717076728,
+          "name": "capability",
+          "description": "Secured motivating access",
+          "model": "gpt-4-turbo",
+          "instructions": "enhance impactful e-commerce",
           "tools": [],
           "top_p": 1.0,
           "temperature": 1.0,
@@ -155,5 +155,5 @@ http_interactions:
           "metadata": {},
           "response_format": "auto"
         }
-  recorded_at: Thu, 30 May 2024 13:28:56 GMT
+  recorded_at: Thu, 30 May 2024 13:45:28 GMT
 recorded_with: VCR 6.2.0

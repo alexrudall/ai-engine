@@ -1,4 +1,6 @@
 class User < ApplicationRecord
+  include AI::Engine::Chattable
+
   SYSTEM_USER_EMAIL = "ai@landingburn.com"
 
   # Include default devise modules. Others available are:
@@ -6,16 +8,7 @@ class User < ApplicationRecord
   # :registerable, :recoverable and :validatable
   devise :database_authenticatable, :rememberable, :omniauthable, omniauth_providers: [:google_oauth2]
 
-  has_many :user_assistables
-  has_many :assistants, through: :user_assistables, source: :assistable, source_type: "Assistant"
-  has_many :pipelines, through: :user_assistables, source: :assistable, source_type: "Pipeline"
-  has_many :user_chats, dependent: :destroy
-  has_many :chats, through: :user_chats, source: :chat
-  has_many :messages, dependent: :destroy
-
-  def assistables
-    user_assistables.map(&:assistable)
-  end
+  has_many :storytellers, dependent: :destroy
 
   def human?
     email != SYSTEM_USER_EMAIL

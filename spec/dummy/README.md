@@ -37,20 +37,6 @@ GOOGLE_OAUTH_CLIENT_ID=Your client id
 GOOGLE_OAUTH_CLIENT_SECRET=Your client secret
 ```
 
-## Pipelines 
-
-Pipelines let you make a sequence of Assistants. Each message is passed to each assistant so they can give their response.
-
-### Video Demo
-
-You can find a short Loom demo of this feature [here](https://www.loom.com/share/4c1f0b763c544cbab415aa0d41d159d8?sid=64bb3fcd-c172-47b5-ba68-be77f5545ffb)
-
-### Architecture
-
-Here's a quick diagram of the LandingBurn Pipeline architecture.
-
-<img src="https://github.com/landingburn-ai/landingburn/assets/7175262/7775631e-8c1d-484e-b909-c69f32488148" width="50%">
-
 ## Tests
 
 Run the tests with `rspec`.
@@ -64,7 +50,7 @@ Add a breakpoint with `debugger`. To debug the server, you need to remove `web: 
 LandingBurn uses VCR to record HTTP requests and responses. To run a test against a live API and re-record a cassette:
 
 ```
-VCR=all rspec spec/requests/assistants_spec.rb:13
+VCR=all rspec spec/requests/storytellers_spec.rb:13
 ```
 
 ## To add libraries using ImportMaps

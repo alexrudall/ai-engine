@@ -1,0 +1,29 @@
+module AI::Engine
+  class OpenAI::Assistants::Update
+    # Updates an OpenAI Assistant with the given parameters.
+    def self.call(remote_id:, name: nil, model: nil, description: nil, instructions: nil)
+      parameters = {
+        name: name,
+        model: model,
+        description: description,
+        instructions: instructions
+      }.compact
+
+      client.assistants.modify(
+        id: remote_id,
+        parameters: parameters
+      )
+    end
+
+    private
+
+    def self.client
+      @client ||= OpenAI::Client.new(
+        access_token: AI::Engine::Engine.config.openai_access_token,
+        organization_id: AI::Engine::Engine.config.openai_organization_id,
+        log_errors: Rails.env.development? || Rails.env.test?,
+        request_timeout: 2.minutes.to_i
+      )
+    end
+  end
+end

@@ -1,9 +1,8 @@
 require "rails_helper"
 
-RSpec.describe ChatsHelper, type: :helper do
-  describe "#chat_assistant_options" do
+RSpec.describe MessagesHelper, type: :helper do
+  describe "#message_assistant_options" do
     let(:current_user) { create(:user) }
-    let(:other_user) { create(:user) }
     let!(:assistant1) { create(:assistant, users: [current_user]) }
     let!(:assistant2) { create(:assistant, users: [other_user]) }
 

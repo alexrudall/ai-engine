@@ -5,21 +5,15 @@ FactoryBot.define do
     content { "Hi" }
   end
 
-  factory :assistant do
-    remote_id { Faker::Internet.uuid }
+  factory :storyteller do
     name { Faker::Company.buzzword }
     model { AI::Engine::Assistant::MODEL_OPTIONS.sample }
-    description { Faker::Company.catch_phrase }
     instructions { Faker::Company.bs }
   end
 
-  factory :chat do
+  factory :chat, class: AI::Engine::Chat do
     remote_id { Faker::Internet.uuid }
-    assistable { create(:assistant) }
-  end
-
-  factory :pipeline do
-    name { Faker::Company.catch_phrase }
+    chattable { create(:user) }
   end
 
   factory :user do
