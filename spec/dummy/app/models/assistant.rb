@@ -1,5 +1,6 @@
 class Assistant < ApplicationRecord
   include Nameable
+  include AI::Engine::Assistable
 
   has_many :user_assistables, as: :assistable, dependent: :destroy
   has_many :users, through: :user_assistables
