@@ -231,4 +231,81 @@ http_interactions:
           "response_format": "auto"
         }
   recorded_at: Thu, 30 May 2024 12:29:49 GMT
+- request:
+    method: get
+    uri: https://api.openai.com/v1/assistants/asst_ust1LkevXuZOLCGP9rmQqVux
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Content-Type:
+      - application/json
+      Authorization:
+      - Bearer <OPENAI_ACCESS_TOKEN>
+      Openai-Organization:
+      - "<OPENAI_ORGANIZATION_ID>"
+      Openai-Beta:
+      - assistants=v2
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Thu, 30 May 2024 12:41:01 GMT
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Openai-Version:
+      - '2020-10-01'
+      Openai-Organization:
+      - user-jxm65ijkzc1qrfhc0ij8moic
+      X-Request-Id:
+      - req_7bdc93dbb1e1ae6f7391d626b5805471
+      Openai-Processing-Ms:
+      - '57'
+      Strict-Transport-Security:
+      - max-age=15724800; includeSubDomains
+      Cf-Cache-Status:
+      - DYNAMIC
+      Set-Cookie:
+      - __cf_bm=t8KDZDttkXEuimBPCeGxcRQATxLzB.B5XPuvXZNLF18-1717072861-1.0.1.1-6XfjjAXt_zTNz_1aYjsAwwbR.g.QOY.XmUuqGxmKv2Hu13TY_ljrdHDsOZf4AzWUVfERRpPWjunnJKVHWGovDw;
+        path=/; expires=Thu, 30-May-24 13:11:01 GMT; domain=.api.openai.com; HttpOnly;
+        Secure; SameSite=None
+      - _cfuvid=.svmx9OrE6iEyPrqKsiruuAGZXYUz_H0_dwWIx7dX6M-1717072861689-0.0.1.1-604800000;
+        path=/; domain=.api.openai.com; HttpOnly; Secure; SameSite=None
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 88becbc84bd66406-LHR
+      Alt-Svc:
+      - h3=":443"; ma=86400
+    body:
+      encoding: ASCII-8BIT
+      string: |-
+        {
+          "id": "asst_ust1LkevXuZOLCGP9rmQqVux",
+          "object": "assistant",
+          "created_at": 1717072860,
+          "name": "responsive",
+          "description": "Compatible systematic help-desk",
+          "model": "gpt-3.5-turbo",
+          "instructions": "Design a big hat",
+          "tools": [],
+          "top_p": 1.0,
+          "temperature": 1.0,
+          "tool_resources": {},
+          "metadata": {},
+          "response_format": "auto"
+        }
+  recorded_at: Thu, 30 May 2024 12:41:01 GMT
 recorded_with: VCR 6.2.0

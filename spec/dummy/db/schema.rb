@@ -45,15 +45,12 @@ ActiveRecord::Schema[7.1].define(version: 2024_05_28_153439) do
 
   create_table "ai_engine_assistants", force: :cascade do |t|
     t.string "remote_id"
-    t.string "name", null: false
-    t.string "model"
-    t.string "description"
-    t.string "instructions"
-    t.integer "max_prompt_tokens"
-    t.integer "max_completion_tokens"
+    t.string "assistable_type"
+    t.bigint "assistable_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["remote_id"], name: "index_ai_engine_assistants_on_remote_id", unique: true
+    t.index ["assistable_type", "assistable_id", "remote_id"], name: "idx_on_assistable_type_assistable_id_remote_id_bea46cd0e4", unique: true
+    t.index ["assistable_type", "assistable_id"], name: "index_ai_engine_assistants_on_assistable"
   end
 
   create_table "assistants", force: :cascade do |t|

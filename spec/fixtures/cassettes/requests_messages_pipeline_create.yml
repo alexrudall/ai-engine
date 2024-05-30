@@ -490,5 +490,209 @@ http_interactions:
         data: [DONE]
 
   recorded_at: Thu, 30 May 2024 12:29:52 GMT
+- request:
+    method: post
+    uri: https://api.openai.com/v1/threads/thread_PEVr6GhIJ1CB0eiOrR1LQZdP/messages
+    body:
+      encoding: UTF-8
+      string: '{"content":"Hi there","role":"user"}'
+    headers:
+      Content-Type:
+      - application/json
+      Authorization:
+      - Bearer <OPENAI_ACCESS_TOKEN>
+      Openai-Organization:
+      - "<OPENAI_ORGANIZATION_ID>"
+      Openai-Beta:
+      - assistants=v2
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Thu, 30 May 2024 12:41:03 GMT
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Openai-Version:
+      - '2020-10-01'
+      Openai-Organization:
+      - user-jxm65ijkzc1qrfhc0ij8moic
+      X-Request-Id:
+      - req_93ac46a5eb595689fef406fbc2fd79d3
+      Openai-Processing-Ms:
+      - '37'
+      Strict-Transport-Security:
+      - max-age=15724800; includeSubDomains
+      Cf-Cache-Status:
+      - DYNAMIC
+      Set-Cookie:
+      - __cf_bm=sXXRbK26qYAl1sh8b9nKl8sCmAmHYJbMeg.wp1SkYzU-1717072863-1.0.1.1-JPu9f4sxk8WQ0lAGAsPLM4rOKVQFoZVcT8oCTLFtMoEAXEtxGuJMGWPTO8hjhOJHGApywp39sQ8W7wICojSCnQ;
+        path=/; expires=Thu, 30-May-24 13:11:03 GMT; domain=.api.openai.com; HttpOnly;
+        Secure; SameSite=None
+      - _cfuvid=xtz0vnMjg_ZOO3DxOpgIfY3ScJ6.1Imhh57Slhu6lo0-1717072863552-0.0.1.1-604800000;
+        path=/; domain=.api.openai.com; HttpOnly; Secure; SameSite=None
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 88becbd41fd594b7-LHR
+      Alt-Svc:
+      - h3=":443"; ma=86400
+    body:
+      encoding: ASCII-8BIT
+      string: |-
+        {
+          "id": "msg_mWVEJGVusDDvpF2UqGenThOy",
+          "object": "thread.message",
+          "created_at": 1717072863,
+          "assistant_id": null,
+          "thread_id": "thread_PEVr6GhIJ1CB0eiOrR1LQZdP",
+          "run_id": null,
+          "role": "user",
+          "content": [
+            {
+              "type": "text",
+              "text": {
+                "value": "Hi there",
+                "annotations": []
+              }
+            }
+          ],
+          "attachments": [],
+          "metadata": {}
+        }
+  recorded_at: Thu, 30 May 2024 12:41:03 GMT
+- request:
+    method: post
+    uri: https://api.openai.com/v1/threads/thread_PEVr6GhIJ1CB0eiOrR1LQZdP/runs
+    body:
+      encoding: UTF-8
+      string: '{"assistant_id":"asst_dea42MQ4SVmWTYyMYnn21k8O","max_prompt_tokens":256,"max_completion_tokens":16,"stream":true}'
+    headers:
+      Content-Type:
+      - application/json
+      Authorization:
+      - Bearer <OPENAI_ACCESS_TOKEN>
+      Openai-Organization:
+      - "<OPENAI_ORGANIZATION_ID>"
+      Openai-Beta:
+      - assistants=v2
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Thu, 30 May 2024 12:41:04 GMT
+      Content-Type:
+      - text/event-stream; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Openai-Version:
+      - '2020-10-01'
+      Openai-Organization:
+      - user-jxm65ijkzc1qrfhc0ij8moic
+      X-Request-Id:
+      - req_756d040bb5e6e73e000b499498ec44ce
+      Openai-Processing-Ms:
+      - '321'
+      Strict-Transport-Security:
+      - max-age=15724800; includeSubDomains
+      Cf-Cache-Status:
+      - DYNAMIC
+      Set-Cookie:
+      - __cf_bm=lWUXA4Y1cjkvJolBraRJ7yFX3VI0loHwYyf83z159Jk-1717072864-1.0.1.1-Is_h2oxYhywZ0S5U3bULGfsMoqs.5uDPwA1WvDwutcguSHZ96zvcqTBQs4hCnDqCQ7GZlZDX63Av7n6C79R4JQ;
+        path=/; expires=Thu, 30-May-24 13:11:04 GMT; domain=.api.openai.com; HttpOnly;
+        Secure; SameSite=None
+      - _cfuvid=KxNK9tQ6zOQAC1EA0_eRWMP28BzR7eB6MZ3cI35nRtA-1717072864151-0.0.1.1-604800000;
+        path=/; domain=.api.openai.com; HttpOnly; Secure; SameSite=None
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 88becbd61cca63f5-LHR
+      Alt-Svc:
+      - h3=":443"; ma=86400
+    body:
+      encoding: UTF-8
+      string: |+
+        event: thread.run.created
+        data: {"id":"run_OogNZwmBt4YVnTLM4LpD9w0F","object":"thread.run","created_at":1717072863,"assistant_id":"asst_dea42MQ4SVmWTYyMYnn21k8O","thread_id":"thread_PEVr6GhIJ1CB0eiOrR1LQZdP","status":"queued","started_at":null,"expires_at":1717073463,"cancelled_at":null,"failed_at":null,"completed_at":null,"required_action":null,"last_error":null,"model":"gpt-4o","instructions":"mesh wireless users","tools":[],"tool_resources":{"code_interpreter":{"file_ids":[]}},"metadata":{},"temperature":1.0,"top_p":1.0,"max_completion_tokens":16,"max_prompt_tokens":256,"truncation_strategy":{"type":"auto","last_messages":null},"incomplete_details":null,"usage":null,"response_format":"auto","tool_choice":"auto"}
+
+        event: thread.run.queued
+        data: {"id":"run_OogNZwmBt4YVnTLM4LpD9w0F","object":"thread.run","created_at":1717072863,"assistant_id":"asst_dea42MQ4SVmWTYyMYnn21k8O","thread_id":"thread_PEVr6GhIJ1CB0eiOrR1LQZdP","status":"queued","started_at":null,"expires_at":1717073463,"cancelled_at":null,"failed_at":null,"completed_at":null,"required_action":null,"last_error":null,"model":"gpt-4o","instructions":"mesh wireless users","tools":[],"tool_resources":{"code_interpreter":{"file_ids":[]}},"metadata":{},"temperature":1.0,"top_p":1.0,"max_completion_tokens":16,"max_prompt_tokens":256,"truncation_strategy":{"type":"auto","last_messages":null},"incomplete_details":null,"usage":null,"response_format":"auto","tool_choice":"auto"}
+
+        event: thread.run.in_progress
+        data: {"id":"run_OogNZwmBt4YVnTLM4LpD9w0F","object":"thread.run","created_at":1717072863,"assistant_id":"asst_dea42MQ4SVmWTYyMYnn21k8O","thread_id":"thread_PEVr6GhIJ1CB0eiOrR1LQZdP","status":"in_progress","started_at":1717072864,"expires_at":1717073463,"cancelled_at":null,"failed_at":null,"completed_at":null,"required_action":null,"last_error":null,"model":"gpt-4o","instructions":"mesh wireless users","tools":[],"tool_resources":{"code_interpreter":{"file_ids":[]}},"metadata":{},"temperature":1.0,"top_p":1.0,"max_completion_tokens":16,"max_prompt_tokens":256,"truncation_strategy":{"type":"auto","last_messages":null},"incomplete_details":null,"usage":null,"response_format":"auto","tool_choice":"auto"}
+
+        event: thread.run.step.created
+        data: {"id":"step_kEiVuCYHfPvM22hy8ndi2gE6","object":"thread.run.step","created_at":1717072865,"run_id":"run_OogNZwmBt4YVnTLM4LpD9w0F","assistant_id":"asst_dea42MQ4SVmWTYyMYnn21k8O","thread_id":"thread_PEVr6GhIJ1CB0eiOrR1LQZdP","type":"message_creation","status":"in_progress","cancelled_at":null,"completed_at":null,"expires_at":1717073463,"failed_at":null,"last_error":null,"step_details":{"type":"message_creation","message_creation":{"message_id":"msg_8nimj6P9GUMQgB5U9wepLcrZ"}},"usage":null}
+
+        event: thread.run.step.in_progress
+        data: {"id":"step_kEiVuCYHfPvM22hy8ndi2gE6","object":"thread.run.step","created_at":1717072865,"run_id":"run_OogNZwmBt4YVnTLM4LpD9w0F","assistant_id":"asst_dea42MQ4SVmWTYyMYnn21k8O","thread_id":"thread_PEVr6GhIJ1CB0eiOrR1LQZdP","type":"message_creation","status":"in_progress","cancelled_at":null,"completed_at":null,"expires_at":1717073463,"failed_at":null,"last_error":null,"step_details":{"type":"message_creation","message_creation":{"message_id":"msg_8nimj6P9GUMQgB5U9wepLcrZ"}},"usage":null}
+
+        event: thread.message.created
+        data: {"id":"msg_8nimj6P9GUMQgB5U9wepLcrZ","object":"thread.message","created_at":1717072865,"assistant_id":"asst_dea42MQ4SVmWTYyMYnn21k8O","thread_id":"thread_PEVr6GhIJ1CB0eiOrR1LQZdP","run_id":"run_OogNZwmBt4YVnTLM4LpD9w0F","status":"in_progress","incomplete_details":null,"incomplete_at":null,"completed_at":null,"role":"assistant","content":[],"attachments":[],"metadata":{}}
+
+        event: thread.message.in_progress
+        data: {"id":"msg_8nimj6P9GUMQgB5U9wepLcrZ","object":"thread.message","created_at":1717072865,"assistant_id":"asst_dea42MQ4SVmWTYyMYnn21k8O","thread_id":"thread_PEVr6GhIJ1CB0eiOrR1LQZdP","run_id":"run_OogNZwmBt4YVnTLM4LpD9w0F","status":"in_progress","incomplete_details":null,"incomplete_at":null,"completed_at":null,"role":"assistant","content":[],"attachments":[],"metadata":{}}
+
+        event: thread.message.delta
+        data: {"id":"msg_8nimj6P9GUMQgB5U9wepLcrZ","object":"thread.message.delta","delta":{"content":[{"index":0,"type":"text","text":{"value":"Hello","annotations":[]}}]}}
+
+        event: thread.message.delta
+        data: {"id":"msg_8nimj6P9GUMQgB5U9wepLcrZ","object":"thread.message.delta","delta":{"content":[{"index":0,"type":"text","text":{"value":"!"}}]}}
+
+        event: thread.message.delta
+        data: {"id":"msg_8nimj6P9GUMQgB5U9wepLcrZ","object":"thread.message.delta","delta":{"content":[{"index":0,"type":"text","text":{"value":" How"}}]}}
+
+        event: thread.message.delta
+        data: {"id":"msg_8nimj6P9GUMQgB5U9wepLcrZ","object":"thread.message.delta","delta":{"content":[{"index":0,"type":"text","text":{"value":" can"}}]}}
+
+        event: thread.message.delta
+        data: {"id":"msg_8nimj6P9GUMQgB5U9wepLcrZ","object":"thread.message.delta","delta":{"content":[{"index":0,"type":"text","text":{"value":" I"}}]}}
+
+        event: thread.message.delta
+        data: {"id":"msg_8nimj6P9GUMQgB5U9wepLcrZ","object":"thread.message.delta","delta":{"content":[{"index":0,"type":"text","text":{"value":" assist"}}]}}
+
+        event: thread.message.delta
+        data: {"id":"msg_8nimj6P9GUMQgB5U9wepLcrZ","object":"thread.message.delta","delta":{"content":[{"index":0,"type":"text","text":{"value":" you"}}]}}
+
+        event: thread.message.delta
+        data: {"id":"msg_8nimj6P9GUMQgB5U9wepLcrZ","object":"thread.message.delta","delta":{"content":[{"index":0,"type":"text","text":{"value":" today"}}]}}
+
+        event: thread.message.delta
+        data: {"id":"msg_8nimj6P9GUMQgB5U9wepLcrZ","object":"thread.message.delta","delta":{"content":[{"index":0,"type":"text","text":{"value":"?"}}]}}
+
+        event: thread.message.completed
+        data: {"id":"msg_8nimj6P9GUMQgB5U9wepLcrZ","object":"thread.message","created_at":1717072865,"assistant_id":"asst_dea42MQ4SVmWTYyMYnn21k8O","thread_id":"thread_PEVr6GhIJ1CB0eiOrR1LQZdP","run_id":"run_OogNZwmBt4YVnTLM4LpD9w0F","status":"completed","incomplete_details":null,"incomplete_at":null,"completed_at":1717072865,"role":"assistant","content":[{"type":"text","text":{"value":"Hello! How can I assist you today?","annotations":[]}}],"attachments":[],"metadata":{}}
+
+        event: thread.run.step.completed
+        data: {"id":"step_kEiVuCYHfPvM22hy8ndi2gE6","object":"thread.run.step","created_at":1717072865,"run_id":"run_OogNZwmBt4YVnTLM4LpD9w0F","assistant_id":"asst_dea42MQ4SVmWTYyMYnn21k8O","thread_id":"thread_PEVr6GhIJ1CB0eiOrR1LQZdP","type":"message_creation","status":"completed","cancelled_at":null,"completed_at":1717072865,"expires_at":1717073463,"failed_at":null,"last_error":null,"step_details":{"type":"message_creation","message_creation":{"message_id":"msg_8nimj6P9GUMQgB5U9wepLcrZ"}},"usage":{"prompt_tokens":30,"completion_tokens":11,"total_tokens":41}}
+
+        event: thread.run.incomplete
+        data: {"id":"run_OogNZwmBt4YVnTLM4LpD9w0F","object":"thread.run","created_at":1717072863,"assistant_id":"asst_dea42MQ4SVmWTYyMYnn21k8O","thread_id":"thread_PEVr6GhIJ1CB0eiOrR1LQZdP","status":"incomplete","started_at":1717072864,"expires_at":null,"cancelled_at":null,"failed_at":null,"completed_at":1717072865,"required_action":null,"last_error":null,"model":"gpt-4o","instructions":"mesh wireless users","tools":[],"tool_resources":{"code_interpreter":{"file_ids":[]}},"metadata":{},"temperature":1.0,"top_p":1.0,"max_completion_tokens":16,"max_prompt_tokens":256,"truncation_strategy":{"type":"auto","last_messages":null},"incomplete_details":{"reason":"max_prompt_tokens"},"usage":{"prompt_tokens":30,"completion_tokens":11,"total_tokens":41},"response_format":"auto","tool_choice":"auto"}
+
+        event: done
+        data: [DONE]
+
+  recorded_at: Thu, 30 May 2024 12:41:05 GMT
 recorded_with: VCR 6.2.0
 ...
