@@ -22,7 +22,6 @@ class ChatsController < ApplicationController
   # POST /chats or /chats.json
   def create
     @chat = current_user.chats.new
-    @chat.remote_id = AI::Engine::OpenAI::Threads::Create.call
 
     respond_to do |format|
       if @chat.save

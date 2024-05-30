@@ -22,23 +22,6 @@ RSpec.describe MessagesController, type: :request do
 
   describe "POST /create" do
     context "with valid parameters" do
-      context "with a pipeline" do
-        let(:assistable) { create(:pipeline, users: [current_user], assistants: [assistant]) }
-
-        it "creates a new Message" do
-          VCR.use_cassette("requests_messages_pipeline_create") do
-            expect {
-              post chat_messages_url(chat_id: chat_id), as: :turbo_stream, params: {message: valid_attributes}
-            }.to change(Message, :count).by(2)
-          end
-
-          expect(Chat.last.messages.count).to eq(2)
-          expect(Message.first.user_id).to eq(current_user.id)
-          expect(Message.last.user).to eq(User.system)
-          expect(Message.last.assistant).to eq(assistant)
-        end
-      end
-
       context "with an assistant" do
         let(:assistable) { assistant }
 

@@ -8,6 +8,3 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [0.1.0] - 2020-05-14
 
 ### Added
-
-- Add Pipelines so you can make a sequence of Assistants.
-- Update Assistants remotely on OpenAI as well as locally.

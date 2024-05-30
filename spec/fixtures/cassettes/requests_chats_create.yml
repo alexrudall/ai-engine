@@ -1,0 +1,72 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://api.openai.com/v1/threads
+    body:
+      encoding: UTF-8
+      string: "{}"
+    headers:
+      Content-Type:
+      - application/json
+      Authorization:
+      - Bearer sk-AizTVjdUvJmbL4FQrAp3qgRN4RpNudGNatFErFJ2
+      Openai-Organization:
+      - org-Rf437IxKhhQPMiIQ0Es8OwrH
+      Openai-Beta:
+      - assistants=v2
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Thu, 30 May 2024 15:45:50 GMT
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Openai-Version:
+      - '2020-10-01'
+      Openai-Organization:
+      - user-jxm65ijkzc1qrfhc0ij8moic
+      X-Request-Id:
+      - req_ed9710bbc90dbfe6ae1270ded53892fd
+      Openai-Processing-Ms:
+      - '23'
+      Strict-Transport-Security:
+      - max-age=15724800; includeSubDomains
+      Cf-Cache-Status:
+      - DYNAMIC
+      Set-Cookie:
+      - __cf_bm=CHrj.pUdwxXh87kZjgj0zlukmVOT1wdCe.OBTfbSb1I-1717083950-1.0.1.1-CfYG4e3EVdz.H1wAW6aORrn6iCnmjFAl3lSKuCZhmM7ZCWrO.imW22qgqYbQ69A_Fp7Vo37W52yI2GPSyoZb_A;
+        path=/; expires=Thu, 30-May-24 16:15:50 GMT; domain=.api.openai.com; HttpOnly;
+        Secure; SameSite=None
+      - _cfuvid=kT6vgKDJ8Beg.4Ub9VbG3bsjKF4e2OUNol1IdKWIx0U-1717083950235-0.0.1.1-604800000;
+        path=/; domain=.api.openai.com; HttpOnly; Secure; SameSite=None
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 88bfda7ffddc9409-LHR
+      Alt-Svc:
+      - h3=":443"; ma=86400
+    body:
+      encoding: ASCII-8BIT
+      string: |-
+        {
+          "id": "thread_c6DQJASF08sYcXpPaIxN3bxF",
+          "object": "thread",
+          "created_at": 1717083950,
+          "metadata": {},
+          "tool_resources": {}
+        }
+  recorded_at: Thu, 30 May 2024 15:45:50 GMT
+recorded_with: VCR 6.2.0

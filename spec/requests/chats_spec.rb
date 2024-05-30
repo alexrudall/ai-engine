@@ -8,7 +8,6 @@ RSpec.describe ChatsController, type: :request do
       Assistant.last
     end
   end
-  let(:pipeline) { create(:pipeline, users: [current_user], assistants: [assistant]) }
   let(:valid_attributes) { {} }
 
   before do
