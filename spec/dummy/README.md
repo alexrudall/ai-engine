@@ -10,6 +10,7 @@
 - `redis-server` # Run Redis to store the job queue.
 
 - `bin/rails db:create` # Create the database.
+- `bin/rails app:ai_engine:install:migrations` # Copy across the Engine migrations.
 - `bin/rails db:migrate` # Migrate the database.
 - `bin/dev` # Run the server.
 - `standardrb --fix` # Run linter & auto-fix where possible.

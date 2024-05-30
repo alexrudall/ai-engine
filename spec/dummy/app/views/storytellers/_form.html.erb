@@ -1,10 +1,10 @@
-<%= form_with(model: assistant, class: "contents") do |form| %>
-  <% if assistant.errors.any? %>
+<%= form_with(model: storyteller, class: "contents") do |form| %>
+  <% if storyteller.errors.any? %>
     <div id="error_explanation" class="bg-red-50 text-red-500 px-3 py-2 font-medium rounded-lg mt-3">
-      <h2><%= pluralize(assistant.errors.count, "error") %> prohibited this assistant from being saved:</h2>
+      <h2><%= pluralize(storyteller.errors.count, "error") %> prohibited this storyteller from being saved:</h2>
 
       <ul>
-        <% assistant.errors.each do |error| %>
+        <% storyteller.errors.each do |error| %>
           <li><%= error.full_message %></li>
         <% end %>
       </ul>
@@ -18,7 +18,7 @@
 
   <div class="my-5">
     <%= form.label :model %>
-    <%= form.select :model, model_options(assistant: assistant), {}, class: "block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-full focus:border-red-600 focus:ring-red-600" %>
+    <%= form.select :model, model_options(storyteller: storyteller), {}, class: "block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-full focus:border-red-600 focus:ring-red-600" %>
   </div>
 
   <div class="my-5">
@@ -33,12 +33,12 @@
 
   <div class="my-5">
     <%= form.label :max_prompt_tokens %>
-    <%= form.number_field :max_prompt_tokens, class: "block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-full focus:border-red-600 focus:ring-red-600", required: true, min: Assistant::MIN_PROMPT_TOKENS %>
+    <%= form.number_field :max_prompt_tokens, class: "block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-full focus:border-red-600 focus:ring-red-600", required: true, min: AI::Engine::Assistant::MIN_PROMPT_TOKENS %>
   </div>
 
   <div class="my-5">
     <%= form.label :max_completion_tokens %>
-    <%= form.number_field :max_completion_tokens, class: "block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-full focus:border-red-600 focus:ring-red-600", required: true, min: Assistant::MIN_COMPLETION_TOKENS %>
+    <%= form.number_field :max_completion_tokens, class: "block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-full focus:border-red-600 focus:ring-red-600", required: true, min: AI::Engine::Assistant::MIN_COMPLETION_TOKENS %>
   </div>
 
   <div class="inline">
