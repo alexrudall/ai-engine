@@ -462,4 +462,81 @@ http_interactions:
           "response_format": "auto"
         }
   recorded_at: Thu, 30 May 2024 13:01:40 GMT
+- request:
+    method: get
+    uri: https://api.openai.com/v1/assistants/asst_6Pz9lppw0Y2YUmus3FPrWuM0
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Content-Type:
+      - application/json
+      Authorization:
+      - Bearer <OPENAI_ACCESS_TOKEN>
+      Openai-Organization:
+      - "<OPENAI_ORGANIZATION_ID>"
+      Openai-Beta:
+      - assistants=v2
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Thu, 30 May 2024 13:28:52 GMT
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Openai-Version:
+      - '2020-10-01'
+      Openai-Organization:
+      - user-jxm65ijkzc1qrfhc0ij8moic
+      X-Request-Id:
+      - req_3789cf4833cb70bb7264b67b9ccbd34c
+      Openai-Processing-Ms:
+      - '47'
+      Strict-Transport-Security:
+      - max-age=15724800; includeSubDomains
+      Cf-Cache-Status:
+      - DYNAMIC
+      Set-Cookie:
+      - __cf_bm=aI3svIRbpQvEvhp9wNpks6ia0bsKkhiBODX3gNTk8Ww-1717075732-1.0.1.1-udTEZ5AHcF2qPPYsDJoIWJm16JlQzR7AHNES6UZxmCPOA04c1U5ibwE9.vCaslcO8ov4BGQKZ1AOme3mZQA3ww;
+        path=/; expires=Thu, 30-May-24 13:58:52 GMT; domain=.api.openai.com; HttpOnly;
+        Secure; SameSite=None
+      - _cfuvid=RvBbdkmoDvGkK87gAQo3yNrUHa3X.DSN4zZ7YOH2NAo-1717075732484-0.0.1.1-604800000;
+        path=/; domain=.api.openai.com; HttpOnly; Secure; SameSite=None
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 88bf11deed5bdc8f-LHR
+      Alt-Svc:
+      - h3=":443"; ma=86400
+    body:
+      encoding: ASCII-8BIT
+      string: |-
+        {
+          "id": "asst_6Pz9lppw0Y2YUmus3FPrWuM0",
+          "object": "assistant",
+          "created_at": 1717075731,
+          "name": "Exclusive",
+          "description": "Ameliorated motivating firmware",
+          "model": "gpt-4o",
+          "instructions": "Design a big hat",
+          "tools": [],
+          "top_p": 1.0,
+          "temperature": 1.0,
+          "tool_resources": {},
+          "metadata": {},
+          "response_format": "auto"
+        }
+  recorded_at: Thu, 30 May 2024 13:28:52 GMT
 recorded_with: VCR 6.2.0

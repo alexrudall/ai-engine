@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2024_05_28_153439) do
+ActiveRecord::Schema[7.1].define(version: 2024_05_30_130834) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "citext"
   enable_extension "plpgsql"
@@ -44,13 +44,32 @@ ActiveRecord::Schema[7.1].define(version: 2024_05_28_153439) do
   end
 
   create_table "ai_engine_assistants", force: :cascade do |t|
-    t.string "remote_id"
+    t.string "remote_id", null: false
     t.string "assistable_type"
     t.bigint "assistable_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["assistable_type", "assistable_id", "remote_id"], name: "idx_on_assistable_type_assistable_id_remote_id_bea46cd0e4", unique: true
     t.index ["assistable_type", "assistable_id"], name: "index_ai_engine_assistants_on_assistable"
+  end
+
+  create_table "ai_engine_chats", force: :cascade do |t|
+    t.string "remote_id", null: false
+    t.string "chattable_type"
+    t.bigint "chattable_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["chattable_type", "chattable_id"], name: "index_ai_engine_chats_on_chattable"
+  end
+
+  create_table "ai_engine_runs", force: :cascade do |t|
+    t.string "remote_id", null: false
+    t.bigint "ai_engine_assistant_id"
+    t.bigint "ai_engine_chat_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["ai_engine_assistant_id"], name: "index_ai_engine_runs_on_ai_engine_assistant_id"
+    t.index ["ai_engine_chat_id"], name: "index_ai_engine_runs_on_ai_engine_chat_id"
   end
 
   create_table "assistants", force: :cascade do |t|
@@ -141,6 +160,8 @@ ActiveRecord::Schema[7.1].define(version: 2024_05_28_153439) do
 
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
   add_foreign_key "active_storage_variant_records", "active_storage_blobs", column: "blob_id"
+  add_foreign_key "ai_engine_runs", "ai_engine_assistants"
+  add_foreign_key "ai_engine_runs", "ai_engine_chats"
   add_foreign_key "messages", "chats"
   add_foreign_key "messages", "users"
   add_foreign_key "pipeline_assistants", "assistants"

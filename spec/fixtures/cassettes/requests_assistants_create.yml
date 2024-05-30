@@ -5,8 +5,8 @@ http_interactions:
     uri: https://api.openai.com/v1/assistants
     body:
       encoding: UTF-8
-      string: '{"name":"alliance","model":"gpt-4","description":"Visionary 24/7 emulation","instructions":"target
-        turn-key e-business"}'
+      string: '{"name":"Multi-lateral","model":"gpt-3.5-turbo","description":"Switchable
+        hybrid collaboration","instructions":"expedite cross-media synergies"}'
     headers:
       Content-Type:
       - application/json
@@ -28,7 +28,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Thu, 30 May 2024 13:01:41 GMT
+      - Thu, 30 May 2024 13:28:53 GMT
       Content-Type:
       - application/json
       Transfer-Encoding:
@@ -40,36 +40,36 @@ http_interactions:
       Openai-Organization:
       - user-jxm65ijkzc1qrfhc0ij8moic
       X-Request-Id:
-      - req_0a74488599004e3f10220afee80d1f6c
+      - req_d1fe37b0037a50052605eb198bd613b6
       Openai-Processing-Ms:
-      - '64'
+      - '87'
       Strict-Transport-Security:
       - max-age=15724800; includeSubDomains
       Cf-Cache-Status:
       - DYNAMIC
       Set-Cookie:
-      - __cf_bm=0iT6RTFwKh9GFeZQMsg7jcRhBOOjYrlRjDOjqyzyyyo-1717074101-1.0.1.1-eKTeQSU4iIPzloKEFkF4DXr8N1wNhtakdlELPnbyf9dSOVFSb6ge_AcTcHkPc5vQOkbe.95vGizsIYZpYzTGtw;
-        path=/; expires=Thu, 30-May-24 13:31:41 GMT; domain=.api.openai.com; HttpOnly;
+      - __cf_bm=ulPd1INIpm4uoo9CGOibHLQVejeIbQms.rNhaD3OLWk-1717075733-1.0.1.1-Px.wDuG_ktuKANqXi6VbsZZZJloTNQwErs5lNqjboZUR2dpi0QrA5cKYSDs.OxsfXPdOxMcDB0YFHxdZ6s_Etg;
+        path=/; expires=Thu, 30-May-24 13:58:53 GMT; domain=.api.openai.com; HttpOnly;
         Secure; SameSite=None
-      - _cfuvid=ZEQ6UyhqT9z5_gSUBWk6_5WImbSXUdtyzrSvlJRu010-1717074101264-0.0.1.1-604800000;
+      - _cfuvid=FQP8Mfdx3v8nUzsDnjKsgJu_tiAR4A5nmW.JCHvgKco-1717075733505-0.0.1.1-604800000;
         path=/; domain=.api.openai.com; HttpOnly; Secure; SameSite=None
       Server:
       - cloudflare
       Cf-Ray:
-      - 88beea0bae0623ad-LHR
+      - 88bf11e508ee94bb-LHR
       Alt-Svc:
       - h3=":443"; ma=86400
     body:
       encoding: ASCII-8BIT
       string: |-
         {
-          "id": "asst_HUWVgGAuWogAZJc0ZphvmJQv",
+          "id": "asst_SwH3ArU8GNyaBMiuroi4cLQU",
           "object": "assistant",
-          "created_at": 1717074101,
-          "name": "alliance",
-          "description": "Visionary 24/7 emulation",
-          "model": "gpt-4",
-          "instructions": "target turn-key e-business",
+          "created_at": 1717075733,
+          "name": "Multi-lateral",
+          "description": "Switchable hybrid collaboration",
+          "model": "gpt-3.5-turbo",
+          "instructions": "expedite cross-media synergies",
           "tools": [],
           "top_p": 1.0,
           "temperature": 1.0,
@@ -77,14 +77,14 @@ http_interactions:
           "metadata": {},
           "response_format": "auto"
         }
-  recorded_at: Thu, 30 May 2024 13:01:41 GMT
+  recorded_at: Thu, 30 May 2024 13:28:53 GMT
 - request:
     method: post
     uri: https://api.openai.com/v1/assistants
     body:
       encoding: UTF-8
-      string: '{"name":"Devolved","model":"gpt-4-turbo","description":"Extended systematic
-        initiative","instructions":"integrate vertical deliverables"}'
+      string: '{"name":"national","model":"gpt-4o","description":"Virtual bi-directional
+        knowledge base","instructions":"innovate leading-edge networks"}'
     headers:
       Content-Type:
       - application/json
@@ -106,7 +106,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Thu, 30 May 2024 13:02:50 GMT
+      - Thu, 30 May 2024 13:28:56 GMT
       Content-Type:
       - application/json
       Transfer-Encoding:
@@ -118,36 +118,36 @@ http_interactions:
       Openai-Organization:
       - user-jxm65ijkzc1qrfhc0ij8moic
       X-Request-Id:
-      - req_6d9fda03cfaebef33fb63d2ac8c8f149
+      - req_b8fbe4d8ca4f59812b7711987d478550
       Openai-Processing-Ms:
-      - '56'
+      - '61'
       Strict-Transport-Security:
       - max-age=15724800; includeSubDomains
       Cf-Cache-Status:
       - DYNAMIC
       Set-Cookie:
-      - __cf_bm=GYug_1fcgGKazEicxyezHoqG6LH1GBtc.q_eG.GAyKs-1717074170-1.0.1.1-FaU6i5.6Q_iHz9SJZGQLq.0n28FvV35ELUC.WpxrduSaRqcKU1F2JKFGZtS4W1fX1OdhFVwd0cAEf86RDxjtbA;
-        path=/; expires=Thu, 30-May-24 13:32:50 GMT; domain=.api.openai.com; HttpOnly;
+      - __cf_bm=FXCfwRaX9mf655Qj3VbxKSngUDQcVk6dNFVa.OBnSZo-1717075736-1.0.1.1-mpdUt1Gj63ElFx2pKoveTOhBI8NuGV..eK16zrVDZHBiqdbMFFWWLGnHwXWxDCWiUvoKvW0K7OFtUUxCGoIXIw;
+        path=/; expires=Thu, 30-May-24 13:58:56 GMT; domain=.api.openai.com; HttpOnly;
         Secure; SameSite=None
-      - _cfuvid=b8oBhryrD9AZx1ab5JO7PY5KhTRDQpprlHk_jPKcRvs-1717074170105-0.0.1.1-604800000;
+      - _cfuvid=KmLmM.5t0gC_tX9.jhfXqmTWWLFUQImzHJQ_Bk3nVG0-1717075736056-0.0.1.1-604800000;
         path=/; domain=.api.openai.com; HttpOnly; Secure; SameSite=None
       Server:
       - cloudflare
       Cf-Ray:
-      - 88beebb9f88b93f5-LHR
+      - 88bf11f50c0f9535-LHR
       Alt-Svc:
       - h3=":443"; ma=86400
     body:
       encoding: ASCII-8BIT
       string: |-
         {
-          "id": "asst_QCnY6nX3tIIj3X5vSxM23G8o",
+          "id": "asst_innzxfC9bMajk058rSthT6gF",
           "object": "assistant",
-          "created_at": 1717074170,
-          "name": "Devolved",
-          "description": "Extended systematic initiative",
-          "model": "gpt-4-turbo",
-          "instructions": "integrate vertical deliverables",
+          "created_at": 1717075735,
+          "name": "national",
+          "description": "Virtual bi-directional knowledge base",
+          "model": "gpt-4o",
+          "instructions": "innovate leading-edge networks",
           "tools": [],
           "top_p": 1.0,
           "temperature": 1.0,
@@ -155,5 +155,5 @@ http_interactions:
           "metadata": {},
           "response_format": "auto"
         }
-  recorded_at: Thu, 30 May 2024 13:02:50 GMT
+  recorded_at: Thu, 30 May 2024 13:28:56 GMT
 recorded_with: VCR 6.2.0
