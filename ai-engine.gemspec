@@ -26,13 +26,9 @@ Gem::Specification.new do |spec|
   ## Core
   spec.add_dependency "rails", ">= 7.1.3"
   spec.add_dependency "pg", "~> 1.1"
-  spec.add_dependency "puma", "~> 6.4.2"
-  spec.add_dependency "ranked-model", "~> 0.4.9"
   spec.add_dependency "ruby-openai", "~> 7.0.1"
 
   ## Web UI for managing AI agents
-  spec.add_dependency "importmap-rails", "~> 2.0.1"
-  spec.add_dependency "tailwindcss-rails", "~> 2.6.0"
 
   # Development
   ## Quality of life
@@ -48,6 +44,10 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency "webmock", "~> 3.23.0"
 
   ## Streaming UI example
+  spec.add_development_dependency "puma", "~> 6.4.2"
+  spec.add_development_dependency "ranked-model", "~> 0.4.9"
+  spec.add_development_dependency "importmap-rails", "~> 2.0.1"
+  spec.add_development_dependency "tailwindcss-rails", "~> 2.6.0"
   spec.add_development_dependency "turbo-rails", "~> 2.0.5"
   spec.add_development_dependency "stimulus-rails", "~> 1.3.3"
   spec.add_development_dependency "redis", "~> 5.2.0"
