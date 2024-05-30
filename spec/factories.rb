@@ -8,7 +8,7 @@ FactoryBot.define do
   factory :assistant do
     remote_id { Faker::Internet.uuid }
     name { Faker::Company.buzzword }
-    model { AssistantsHelper::MODEL_OPTIONS.sample }
+    model { AI::Engine::Assistant::MODEL_OPTIONS.sample }
     description { Faker::Company.catch_phrase }
     instructions { Faker::Company.bs }
   end
