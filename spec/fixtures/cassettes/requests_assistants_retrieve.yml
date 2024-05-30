@@ -1,0 +1,234 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.openai.com/v1/assistants/asst_OcnULbIQ80WC2vKfy7dGefDR
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Content-Type:
+      - application/json
+      Authorization:
+      - Bearer <OPENAI_ACCESS_TOKEN>
+      Openai-Organization:
+      - "<OPENAI_ORGANIZATION_ID>"
+      Openai-Beta:
+      - assistants=v2
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Thu, 30 May 2024 12:19:00 GMT
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Openai-Version:
+      - '2020-10-01'
+      Openai-Organization:
+      - user-jxm65ijkzc1qrfhc0ij8moic
+      X-Request-Id:
+      - req_3440f4c48cca53f861345ae030669092
+      Openai-Processing-Ms:
+      - '41'
+      Strict-Transport-Security:
+      - max-age=15724800; includeSubDomains
+      Cf-Cache-Status:
+      - DYNAMIC
+      Set-Cookie:
+      - __cf_bm=GmWnWGBt6JJVT_NsZ5.8Y.NarWjNeHNb_lEUqCqcW6A-1717071540-1.0.1.1-kR_qAbMKYPbk0hqNkK3mjkumXbRL7SMU4EE2Z9DIktlE3z5QB..V.AvxJRhZngpGtxGBGCt1hYyiTdIJ_rnA2w;
+        path=/; expires=Thu, 30-May-24 12:49:00 GMT; domain=.api.openai.com; HttpOnly;
+        Secure; SameSite=None
+      - _cfuvid=33l85M58sfRXAllkWUOhdevEKkNMLg1MoiPP6W0.3eY-1717071540706-0.0.1.1-604800000;
+        path=/; domain=.api.openai.com; HttpOnly; Secure; SameSite=None
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 88beab8859b3dc97-LHR
+      Alt-Svc:
+      - h3=":443"; ma=86400
+    body:
+      encoding: ASCII-8BIT
+      string: |-
+        {
+          "id": "asst_OcnULbIQ80WC2vKfy7dGefDR",
+          "object": "assistant",
+          "created_at": 1717071540,
+          "name": "Grass-roots",
+          "description": "Reverse-engineered national algorithm",
+          "model": "gpt-4-turbo",
+          "instructions": "Design a big hat",
+          "tools": [],
+          "top_p": 1.0,
+          "temperature": 1.0,
+          "tool_resources": {},
+          "metadata": {},
+          "response_format": "auto"
+        }
+  recorded_at: Thu, 30 May 2024 12:19:00 GMT
+- request:
+    method: get
+    uri: https://api.openai.com/v1/assistants/asst_WS02qocDoDtUrtNe78dSL5bJ
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Content-Type:
+      - application/json
+      Authorization:
+      - Bearer <OPENAI_ACCESS_TOKEN>
+      Openai-Organization:
+      - "<OPENAI_ORGANIZATION_ID>"
+      Openai-Beta:
+      - assistants=v2
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Thu, 30 May 2024 12:29:25 GMT
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Openai-Version:
+      - '2020-10-01'
+      Openai-Organization:
+      - user-jxm65ijkzc1qrfhc0ij8moic
+      X-Request-Id:
+      - req_45b0d289a5001bab3a81bad1f814cc3d
+      Openai-Processing-Ms:
+      - '32'
+      Strict-Transport-Security:
+      - max-age=15724800; includeSubDomains
+      Cf-Cache-Status:
+      - DYNAMIC
+      Set-Cookie:
+      - __cf_bm=ipAgabDG1WIhAs_NbPEUvPOtCBkm48LspJ0RG6u0DFY-1717072165-1.0.1.1-Y9bLvt97w.Y.4BpP_yzevwrU2m_IO2nb9p3OaMRkR.tt2JVl2_Xyd_7.zZmy5KQfdFZaic2PI9d.L09tzF.nGA;
+        path=/; expires=Thu, 30-May-24 12:59:25 GMT; domain=.api.openai.com; HttpOnly;
+        Secure; SameSite=None
+      - _cfuvid=tSX4iSILAySEHQE9CligSxanoIz3I1ldb.qJzzka0I4-1717072165153-0.0.1.1-604800000;
+        path=/; domain=.api.openai.com; HttpOnly; Secure; SameSite=None
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 88bebac5cf6d94c0-LHR
+      Alt-Svc:
+      - h3=":443"; ma=86400
+    body:
+      encoding: ASCII-8BIT
+      string: |-
+        {
+          "id": "asst_WS02qocDoDtUrtNe78dSL5bJ",
+          "object": "assistant",
+          "created_at": 1717072164,
+          "name": "Reactive",
+          "description": "Reverse-engineered radical function",
+          "model": "gpt-4o",
+          "instructions": "Design a big hat",
+          "tools": [],
+          "top_p": 1.0,
+          "temperature": 1.0,
+          "tool_resources": {},
+          "metadata": {},
+          "response_format": "auto"
+        }
+  recorded_at: Thu, 30 May 2024 12:29:25 GMT
+- request:
+    method: get
+    uri: https://api.openai.com/v1/assistants/asst_R7pH9selVz5J6nddS9HOC3pe
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Content-Type:
+      - application/json
+      Authorization:
+      - Bearer <OPENAI_ACCESS_TOKEN>
+      Openai-Organization:
+      - "<OPENAI_ORGANIZATION_ID>"
+      Openai-Beta:
+      - assistants=v2
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Thu, 30 May 2024 12:29:49 GMT
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Openai-Version:
+      - '2020-10-01'
+      Openai-Organization:
+      - user-jxm65ijkzc1qrfhc0ij8moic
+      X-Request-Id:
+      - req_86d1ffe559c6fbb3972d48e84618548d
+      Openai-Processing-Ms:
+      - '33'
+      Strict-Transport-Security:
+      - max-age=15724800; includeSubDomains
+      Cf-Cache-Status:
+      - DYNAMIC
+      Set-Cookie:
+      - __cf_bm=5tMKT8sETAdL3zYq.IEsUt.syDMvo_poESewOinAuiM-1717072189-1.0.1.1-GlbZMT76LaOgEzBA6n8FGqd7agOIkZSLEpwMQjWmYbkpWdO7JhOB75zRDQtJx.p8UqgtXTUFbQhHIOrk12Xfig;
+        path=/; expires=Thu, 30-May-24 12:59:49 GMT; domain=.api.openai.com; HttpOnly;
+        Secure; SameSite=None
+      - _cfuvid=Bzg9We5J.vx_jEDQRV7IQ6ie677F4_EjoOU93z7L8R8-1717072189382-0.0.1.1-604800000;
+        path=/; domain=.api.openai.com; HttpOnly; Secure; SameSite=None
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 88bebb5eafd5413c-LHR
+      Alt-Svc:
+      - h3=":443"; ma=86400
+    body:
+      encoding: ASCII-8BIT
+      string: |-
+        {
+          "id": "asst_R7pH9selVz5J6nddS9HOC3pe",
+          "object": "assistant",
+          "created_at": 1717072188,
+          "name": "directional",
+          "description": "Ergonomic web-enabled toolset",
+          "model": "gpt-4o",
+          "instructions": "Design a big hat",
+          "tools": [],
+          "top_p": 1.0,
+          "temperature": 1.0,
+          "tool_resources": {},
+          "metadata": {},
+          "response_format": "auto"
+        }
+  recorded_at: Thu, 30 May 2024 12:29:49 GMT
+recorded_with: VCR 6.2.0

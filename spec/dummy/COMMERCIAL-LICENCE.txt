@@ -1,0 +1,103 @@
+LandingBurn Pro Commercial License Agreement
+
+1. Introduction
+
+This Commercial License Agreement ("Agreement") is a legal document between you (either an individual or an entity, referred to herein as "Licensee") and Peaceterms Ltd ("Licensor"), the creator of LandingBurn Pro ("Software"). By installing, copying, or otherwise using the Software, you agree to be bound by the terms of this Agreement.
+
+2. License Grant
+
+2.1 Grant of License: The Licensor grants the Licensee a non-exclusive, worldwide license to use the Software for commercial purposes within the Licensee's internal operations and in the development of projects for the Licensee's clients. This license is non-transferable with respect to the original, unaltered Software itself, but this restriction does not apply to the Licensee's right to distribute their own modifications or derivative works that incorporate the Software, under the terms specified in this Agreement.
+
+2.2 Usage: The Licensee may use, modify, and integrate the Software into an unlimited number of internal and client projects. The Licensee retains full ownership of their modifications, derivatives, or integrations that incorporate the Software, including the right to grant, sell, or transfer such modified software to clients or third parties.
+
+2.3 Restrictions: While the Licensee is permitted to redistribute their own modifications or derivative works that incorporate the Software, the original, unaltered Software may not be redistributed, sold, leased, sublicensed, or otherwise made available as a standalone product outside the Licensee's organization.
+
+3. Ownership and Intellectual Property
+
+The Software, as provided by the Licensor, remains the exclusive property of the Licensor. However, the Licensee shall own all rights, title, and interest in and to the modifications, derivatives, or standalone applications they develop that incorporate the Software, whether for internal use or as part of projects delivered to clients.
+
+4. Limitation of Liability
+
+Licensor's liability to Licensee for costs, damages, or other losses arising from Licensee's use of the Software — including third-party claims against Licensee — is limited to a refund of the license fee paid by Licensee. Licensor shall not be liable for any indirect, special, incidental, consequential, or punitive damages of any kind, including but not limited to lost profits or revenue, even if Licensor has been advised of the possibility of such damages.
+
+5. Warranties and Disclaimers
+
+The Software is provided "as is," with all faults, defects and errors, and without warranty of any kind. Peaceterms Ltd does not warrant that the Software will be free of bugs, errors, viruses or other defects, and Peaceterms Ltd shall have no liability of any kind for the use of or inability to use the Software, the Software content or any associated service, and you acknowledge that it is not technically practicable for Peaceterms Ltd to do so. To the maximum extent permitted by applicable law, Peaceterms Ltd disclaims all warranties, express, implied, arising by law or otherwise, regarding the Software, the Software content and their respective performance or suitability for your intended use, including without limitation any implied warranty of merchantability, fitness for a particular purpose.
+
+6. Subscription Terms and Perpetual Use Rights
+
+6.1 Subscription Services: Access to the Software, including updates and support, is provided under a subscription model. Licensee must maintain an active subscription to receive ongoing updates and support services.
+
+6.2 Perpetual Use Rights: Upon the expiration or termination of the subscription for any reason, Licensee shall have the right to continue using the last version of the Software available prior to expiration or termination, subject to the terms of this Agreement.
+
+7. Term and Termination
+
+This Agreement is effective until terminated. Licensee may terminate it at any time by ceasing all use of the Software and deleting all copies. Licensor reserves the right to terminate this Agreement if Licensee violates any of its terms.
+
+8. General
+
+This Agreement constitutes the entire agreement between Licensee and Licensor concerning the Software and supersedes any prior agreements. If any part of this Agreement is held invalid or unenforceable, the remaining provisions will remain in effect.
+
+9. Contributions and Feedback
+
+9.1 Ownership of Contributions: Any contributions, including but not limited to code, ideas, or feedback, provided by the Licensee, or any party acting on behalf of the Licensee, to the Licensor or directly to the Software's repository, shall be the exclusive property of the Licensor. This includes all rights, title, and interest in the contributions globally, under all copyright, patent, and intellectual property laws.
+
+9.2 License to Contributions: The Licensee grants the Licensor a perpetual, irrevocable, worldwide, royalty-free license, with the right to sublicense, to use, reproduce, incorporate, modify, display, perform, distribute, and otherwise exploit any contributions provided by the Licensee as part of or in relation to the Software, without any obligation to provide attribution or compensation to the Licensee or any third party.
+
+9.3 Feedback: Any feedback, suggestions, ideas, reports, or other information provided by the Licensee or any user of the Software to the Licensor regarding the operation, functionality, or use of the Software shall be considered non-confidential and non-proprietary. The Licensor shall have a royalty-free, worldwide, transferable, sublicenseable, irrevocable, perpetual license to use or incorporate into the Software any feedback provided by the Licensee or its users.
+
+10. Jurisdiction
+
+This Agreement shall be governed by and construed in accordance with the laws of England and Wales, without regard to its conflict of laws principles. Legal proceedings related to this Agreement may only be brought in the courts of England and Wales. Licensee agrees to service of process at the email address provided at the time of the order. This section is intended to provide clarity on the applicable legal framework and ensure both parties are aware of the jurisdiction that will govern disputes arising under the agreement.
+
+11. Audit Rights
+
+11.1 Right to Audit: The Licensor, or a certified auditor appointed by the Licensor, reserves the right, upon reasonable notice and at Licensor's expense, to conduct an audit regarding the Licensee's compliance with the use and distribution of the Software as stipulated in this Agreement. This audit may be executed through mail, electronic means, or by an in-person visit to the Licensee’s premises.
+
+11.2 Audit Procedure: Any in-person audit will be conducted during the Licensee's normal business hours at the Licensee’s offices and designed to minimize disruption to the Licensee's operations. The Licensor agrees not to remove, copy, or redistribute any electronic or physical material belonging to the Licensee during the audit process.
+
+11.3 Consequences of Violations: Should the audit uncover that the Licensee has materially breached the terms of this Agreement by unauthorized use of the Software, the Licensee will be required to cover the reasonable costs of the audit. Furthermore, the Licensee must compensate the Licensor for any due payments resulting from such unauthorized use.
+
+11.4 Remedial Actions: In the event of a material breach, the Licensor reserves the right to either seek compensation for the unauthorized use or, at the Licensor’s discretion, terminate the Software licenses granted under this Agreement.
+
+12. Third-Party Components and Licenses
+
+12.1 Acknowledgment of Third-Party Software: The Software includes components that are licensed under the MIT License, including the Rails framework. This Agreement does not restrict Licensee's rights under the MIT License with respect to the use of Rails and other open-source components included within the Software.
+
+12.2 Compliance with Third-Party Licenses: Licensee agrees to comply with all applicable open-source licenses for any third-party components included within the Software.
+
+13. International Use and Jurisdiction
+
+13.1 International Use: While this Agreement is governed by the laws of England and Wales, Licensor acknowledges that Licensees may be based in jurisdictions outside of England and Wales. Licensee agrees to comply with all local laws and regulations applicable to the use of the Software in Licensee's jurisdiction.
+
+13.2 Governing Law: This Agreement shall be governed by and construed in accordance with the laws of England and Wales, without regard to its conflict of laws principles. Any disputes arising out of or in connection with this Agreement shall be subject to the exclusive jurisdiction of the courts of England and Wales.
+
+14. Acknowledgements.
+
+14.1 Consent to the Use of Data. You agree that Peaceterms Ltd and its affiliates may collect and use technical information gathered as part of the product support services. Peaceterms Ltd may use this information to improve products and services and will not disclose this information in a form that personally identifies you.
+
+14.2 Third Party Software. Examples included in Software may provide links to third party libraries or code (collectively “Third Party Software”) to implement various functions. Third Party Software does not comprise part of the Software. In some cases, access to Third Party Software may be included along with the Software delivery as a convenience for demonstration purposes. Such source code and libraries may be included in the “…/examples” source tree delivered with the Software and do not comprise the Software. Licensee acknowledges (1) that some part of Third Party Software may require additional licensing of copyright and patents from the owners of such, and (2) that distribution of any of the Software referencing or including any portion of a Third Party Software may require appropriate licensing from such third parties.
+
+15. Miscellaneous
+
+15.1 Entire Agreement. This Agreement sets forth our entire agreement with respect to the Software and the subject matter hereof and supersedes all prior and contemporaneous understandings and agreements whether written or oral.
+
+15.2 Amendment. Peaceterms Ltd reserves the right, in its sole discretion, to amend this Agreement from time. Amendments to this Agreement can be located at: https://github.com/alexrudall/landingburn/blob/main/COMMERCIAL-LICENCE.
+
+15.3 Assignment. You may not assign this Agreement or any of its rights under this Agreement without the prior written consent of Peaceterms Ltd and any attempted assignment without such consent shall be void.
+
+15.4 Export Compliance. You agree to comply with all applicable laws and regulations, including laws, regulations, orders or other restrictions on export, re-export or redistribution of software.
+
+15.5 Indemnification. You agree to defend, indemnify, and hold harmless Peaceterms Ltd from and against any lawsuits, claims, losses, damages, fines and expenses (including attorneys' fees and costs) arising out of your use of the Software or breach of this Agreement.
+
+15.6 Governing Law. This Agreement is governed by the laws of England and Wales without regard to conflicts of laws provisions thereof. The jurisdiction and venue for actions related to the subject matter hereof shall be the courts of England and Wales, and both parties hereby submit to the personal jurisdiction of such courts. Notwithstanding the foregoing, for any matters requiring enforcement or relating to intellectual property rights in jurisdictions outside England and Wales, the Licensor retains the right to initiate proceedings in any relevant jurisdiction.
+
+15.7 Attorneys' Fees and Costs. The prevailing party in any action to enforce this Agreement will be entitled to recover its attorneys' fees and costs in connection with such action.
+
+15.8 Severability. If any provision of this Agreement is held by a court of competent jurisdiction to be invalid, illegal, or unenforceable, the remainder of this Agreement will remain in full force and effect.
+
+15.9 Waiver. Failure or neglect by either party to enforce at any time any of the provisions of this licence Agreement shall not be construed or deemed to be a waiver of that party's rights under this Agreement.
+
+15.10 Headings. The headings of sections and paragraphs of this Agreement are for convenience of reference only and are not intended to restrict, affect or be of any weight in the interpretation or construction of the provisions of such sections or paragraphs.
+
+16. Contact Information. If you have any questions about this EULA, or if you want to contact Peaceterms Ltd for any reason, please direct correspondence to hello@alexrudall.com.

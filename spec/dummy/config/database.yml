@@ -21,13 +21,13 @@ default: &default
 
 development:
   <<: *default
-  database: ai_engine_example_development
+  database: ai_engine_dummy_development
 
   # The specified database role being used to connect to PostgreSQL.
   # To create additional roles in PostgreSQL see `$ createuser --help`.
   # When left blank, PostgreSQL will use the default role. This is
   # the same name as the operating system user running Rails.
-  #username: ai_engine_example
+  #username: ai_engine_dummy
 
   # The password associated with the PostgreSQL role (username).
   #password:
@@ -55,14 +55,14 @@ development:
 # Do not set this db to the same as development or production.
 test:
   <<: *default
-  database: ai_engine_example_test
+  database: ai_engine_dummy_test
 
 # As with config/credentials.yml, you never want to store sensitive information,
 # like your database password, in your source code. If your source code is
 # ever seen by anyone, they now have access to your database.
 #
 # Instead, provide the password or a full connection URL as an environment
-# variable when you boot the app. For example:
+# variable when you boot the app. For dummy:
 #
 #   DATABASE_URL="postgres://myuser:mypass@localhost/somedatabase"
 #
@@ -79,6 +79,6 @@ test:
 #
 production:
   <<: *default
-  database: ai_engine_example_production
-  username: ai_engine_example
-  password: <%= ENV["ai_engine_example_DATABASE_PASSWORD"] %>
+  database: ai_engine_dummy_production
+  username: ai_engine_dummy
+  password: <%= ENV["ai_engine_dummy_DATABASE_PASSWORD"] %>

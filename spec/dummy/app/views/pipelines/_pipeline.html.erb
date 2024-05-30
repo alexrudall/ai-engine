@@ -1,0 +1,21 @@
+<div id="<%= dom_id pipeline %>" class="space-y-2">
+  <p class="my-5">
+    <strong class="block font-medium mb-1">Name:</strong>
+    <%= pipeline.name %>
+  </p>
+
+  <p>
+    <strong class="block font-medium">Assistants:</strong>
+    <ol>
+      <% pipeline.pipeline_assistants.includes(:assistant).rank(:row_order).each do |pa| %>
+        <li><%= pa.assistant.name %></li>
+      <% end %>
+    </ol>
+  </p>
+
+  <% if action_name != "show" %>
+    <%= link_to "Show this pipeline", pipeline, class: "rounded-lg py-3 px-5 bg-gray-100 inline-block font-medium" %>
+    <%= link_to "Edit this pipeline", edit_pipeline_path(pipeline), class: "rounded-lg py-3 ml-2 px-5 bg-gray-100 inline-block font-medium" %>
+    <hr class="mt-6">
+  <% end %>
+</div>

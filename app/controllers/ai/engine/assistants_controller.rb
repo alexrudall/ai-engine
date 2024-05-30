@@ -24,7 +24,6 @@ module AI::Engine
     def create
       @assistant = Assistant.new(assistant_params)
       create_remote_assistant
-
       if @assistant.errors.empty? && @assistant.save
         redirect_to @assistant, notice: "Assistant was successfully created."
       else

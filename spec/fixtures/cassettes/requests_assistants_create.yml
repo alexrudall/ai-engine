@@ -5,15 +5,15 @@ http_interactions:
     uri: https://api.openai.com/v1/assistants
     body:
       encoding: UTF-8
-      string: '{"name":"infrastructure","model":"gpt-4","description":"Public-key
-        24/7 framework","instructions":"streamline cross-platform metrics"}'
+      string: '{"name":"hardware","model":"gpt-4-turbo","description":"Polarised global
+        project","instructions":"innovate strategic methodologies"}'
     headers:
       Content-Type:
       - application/json
       Authorization:
-      - Bearer sk-AizTVjdUvJmbL4FQrAp3qgRN4RpNudGNatFErFJ2
+      - Bearer <OPENAI_ACCESS_TOKEN>
       Openai-Organization:
-      - org-Rf437IxKhhQPMiIQ0Es8OwrH
+      - "<OPENAI_ORGANIZATION_ID>"
       Openai-Beta:
       - assistants=v2
       Accept-Encoding:
@@ -28,7 +28,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Wed, 29 May 2024 13:02:28 GMT
+      - Thu, 30 May 2024 12:29:50 GMT
       Content-Type:
       - application/json
       Transfer-Encoding:
@@ -40,36 +40,36 @@ http_interactions:
       Openai-Organization:
       - user-jxm65ijkzc1qrfhc0ij8moic
       X-Request-Id:
-      - req_ae9944ecaac10e4ab1425594e6ddd199
+      - req_b725e2b10430929802cbf5b8574e4f55
       Openai-Processing-Ms:
-      - '57'
+      - '48'
       Strict-Transport-Security:
       - max-age=15724800; includeSubDomains
       Cf-Cache-Status:
       - DYNAMIC
       Set-Cookie:
-      - __cf_bm=R1hcmKu4U1KLhO51O6XTm1QQpO49QwAhdMTHB8Y9.98-1716987748-1.0.1.1-kODXnYMa4BSHsunpWECTSqczwKVpH4HiEhmA01y_VKvoLR7LbpawfZybBtLCCXuZLEFaEyW6TJH5v349d1x9nA;
-        path=/; expires=Wed, 29-May-24 13:32:28 GMT; domain=.api.openai.com; HttpOnly;
+      - __cf_bm=xEo5plZO5RqKXep8BwPhtVxMvWoA3fJwhSHWDe9rqnw-1717072190-1.0.1.1-r2n5R4h2adDCGYfNk4zc7M_OosdBnNTC12kgOFw1ryJUrfCg0y_Hif6xVDI_tn9jQdNyoXEsAFAJx766ygSkkg;
+        path=/; expires=Thu, 30-May-24 12:59:50 GMT; domain=.api.openai.com; HttpOnly;
         Secure; SameSite=None
-      - _cfuvid=xd8M11a0KHxU1shoe5vD3OUTnrJ_yqXyX9L8RYIRfL8-1716987748139-0.0.1.1-604800000;
+      - _cfuvid=hxXqggpZv7fsdsyBRL0kNEBgi_X1IEVBnFHCbFG7w8Y-1717072190259-0.0.1.1-604800000;
         path=/; domain=.api.openai.com; HttpOnly; Secure; SameSite=None
       Server:
       - cloudflare
       Cf-Ray:
-      - 88b6add098dc9425-LHR
+      - 88bebb640e2f2404-LHR
       Alt-Svc:
       - h3=":443"; ma=86400
     body:
       encoding: ASCII-8BIT
       string: |-
         {
-          "id": "asst_TxG69RD4rVI45yyPANbDtzjN",
+          "id": "asst_LfAEJ6O6tzVpNLEmbyKErHJD",
           "object": "assistant",
-          "created_at": 1716987748,
-          "name": "infrastructure",
-          "description": "Public-key 24/7 framework",
-          "model": "gpt-4",
-          "instructions": "streamline cross-platform metrics",
+          "created_at": 1717072190,
+          "name": "hardware",
+          "description": "Polarised global project",
+          "model": "gpt-4-turbo",
+          "instructions": "innovate strategic methodologies",
           "tools": [],
           "top_p": 1.0,
           "temperature": 1.0,
@@ -77,5 +77,83 @@ http_interactions:
           "metadata": {},
           "response_format": "auto"
         }
-  recorded_at: Wed, 29 May 2024 13:02:28 GMT
+  recorded_at: Thu, 30 May 2024 12:29:50 GMT
+- request:
+    method: post
+    uri: https://api.openai.com/v1/assistants
+    body:
+      encoding: UTF-8
+      string: '{"name":"Object-based","model":"gpt-4","description":"Realigned static
+        archive","instructions":"redefine rich infrastructures"}'
+    headers:
+      Content-Type:
+      - application/json
+      Authorization:
+      - Bearer <OPENAI_ACCESS_TOKEN>
+      Openai-Organization:
+      - "<OPENAI_ORGANIZATION_ID>"
+      Openai-Beta:
+      - assistants=v2
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Thu, 30 May 2024 12:29:53 GMT
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Openai-Version:
+      - '2020-10-01'
+      Openai-Organization:
+      - user-jxm65ijkzc1qrfhc0ij8moic
+      X-Request-Id:
+      - req_01aa7d5d5c1c5c549c8d3521021ac6bc
+      Openai-Processing-Ms:
+      - '71'
+      Strict-Transport-Security:
+      - max-age=15724800; includeSubDomains
+      Cf-Cache-Status:
+      - DYNAMIC
+      Set-Cookie:
+      - __cf_bm=l.NDkk5skBKZnhs9.ICHZ0O29.NP7g9YvjUXYsn.6mM-1717072193-1.0.1.1-hWEqsY2JOuIHChhIg35GVdGAZIxpXzQ17l0tIH0Yo6erksnOktV2kgKojwXBzNxv5Sl0hyUVl1fRYE_A3eDsWg;
+        path=/; expires=Thu, 30-May-24 12:59:53 GMT; domain=.api.openai.com; HttpOnly;
+        Secure; SameSite=None
+      - _cfuvid=C6eS_k6T3ctM3dKBXZiWdUlfIu28b7mvNa_2bqynEd0-1717072193257-0.0.1.1-604800000;
+        path=/; domain=.api.openai.com; HttpOnly; Secure; SameSite=None
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 88bebb76ac2b6383-LHR
+      Alt-Svc:
+      - h3=":443"; ma=86400
+    body:
+      encoding: ASCII-8BIT
+      string: |-
+        {
+          "id": "asst_2WXPDnd4HoYieR9R6FQH0WUp",
+          "object": "assistant",
+          "created_at": 1717072193,
+          "name": "Object-based",
+          "description": "Realigned static archive",
+          "model": "gpt-4",
+          "instructions": "redefine rich infrastructures",
+          "tools": [],
+          "top_p": 1.0,
+          "temperature": 1.0,
+          "tool_resources": {},
+          "metadata": {},
+          "response_format": "auto"
+        }
+  recorded_at: Thu, 30 May 2024 12:29:53 GMT
 recorded_with: VCR 6.2.0

@@ -1,0 +1,150 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://api.openai.com/v1/assistants
+    body:
+      encoding: UTF-8
+      string: '{"name":"policy","model":"gpt-4","description":"Assimilated high-level
+        open architecture","instructions":"e-enable turn-key users"}'
+    headers:
+      Content-Type:
+      - application/json
+      Authorization:
+      - Bearer <OPENAI_ACCESS_TOKEN>
+      Openai-Organization:
+      - "<OPENAI_ORGANIZATION_ID>"
+      Openai-Beta:
+      - assistants=v2
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Thu, 30 May 2024 11:53:57 GMT
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Openai-Version:
+      - '2020-10-01'
+      Openai-Organization:
+      - user-jxm65ijkzc1qrfhc0ij8moic
+      X-Request-Id:
+      - req_db95253320afdf97fa3b743f76a3fb5f
+      Openai-Processing-Ms:
+      - '60'
+      Strict-Transport-Security:
+      - max-age=15724800; includeSubDomains
+      Cf-Cache-Status:
+      - DYNAMIC
+      Set-Cookie:
+      - __cf_bm=M6BLCDNwCtMqcUGkHDyQnfoEgqmM3EWwuP48vs49LuY-1717070037-1.0.1.1-.ah4ceNVgkaixrtmVLte5f.ZsPgcFQZEmf7WNWUYDt_z4W97V4d8GFo6pXjopjf_bEKjHVQFm65yDUgQeVIE2w;
+        path=/; expires=Thu, 30-May-24 12:23:57 GMT; domain=.api.openai.com; HttpOnly;
+        Secure; SameSite=None
+      - _cfuvid=DwMp41CMKd.URAWxxi.9aER8wTXeiZtcoE7075Yy.bs-1717070037430-0.0.1.1-604800000;
+        path=/; domain=.api.openai.com; HttpOnly; Secure; SameSite=None
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 88be86d4ca6e63d6-LHR
+      Alt-Svc:
+      - h3=":443"; ma=86400
+    body:
+      encoding: ASCII-8BIT
+      string: |-
+        {
+          "id": "asst_IWwBYYsw4iTptp8Qurzx69G4",
+          "object": "assistant",
+          "created_at": 1717070037,
+          "name": "policy",
+          "description": "Assimilated high-level open architecture",
+          "model": "gpt-4",
+          "instructions": "e-enable turn-key users",
+          "tools": [],
+          "top_p": 1.0,
+          "temperature": 1.0,
+          "tool_resources": {},
+          "metadata": {},
+          "response_format": "auto"
+        }
+  recorded_at: Thu, 30 May 2024 11:53:57 GMT
+- request:
+    method: post
+    uri: https://api.openai.com/v1/threads
+    body:
+      encoding: UTF-8
+      string: "{}"
+    headers:
+      Content-Type:
+      - application/json
+      Authorization:
+      - Bearer <OPENAI_ACCESS_TOKEN>
+      Openai-Organization:
+      - "<OPENAI_ORGANIZATION_ID>"
+      Openai-Beta:
+      - assistants=v2
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Thu, 30 May 2024 12:29:53 GMT
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Openai-Version:
+      - '2020-10-01'
+      Openai-Organization:
+      - user-jxm65ijkzc1qrfhc0ij8moic
+      X-Request-Id:
+      - req_1ae177823beffa44da6eae1d9316ed1c
+      Openai-Processing-Ms:
+      - '26'
+      Strict-Transport-Security:
+      - max-age=15724800; includeSubDomains
+      Cf-Cache-Status:
+      - DYNAMIC
+      Set-Cookie:
+      - __cf_bm=jstih_2nY2TPi6Cg9IHEROaKZKNM3umCCsrewXhugjY-1717072193-1.0.1.1-4gVQFL8HjVz4R1kqK_nM2ysticwwhNYx1Qxkpz0YeSJwHcH2Lslsb03QBh7UrsY7k6z8eZkNEDm.3n5VNRpzUA;
+        path=/; expires=Thu, 30-May-24 12:59:53 GMT; domain=.api.openai.com; HttpOnly;
+        Secure; SameSite=None
+      - _cfuvid=UXvqBUHPO_B7SsWVv3Vuomo8LNkgrR40xWzQDIFLJic-1717072193504-0.0.1.1-604800000;
+        path=/; domain=.api.openai.com; HttpOnly; Secure; SameSite=None
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 88bebb786a1763e1-LHR
+      Alt-Svc:
+      - h3=":443"; ma=86400
+    body:
+      encoding: ASCII-8BIT
+      string: |-
+        {
+          "id": "thread_dmaOHAQTy8O48vyTCZdfF0Hd",
+          "object": "thread",
+          "created_at": 1717072193,
+          "metadata": {},
+          "tool_resources": {}
+        }
+  recorded_at: Thu, 30 May 2024 12:29:53 GMT
+recorded_with: VCR 6.2.0

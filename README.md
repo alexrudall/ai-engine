@@ -32,7 +32,7 @@ The dummy app needs a .env file in the root of the engine for manual and RSpec t
 
 ## Dummy app
 
-Run the dummy app from the root of the project with `bin/rails s`.
+Run the dummy app from the root of the project with `bin/dev`.
 
 ## Tests
 
