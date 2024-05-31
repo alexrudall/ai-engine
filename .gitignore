@@ -11,40 +11,42 @@
 
 # Ignore bundler config.
 /.bundle
-/test/example//.bundle
 
 # Ignore all environment files (except templates).
 /.env*
 !/.env*.example
 
+# Ignore bundler config.
+/spec/dummy/.bundle
+
 # Ignore all logfiles and tempfiles.
-/test/example/log/*
-/test/example/tmp/*
-!/test/example/log/.keep
-!/test/example/tmp/.keep
+/spec/dummy/log/*
+/spec/dummy/tmp/*
+!/spec/dummy/log/.keep
+!/spec/dummy/tmp/.keep
 
 # Ignore pidfiles, but keep the directory.
-/test/example/tmp/pids/*
-!/test/example/tmp/pids/
-!/test/example/tmp/pids/.keep
+/spec/dummy/tmp/pids/*
+!/spec/dummy/tmp/pids/
+!/spec/dummy/tmp/pids/.keep
 
 # Ignore storage (uploaded files in development and any SQLite databases).
-/test/example/storage/*
-!/test/example/storage/.keep
-/test/example/tmp/storage/*
-!/test/example/tmp/storage/
-!/test/example/tmp/storage/.keep
+/spec/dummy/storage/*
+!/spec/dummy/storage/.keep
+/spec/dummy/tmp/storage/*
+!/spec/dummy/tmp/storage/
+!/spec/dummy/tmp/storage/.keep
 
-/test/example/public/assets
+/spec/dummy/public/assets
 
 # Ignore javascript vendor code
-/test/example/vendor/*
+/spec/dummy/vendor/*
 
 # Ignore master key for decrypting credentials and more.
-/test/example/config/master.key
+/spec/dummy/config/master.key
 
-/test/example/app/assets/builds/*
-!/test/example/app/assets/builds/.keep
+/spec/dummy/app/assets/builds/*
+!/spec/dummy/app/assets/builds/.keep
 
 # Ignore redis binary dump (dump.rdb) files
-/test/example/*.rdb
+/spec/dummy/*.rdb
