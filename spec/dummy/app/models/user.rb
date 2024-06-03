@@ -1,5 +1,6 @@
 class User < ApplicationRecord
   include AI::Engine::Chattable
+  include ActionView::RecordIdentifier
 
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable, :trackable
@@ -7,6 +8,19 @@ class User < ApplicationRecord
   devise :database_authenticatable, :rememberable, :omniauthable, omniauth_providers: [:google_oauth2]
 
   has_many :storytellers, dependent: :destroy
+
+  def on_ai_response(message:)
+    broadcast_ai_response(message:)
+  end
+
+  def broadcast_ai_response(message:)
+    broadcast_append_to(
+      "#{dom_id(message.chat)}_messages",
+      partial: "messages/message",
+      locals: {message: message, scroll_to: true},
+      target: "#{dom_id(message.chat)}_messages"
+    )
+  end
 
   def self.from_omniauth(auth)
     # Confusingly, this will set provider and remote_id to the queried values, as well as the other attributes on create.

@@ -7,6 +7,12 @@ module AI::Engine
 
     before_create :create_openai_message, unless: -> { assistant? } # Assistant messages on the OpenAI side are created by a Run.
 
+    after_update :on_ai_response
+
+    def on_ai_response
+      chat.chattable.on_ai_response(message: self)
+    end
+
     def to_partial_path
       "messages/message"
     end
