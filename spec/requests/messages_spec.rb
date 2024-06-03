@@ -27,6 +27,8 @@ RSpec.describe MessagesController, type: :request do
 
           chat = current_user.chats.last
           expect(chat.messages.count).to eq(2)
+          expect(chat.messages.last.remote_id).to be_present
+          expect(chat.messages.last.run).to be_present
         end
       end
     end

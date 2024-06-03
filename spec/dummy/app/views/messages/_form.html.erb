@@ -4,7 +4,12 @@
       <%= form.text_area :content, rows: 4, class: "block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-full focus:border-red-600 focus:ring-red-600", autofocus: true, "x-on:keydown.cmd.enter" => "$event.target.form.requestSubmit();" %>
     </div>
 
-    <div class="grid justify-items-end">
+    <div class="flex justify-items-end">
+      <div class="mr-auto">
+        <%= form.label :storyteller_id, "Storyteller:" %>
+        <%= form.select :storyteller_id, message_storyteller_options(chat: chat), class: "block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-full" %>
+      </div>
+
       <%= form.button type: :submit, class: "rounded-lg py-3 px-5 bg-red-600 text-white inline-block font-medium cursor-pointer" do %>
         <i class="fas fa-paper-plane"></i>
         <span class="pl-2">Send</span>

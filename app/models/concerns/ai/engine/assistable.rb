@@ -32,7 +32,7 @@ module AI
         end
 
         def update_openai_assistant
-          AI::Engine::OpenAI::Assistants::Update.call(remote_id: assistant.remote_id, **ai_assistant)
+          AI::Engine::OpenAI::Assistants::Update.call(remote_id: assistant&.remote_id, **ai_assistant)
         rescue Faraday::Error => e
           errors.add(:base, e.message)
           throw(:abort)

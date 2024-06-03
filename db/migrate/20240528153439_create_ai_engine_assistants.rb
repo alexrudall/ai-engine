@@ -1,7 +1,7 @@
 class CreateAIEngineAssistants < ActiveRecord::Migration[7.1]
   def change
     create_table :ai_engine_assistants do |t|
-      t.string :remote_id, null: false
+      t.string :remote_id
       t.belongs_to :assistable, polymorphic: true
 
       t.timestamps

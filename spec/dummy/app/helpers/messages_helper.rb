@@ -1,8 +1,8 @@
 module MessagesHelper
-  def message_storyteller_options(user:, last_message:)
+  def message_storyteller_options(chat:)
     options_for_select(
-      user.storytellers.map { |storyteller| [storyteller.name, storyteller.id] },
-      selected: last_message&.run&.assistant&.assistable_id
+      chat.chattable.storytellers.map { |storyteller| [storyteller.name, storyteller.id] },
+      selected: chat.messages.last&.run&.assistant&.assistable_id
     )
   end
 end

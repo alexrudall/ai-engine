@@ -1,7 +1,7 @@
 module AI::Engine
   class Message < ApplicationRecord
     belongs_to :chat, class_name: "AI::Engine::Chat", foreign_key: "ai_engine_chat_id"
-    belongs_to :run, class_name: "AI::Engine::Run", optional: true
+    belongs_to :run, class_name: "AI::Engine::Run", foreign_key: "ai_engine_run_id", optional: true
 
     enum role: {system: 0, assistant: 10, user: 20}
 
