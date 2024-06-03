@@ -1,9 +1,17 @@
 <div id="<%= dom_id chat %>">
   <p class="my-5">
     <%= "Created #{chat.created_at.to_formatted_s(:short)}" %>
-    <% if (storyteller = chat.runs.last&.assistant&.storyteller) %>
+    <% storytellers = chat.runs.map { |run| run.assistant.assistable }.uniq %>
+    <% if storytellers.one? %>
       <%= "with " %>
-      <%= link_to storyteller.name, storyteller %>
+      <%= link_to storytellers.first.name, storytellers.first %>
+    <% elsif storytellers.any? %>
+      <%= "with: " %>
+      <ul>
+        <% storytellers.map do |storyteller| %>
+          <li><%= link_to storyteller.name, storyteller %></li>
+        <% end %>
+      </ul>
     <% end %>
   </p>
 
