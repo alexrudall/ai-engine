@@ -2,19 +2,11 @@ require "rails_helper"
 
 RSpec.describe MessagesController, type: :request do
   let(:current_user) { create(:user) }
-  let(:assistant) do
-    VCR.use_cassette("requests_assistants_create") do
-      post assistants_url, params: {assistant: build(:assistant).attributes}
-      Assistant.last
-    end
+  let(:storyteller) do
+    current_user.storytellers << build(:storyteller)
+    current_user.storytellers.last
   end
-  let(:chat_id) do
-    VCR.use_cassette("requests_chats_create") do
-      post chats_url, params: {chat: {assistable_id: assistable.to_global_id}}
-      Chat.last.id
-    end
-  end
-  let(:valid_attributes) { {content: "Hi there"} }
+  let(:valid_attributes) { {storyteller_id: storyteller.id, content: "Hi there"} }
 
   before do
     sign_in current_user
@@ -23,19 +15,23 @@ RSpec.describe MessagesController, type: :request do
   describe "POST /create" do
     context "with valid parameters" do
       context "with an assistant" do
-        let(:assistable) { assistant }
-
         it "creates a new Message" do
-          VCR.use_cassette("requests_messages_assistant_create") do
+          # Creates a chat, assistant, thread and request and response messages on the OpenAI API.
+          VCR.use_cassette("requests_messages_create_and_run") do
+            chat = current_user.chats.create
+
             expect {
-              post chat_messages_url(chat_id: chat_id), as: :turbo_stream, params: {message: valid_attributes}
-            }.to change(Message, :count).by(2)
+              post chat_messages_url(chat_id: chat.id), as: :turbo_stream, params: {message: valid_attributes}
+            }.to change(current_user.chats.last.messages, :count).by(2)
           end
 
-          expect(Chat.last.messages.count).to eq(2)
-          expect(Message.first.user_id).to eq(current_user.id)
-          expect(Message.last.user).to eq(User.system)
-          expect(Message.last.assistant).to eq(assistant)
+          chat = current_user.chats.last
+          expect(chat.messages.count).to eq(2)
+          response = chat.messages.last
+          expect(response.remote_id).to be_present
+          expect(response.run).to be_present
+          expect(response.run.prompt_token_usage).to be_present
+          expect(response.run.completion_token_usage).to be_present
         end
       end
     end

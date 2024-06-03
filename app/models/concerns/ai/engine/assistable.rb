@@ -7,9 +7,10 @@ module AI
         has_one :assistant, as: :assistable, class_name: "AI::Engine::Assistant"
 
         before_create :create_openai_assistant
+        before_update :update_openai_assistant
 
         # Default. Override in including model to customize.
-        def assistant_params
+        def ai_assistant
           {
             name: "Assistant for #{self.class.name} #{id}",
             model: AI::Engine::Assistant::MODEL_OPTIONS.first,
@@ -23,11 +24,18 @@ module AI
         def create_openai_assistant
           build_assistant
           begin
-            assistant.remote_id = AI::Engine::OpenAI::Assistants::Create.call(**assistant_params)
+            assistant.remote_id = AI::Engine::OpenAI::Assistants::Create.call(**ai_assistant)
           rescue Faraday::Error => e
             errors.add(:base, e.message)
             throw(:abort)
           end
+        end
+
+        def update_openai_assistant
+          AI::Engine::OpenAI::Assistants::Update.call(remote_id: assistant&.remote_id, **ai_assistant)
+        rescue Faraday::Error => e
+          errors.add(:base, e.message)
+          throw(:abort)
         end
       end
     end

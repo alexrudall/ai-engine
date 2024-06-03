@@ -2,12 +2,6 @@ require "rails_helper"
 
 RSpec.describe ChatsController, type: :request do
   let(:current_user) { create(:user) }
-  let(:assistant) do
-    VCR.use_cassette("requests_assistants_create") do
-      post assistants_url, params: {assistant: build(:assistant).attributes}
-      Assistant.last
-    end
-  end
   let(:valid_attributes) { {} }
 
   before do

@@ -1,6 +1,18 @@
 <div id="<%= dom_id chat %>">
   <p class="my-5">
-    <%= link_to chat.assistable %>
+    <%= "Created #{chat.created_at.to_formatted_s(:short)}" %>
+    <% storytellers = chat.runs.map { |run| run.assistant.assistable }.uniq %>
+    <% if storytellers.one? %>
+      <%= "with " %>
+      <%= link_to storytellers.first.name, storytellers.first %>
+    <% elsif storytellers.any? %>
+      <%= "with: " %>
+      <ul>
+        <% storytellers.map do |storyteller| %>
+          <li><%= link_to storyteller.name, storyteller %></li>
+        <% end %>
+      </ul>
+    <% end %>
   </p>
 
   <% if action_name != "show" %>

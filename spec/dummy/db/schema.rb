@@ -44,7 +44,7 @@ ActiveRecord::Schema[7.1].define(version: 2024_05_30_135629) do
   end
 
   create_table "ai_engine_assistants", force: :cascade do |t|
-    t.string "remote_id", null: false
+    t.string "remote_id"
     t.string "assistable_type"
     t.bigint "assistable_id"
     t.datetime "created_at", null: false
@@ -54,7 +54,7 @@ ActiveRecord::Schema[7.1].define(version: 2024_05_30_135629) do
   end
 
   create_table "ai_engine_chats", force: :cascade do |t|
-    t.string "remote_id", null: false
+    t.string "remote_id"
     t.string "chattable_type"
     t.bigint "chattable_id"
     t.datetime "created_at", null: false
@@ -63,9 +63,9 @@ ActiveRecord::Schema[7.1].define(version: 2024_05_30_135629) do
   end
 
   create_table "ai_engine_messages", force: :cascade do |t|
-    t.string "remote_id", null: false
-    t.bigint "ai_engine_run_id", null: false
-    t.bigint "ai_engine_chat_id", null: false
+    t.string "remote_id"
+    t.bigint "ai_engine_run_id"
+    t.bigint "ai_engine_chat_id"
     t.integer "role", default: 0, null: false
     t.string "content", null: false
     t.datetime "created_at", null: false
@@ -75,7 +75,7 @@ ActiveRecord::Schema[7.1].define(version: 2024_05_30_135629) do
   end
 
   create_table "ai_engine_runs", force: :cascade do |t|
-    t.string "remote_id", null: false
+    t.string "remote_id"
     t.bigint "ai_engine_assistant_id"
     t.bigint "ai_engine_chat_id"
     t.integer "prompt_token_usage"

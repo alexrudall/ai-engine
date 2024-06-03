@@ -4,11 +4,14 @@
   <li id="<%= dom_id message %>" class="py-4">
 <% end %>
   <div class="flex items-center gap-x-3">
-    <% if message.user.human? %>
-      <%= image_tag(message.user.avatar_url, class: "h-6 w-6 flex-none rounded-full bg-gray-800") %>
-      <h3 class="flex-auto truncate font-semibold leading-6 text-gray-900"><%= message.user.full_name %></h3>
+    <% user = message.chat.chattable %>
+    <% if message.user? %>
+      <%= image_tag(user.avatar_url, class: "h-6 w-6 flex-none rounded-full bg-gray-800") %>
+      <h3 class="flex-auto truncate font-semibold leading-6 text-gray-900"><%= user.full_name %></h3>
     <% else %>
-      <h3 class="flex-auto truncate font-semibold leading-6 text-gray-900"><%= message.assistant %></h3>
+      <h3 class="flex-auto truncate font-semibold leading-6 text-gray-900"><%= message.run.assistant.assistable.name %></h3>
+      <div class="flex-none text-sm text-gray-500"><%= message.run.prompt_token_usage || "?" %> prompt & <%= message.run.completion_token_usage || "?" %> completion tokens</div>
+      <div class="flex-none text-sm text-gray-500"></div>
     <% end %>
     <div class="flex-none text-sm text-gray-500"><%= time_ago_in_words(message.created_at) %> ago</div>
   </div>

@@ -5,15 +5,15 @@ http_interactions:
     uri: https://api.openai.com/v1/assistants
     body:
       encoding: UTF-8
-      string: '{"name":"Assistant for Storyteller ","model":"gpt-3.5-turbo","description":"Assistant
-        for Storyteller ","instructions":"Assistant for Storyteller "}'
+      string: '{"name":"intermediate","model":"gpt-4-turbo","description":"intermediate","instructions":"matrix
+        enterprise interfaces"}'
     headers:
       Content-Type:
       - application/json
       Authorization:
-      - Bearer <OPENAI_ACCESS_TOKEN>
+      - Bearer sk-AizTVjdUvJmbL4FQrAp3qgRN4RpNudGNatFErFJ2
       Openai-Organization:
-      - "<OPENAI_ORGANIZATION_ID>"
+      - org-Rf437IxKhhQPMiIQ0Es8OwrH
       Openai-Beta:
       - assistants=v2
       Accept-Encoding:
@@ -28,7 +28,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Thu, 30 May 2024 15:24:04 GMT
+      - Mon, 03 Jun 2024 15:15:12 GMT
       Content-Type:
       - application/json
       Transfer-Encoding:
@@ -40,36 +40,36 @@ http_interactions:
       Openai-Organization:
       - user-jxm65ijkzc1qrfhc0ij8moic
       X-Request-Id:
-      - req_b5178d024dfe1c9f32a76021ead07e2f
+      - req_93b78d2cfdbaf3560f0f34596a5924ea
       Openai-Processing-Ms:
-      - '55'
+      - '60'
       Strict-Transport-Security:
       - max-age=15724800; includeSubDomains
       Cf-Cache-Status:
       - DYNAMIC
       Set-Cookie:
-      - __cf_bm=yKEsdw_q7nNhKvn4cer3p9KI2sU2HjrVXvuxho8KzKg-1717082644-1.0.1.1-7QnL1lq.jyVU2ClI2TOEWUEte3nXxxPwVXtorgFXzX9Hu6dEjoneq1AEyBAWWISH1dH7Ifdmub5tgIANFZCdUg;
-        path=/; expires=Thu, 30-May-24 15:54:04 GMT; domain=.api.openai.com; HttpOnly;
+      - __cf_bm=j8bjA_yNWWFcHA3rjMsB4Q9ydph99E.qsdw0JE0iOF8-1717427712-1.0.1.1-j3YKRoCr1oalAUqj.YJBzhVHllejKpBSYzuAkh4hE7VhgSH3wlVSIxbgilhQ.pSlE6JcZdMFl9At37KUyJA_dA;
+        path=/; expires=Mon, 03-Jun-24 15:45:12 GMT; domain=.api.openai.com; HttpOnly;
         Secure; SameSite=None
-      - _cfuvid=_U2onlmWEgm.5iB9EbmDHsZoI7okdLU4q21v7TRIDIs-1717082644859-0.0.1.1-604800000;
+      - _cfuvid=3m58xmlzUQYI.ek_APGoaZU1TMIPhMwn3wTaNkADo_A-1717427712655-0.0.1.1-604800000;
         path=/; domain=.api.openai.com; HttpOnly; Secure; SameSite=None
       Server:
       - cloudflare
       Cf-Ray:
-      - 88bfbaa13f1e60ef-LHR
+      - 88e0a322d80388b3-LHR
       Alt-Svc:
       - h3=":443"; ma=86400
     body:
       encoding: ASCII-8BIT
       string: |-
         {
-          "id": "asst_mHAeRX3sskDn0uXz77oG4HMf",
+          "id": "asst_GYswdP0SGHSON8vgajzdxObu",
           "object": "assistant",
-          "created_at": 1717082644,
-          "name": "Assistant for Storyteller ",
-          "description": "Assistant for Storyteller ",
-          "model": "gpt-3.5-turbo",
-          "instructions": "Assistant for Storyteller ",
+          "created_at": 1717427712,
+          "name": "intermediate",
+          "description": "intermediate",
+          "model": "gpt-4-turbo",
+          "instructions": "matrix enterprise interfaces",
           "tools": [],
           "top_p": 1.0,
           "temperature": 1.0,
@@ -77,5 +77,5 @@ http_interactions:
           "metadata": {},
           "response_format": "auto"
         }
-  recorded_at: Thu, 30 May 2024 15:24:04 GMT
+  recorded_at: Mon, 03 Jun 2024 15:15:12 GMT
 recorded_with: VCR 6.2.0

@@ -1,7 +1,6 @@
 class User < ApplicationRecord
   include AI::Engine::Chattable
-
-  SYSTEM_USER_EMAIL = "ai@landingburn.com"
+  include ActionView::RecordIdentifier
 
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable, :trackable
@@ -10,8 +9,17 @@ class User < ApplicationRecord
 
   has_many :storytellers, dependent: :destroy
 
-  def human?
-    email != SYSTEM_USER_EMAIL
+  def on_ai_response(message:)
+    broadcast_ai_response(message:)
+  end
+
+  def broadcast_ai_response(message:)
+    broadcast_append_to(
+      "#{dom_id(message.chat)}_messages",
+      partial: "messages/message",
+      locals: {message: message, scroll_to: true},
+      target: "#{dom_id(message.chat)}_messages"
+    )
   end
 
   def self.from_omniauth(auth)
@@ -23,13 +31,5 @@ class User < ApplicationRecord
       user.full_name = auth.info.name # assuming the user model has a name
       user.avatar_url = auth.info.image # assuming the user model has an image
     end
-  end
-
-  def self.system
-    find_by_email(SYSTEM_USER_EMAIL) || create(
-      email: SYSTEM_USER_EMAIL,
-      password: Devise.friendly_token[0, 20],
-      full_name: "LandingBurn AI"
-    )
   end
 end
