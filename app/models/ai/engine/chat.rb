@@ -14,6 +14,10 @@ module AI::Engine
       runs.create(ai_engine_assistant_id: assistant_id)
     end
 
+    def to_partial_path
+      "chats/chat"
+    end
+
     private
 
     def create_openai_thread

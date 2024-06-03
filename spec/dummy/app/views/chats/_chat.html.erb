@@ -1,6 +1,10 @@
 <div id="<%= dom_id chat %>">
   <p class="my-5">
-    <%= link_to chat.assistable %>
+    <%= "Created #{chat.created_at.to_formatted_s(:short)}" %>
+    <% if (storyteller = chat.runs.last&.assistant&.storyteller) %>
+      <%= "with " %>
+      <%= link_to storyteller.name, storyteller %>
+    <% end %>
   </p>
 
   <% if action_name != "show" %>

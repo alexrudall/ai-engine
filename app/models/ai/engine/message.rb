@@ -7,6 +7,10 @@ module AI::Engine
 
     before_create :create_openai_message, unless: -> { assistant? } # Assistant messages on the OpenAI side are created by a Run.
 
+    def to_partial_path
+      "messages/message"
+    end
+
     private
 
     def create_openai_message

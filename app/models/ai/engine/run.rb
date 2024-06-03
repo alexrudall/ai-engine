@@ -6,6 +6,10 @@ module AI::Engine
 
     before_create :create_openai_run
 
+    def to_partial_path
+      "runs/run"
+    end
+
     private
 
     def create_openai_run
