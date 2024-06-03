@@ -1,9 +1,9 @@
 module ApplicationHelper
   def default_meta_tags
     {
-      site: "landingburn.com",
-      title: "LandingBurn.ai",
-      description: "The Rails AI Template",
+      site: "insertrobot.com",
+      title: "StoryTeller",
+      description: "AI::Engine Example",
       keywords: "ruby, rails, ai",
       separator: "&mdash;".html_safe
     }
