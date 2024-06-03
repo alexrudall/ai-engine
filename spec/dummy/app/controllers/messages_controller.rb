@@ -4,18 +4,21 @@ class MessagesController < ApplicationController
   before_action :authenticate_user!
 
   def create
-    @message = Message.create(message_params.merge(chat_id: params[:chat_id], user_id: current_user.id, role: "user"))
-
-    CreateMessageAndRun.perform_async(@message.id)
+    CreateMessageAndRun.perform_async(
+      "chat_id" => params["chat_id"],
+      "storyteller_id" => message_params[:storyteller_id],
+      "content" => message_params[:content],
+      "user_id" => current_user.id
+    )
 
     respond_to do |format|
-      format.turbo_stream
+      # format.turbo_stream
     end
   end
 
   private
 
   def message_params
-    params.require(:message).permit(:content)
+    params.require(:message).permit(:storyteller_id, :content)
   end
 end

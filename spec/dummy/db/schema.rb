@@ -63,9 +63,9 @@ ActiveRecord::Schema[7.1].define(version: 2024_05_30_135629) do
   end
 
   create_table "ai_engine_messages", force: :cascade do |t|
-    t.string "remote_id", null: false
-    t.bigint "ai_engine_run_id", null: false
-    t.bigint "ai_engine_chat_id", null: false
+    t.string "remote_id"
+    t.bigint "ai_engine_run_id"
+    t.bigint "ai_engine_chat_id"
     t.integer "role", default: 0, null: false
     t.string "content", null: false
     t.datetime "created_at", null: false
