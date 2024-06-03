@@ -7,6 +7,7 @@ module AI
         has_one :assistant, as: :assistable, class_name: "AI::Engine::Assistant"
 
         before_create :create_openai_assistant
+        before_update :update_openai_assistant
 
         # Default. Override in including model to customize.
         def ai_assistant
@@ -28,6 +29,13 @@ module AI
             errors.add(:base, e.message)
             throw(:abort)
           end
+        end
+
+        def update_openai_assistant
+          AI::Engine::OpenAI::Assistants::Update.call(remote_id: assistant.remote_id, **ai_assistant)
+        rescue Faraday::Error => e
+          errors.add(:base, e.message)
+          throw(:abort)
         end
       end
     end
