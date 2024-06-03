@@ -35,7 +35,16 @@ module AI::Engine
           response_message.update(content: response_message.content + new_content) if new_content
         elsif chunk["status"] == "completed"
           response_message.update(remote_id: chunk["id"])
-          update(remote_id: chunk["run_id"])
+          assign_attributes(remote_id: chunk["run_id"])
+
+          remote_run = AI::Engine::OpenAI::Runs::Retrieve.call(remote_id: chunk["run_id"], thread_id: chat.remote_id)
+          if remote_run.present?
+            assign_attributes(
+              prompt_token_usage: remote_run&.dig("usage", "prompt_tokens"),
+              completion_token_usage: remote_run.dig("usage", "completion_tokens")
+            )
+          end
+          save
         end
       end
     end

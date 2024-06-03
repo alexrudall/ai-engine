@@ -9,7 +9,7 @@
         <ul role="list" class="overflow-y-auto max-h-[48vh] flex flex-col-reverse">
           <%= turbo_stream_from "#{dom_id(@chat)}_messages" %>
           <div id="<%= dom_id(@chat) %>_messages">
-            <%= render @chat.messages %>
+            <%= render @chat.messages.order(:created_at) %>
           </div>
         </ul>
 
