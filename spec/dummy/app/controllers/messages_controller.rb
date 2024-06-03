@@ -11,8 +11,10 @@ class MessagesController < ApplicationController
       "user_id" => current_user.id
     )
 
+    @chat = AI::Engine::Chat.find(params["chat_id"])
+
     respond_to do |format|
-      # format.turbo_stream
+      format.turbo_stream
     end
   end
 
