@@ -1,14 +1,14 @@
 require_relative "lib/ai/engine/version"
 
 Gem::Specification.new do |spec|
-  spec.name        = "ai-engine"
-  spec.version     = AI::Engine::VERSION
-  spec.authors     = ["Alex Rudall"]
-  spec.email       = ["hello@alexrudall.com"]
-  spec.homepage    = "https://rubyaiengine.com"
-  spec.summary     = "AI Engine is the fastest way to get AI into your Rails app."
+  spec.name = "ai-engine"
+  spec.version = AI::Engine::VERSION
+  spec.authors = ["Alex Rudall"]
+  spec.email = ["hello@alexrudall.com"]
+  spec.homepage = "https://rubyaiengine.com"
+  spec.summary = "AI Engine is the fastest way to get AI into your Rails app."
   spec.description = "A Rails Engine from the creator of the ruby-openai, anthropic and midjourney gems."
-  spec.license     = "COMMERCIAL-LICENCE.txt"
+  spec.license = "COMMERCIAL-LICENCE.txt"
 
   # Prevent pushing this gem to RubyGems.org. To allow pushes either set the "allowed_push_host"
   # to allow pushing to a single host or delete this section to allow pushing to any host.

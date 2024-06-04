@@ -1,7 +1,7 @@
 module AI
   module Engine
-    def self.setup(&block)
-      Engine.setup(&block)
+    def self.setup(&)
+      Engine.setup(&)
     end
 
     class Engine < ::Rails::Engine
@@ -31,7 +31,7 @@ module AI
       end
 
       def self.config
-        @config || self.setup
+        @config || setup
       end
     end
   end
