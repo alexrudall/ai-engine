@@ -1,5 +1,7 @@
 module AI::Engine
   class Assistant < ApplicationRecord
+    include RemoteIdValidatable
+
     belongs_to :assistable, polymorphic: true
     has_many :runs, class_name: "AI::Engine::Run", foreign_key: "ai_engine_assistant_id", dependent: :nullify
 

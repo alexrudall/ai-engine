@@ -61,6 +61,6 @@ class StorytellersController < ApplicationController
 
   # Only allow a list of trusted parameters through.
   def storyteller_params
-    params.require(:storyteller).permit(:name, :model, :instructions)
+    params.require(:storyteller).permit(:name, :model, :description, :instructions, :max_prompt_tokens, :max_completion_tokens)
   end
 end

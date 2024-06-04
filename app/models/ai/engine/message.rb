@@ -1,5 +1,7 @@
 module AI::Engine
   class Message < ApplicationRecord
+    include RemoteIdValidatable
+
     belongs_to :assistant_thread, class_name: "AI::Engine::AssistantThread", foreign_key: "ai_engine_assistant_thread_id"
     belongs_to :run, class_name: "AI::Engine::Run", foreign_key: "ai_engine_run_id", optional: true
 

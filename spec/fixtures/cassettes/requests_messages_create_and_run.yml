@@ -2,153 +2,6 @@
 http_interactions:
 - request:
     method: post
-    uri: https://api.openai.com/v1/threads
-    body:
-      encoding: UTF-8
-      string: "{}"
-    headers:
-      Content-Type:
-      - application/json
-      Authorization:
-      - Bearer sk-AizTVjdUvJmbL4FQrAp3qgRN4RpNudGNatFErFJ2
-      Openai-Organization:
-      - org-Rf437IxKhhQPMiIQ0Es8OwrH
-      Openai-Beta:
-      - assistants=v2
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      Accept:
-      - "*/*"
-      User-Agent:
-      - Ruby
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      Date:
-      - Tue, 04 Jun 2024 09:55:30 GMT
-      Content-Type:
-      - application/json
-      Transfer-Encoding:
-      - chunked
-      Connection:
-      - keep-alive
-      Openai-Version:
-      - '2020-10-01'
-      Openai-Organization:
-      - user-jxm65ijkzc1qrfhc0ij8moic
-      X-Request-Id:
-      - req_a0de3e3b0ba31f359c76b11a934abe63
-      Openai-Processing-Ms:
-      - '21'
-      Strict-Transport-Security:
-      - max-age=15724800; includeSubDomains
-      Cf-Cache-Status:
-      - DYNAMIC
-      Set-Cookie:
-      - __cf_bm=oB4ComEeQFnsjcTAOk9x37cX8C0j4qN4Cv9hBwQ18dc-1717494930-1.0.1.1-U2rATf3Jzsz0ksRcqA4ep5bytKM2YAhqJOEPLAwo_g7h8VModQGZ7GyAx4LH4MH1H1cwSuzVo_dNGKKgEW2ong;
-        path=/; expires=Tue, 04-Jun-24 10:25:30 GMT; domain=.api.openai.com; HttpOnly;
-        Secure; SameSite=None
-      - _cfuvid=YYf8F9WJOWATADB5rMfA4a3W7uRd.eevE23ZAlx.AfU-1717494930165-0.0.1.1-604800000;
-        path=/; domain=.api.openai.com; HttpOnly; Secure; SameSite=None
-      Server:
-      - cloudflare
-      Cf-Ray:
-      - 88e70c308c1563de-LHR
-      Alt-Svc:
-      - h3=":443"; ma=86400
-    body:
-      encoding: ASCII-8BIT
-      string: |-
-        {
-          "id": "thread_hqnKpHMRkdgmhVFshP6ga931",
-          "object": "thread",
-          "created_at": 1717494930,
-          "metadata": {},
-          "tool_resources": {}
-        }
-  recorded_at: Tue, 04 Jun 2024 09:55:30 GMT
-- request:
-    method: post
-    uri: https://api.openai.com/v1/assistants
-    body:
-      encoding: UTF-8
-      string: '{"name":"24 hour","model":"gpt-3.5-turbo","description":"24 hour","instructions":"empower
-        one-to-one niches"}'
-    headers:
-      Content-Type:
-      - application/json
-      Authorization:
-      - Bearer sk-AizTVjdUvJmbL4FQrAp3qgRN4RpNudGNatFErFJ2
-      Openai-Organization:
-      - org-Rf437IxKhhQPMiIQ0Es8OwrH
-      Openai-Beta:
-      - assistants=v2
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      Accept:
-      - "*/*"
-      User-Agent:
-      - Ruby
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      Date:
-      - Tue, 04 Jun 2024 09:55:30 GMT
-      Content-Type:
-      - application/json
-      Transfer-Encoding:
-      - chunked
-      Connection:
-      - keep-alive
-      Openai-Version:
-      - '2020-10-01'
-      Openai-Organization:
-      - user-jxm65ijkzc1qrfhc0ij8moic
-      X-Request-Id:
-      - req_5781acdcc935f19ab14ed5c2783fd625
-      Openai-Processing-Ms:
-      - '114'
-      Strict-Transport-Security:
-      - max-age=15724800; includeSubDomains
-      Cf-Cache-Status:
-      - DYNAMIC
-      Set-Cookie:
-      - __cf_bm=BIvv1kPJs_.BeqiqVYFrBcVKk4taD0tBEqzUlAH2HPk-1717494930-1.0.1.1-kFV0YX4gnMBLGHtU6roR67HnqpWuB4TonnUAxVOTIRDEljsa_xELlloYB9_vkg21MwoL3oP7Aff0Yp3ACecTuw;
-        path=/; expires=Tue, 04-Jun-24 10:25:30 GMT; domain=.api.openai.com; HttpOnly;
-        Secure; SameSite=None
-      - _cfuvid=nuOOs_3XvBBym0Xw988XXJB2r4YEe2EjykBdpHmysM0-1717494930495-0.0.1.1-604800000;
-        path=/; domain=.api.openai.com; HttpOnly; Secure; SameSite=None
-      Server:
-      - cloudflare
-      Cf-Ray:
-      - 88e70c32187979b0-LHR
-      Alt-Svc:
-      - h3=":443"; ma=86400
-    body:
-      encoding: ASCII-8BIT
-      string: |-
-        {
-          "id": "asst_hNhxxo9fqDU2298C25c4KBob",
-          "object": "assistant",
-          "created_at": 1717494930,
-          "name": "24 hour",
-          "description": "24 hour",
-          "model": "gpt-3.5-turbo",
-          "instructions": "empower one-to-one niches",
-          "tools": [],
-          "top_p": 1.0,
-          "temperature": 1.0,
-          "tool_resources": {},
-          "metadata": {},
-          "response_format": "auto"
-        }
-  recorded_at: Tue, 04 Jun 2024 09:55:30 GMT
-- request:
-    method: post
     uri: https://api.openai.com/v1/threads/thread_hqnKpHMRkdgmhVFshP6ga931/messages
     body:
       encoding: UTF-8
@@ -607,4 +460,453 @@ http_interactions:
       encoding: UTF-8
       string: ''
   recorded_at: Tue, 04 Jun 2024 09:55:33 GMT
+- request:
+    method: post
+    uri: https://api.openai.com/v1/threads
+    body:
+      encoding: UTF-8
+      string: "{}"
+    headers:
+      Content-Type:
+      - application/json
+      Authorization:
+      - Bearer sk-AizTVjdUvJmbL4FQrAp3qgRN4RpNudGNatFErFJ2
+      Openai-Organization:
+      - org-Rf437IxKhhQPMiIQ0Es8OwrH
+      Openai-Beta:
+      - assistants=v2
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 04 Jun 2024 15:49:12 GMT
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Openai-Version:
+      - '2020-10-01'
+      Openai-Organization:
+      - user-jxm65ijkzc1qrfhc0ij8moic
+      X-Request-Id:
+      - req_dc5addba302829ff834fe59e27cf1eb5
+      Openai-Processing-Ms:
+      - '26'
+      Strict-Transport-Security:
+      - max-age=15724800; includeSubDomains
+      Cf-Cache-Status:
+      - DYNAMIC
+      Set-Cookie:
+      - __cf_bm=VVOMvfdBBcnHiUjvA05OyHzFON6FIsaSxEH65szzK20-1717516152-1.0.1.1-jrGgv_kKhYZ72zR_0iQZ.h6o99GEP7zdtnNzBSvSfeTfE7BQ4Ls4Bwj7IOlq9ERKHRtUAmMrlEJACkDJFkutyg;
+        path=/; expires=Tue, 04-Jun-24 16:19:12 GMT; domain=.api.openai.com; HttpOnly;
+        Secure; SameSite=None
+      - _cfuvid=7a6CBE8kY91w3XzZk9N.dfIzb2vrhXEAFA1hNawYEiM-1717516152213-0.0.1.1-604800000;
+        path=/; domain=.api.openai.com; HttpOnly; Secure; SameSite=None
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 88e9124e5e436535-LHR
+      Alt-Svc:
+      - h3=":443"; ma=86400
+    body:
+      encoding: ASCII-8BIT
+      string: |-
+        {
+          "id": "thread_1zvslmtUe4sEhnpWCzItRY8O",
+          "object": "thread",
+          "created_at": 1717516152,
+          "metadata": {},
+          "tool_resources": {}
+        }
+  recorded_at: Tue, 04 Jun 2024 15:49:12 GMT
+- request:
+    method: post
+    uri: https://api.openai.com/v1/assistants
+    body:
+      encoding: UTF-8
+      string: '{"name":"help-desk","model":"gpt-4-turbo","description":"help-desk","instructions":"matrix
+        plug-and-play networks"}'
+    headers:
+      Content-Type:
+      - application/json
+      Authorization:
+      - Bearer sk-AizTVjdUvJmbL4FQrAp3qgRN4RpNudGNatFErFJ2
+      Openai-Organization:
+      - org-Rf437IxKhhQPMiIQ0Es8OwrH
+      Openai-Beta:
+      - assistants=v2
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 04 Jun 2024 15:49:12 GMT
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Openai-Version:
+      - '2020-10-01'
+      Openai-Organization:
+      - user-jxm65ijkzc1qrfhc0ij8moic
+      X-Request-Id:
+      - req_d7572002f1b5e826d7136b66157b86c4
+      Openai-Processing-Ms:
+      - '97'
+      Strict-Transport-Security:
+      - max-age=15724800; includeSubDomains
+      Cf-Cache-Status:
+      - DYNAMIC
+      Set-Cookie:
+      - __cf_bm=dM04dgYAPgIwow2QbHzqfiTCBYGsnl2q0qg3oZknIJQ-1717516152-1.0.1.1-4IMmHV8ngkQAQ9N5eZ5Yd4I4I6dzlOR.eIcZm_LhH86JThfIbOXn1KMEqS85XPpjZxTVdM1elWvhGUP95dchcQ;
+        path=/; expires=Tue, 04-Jun-24 16:19:12 GMT; domain=.api.openai.com; HttpOnly;
+        Secure; SameSite=None
+      - _cfuvid=IZI1zeKa66zi_.0c_YAypWsERVUKYtKVEGarDtGduQ8-1717516152495-0.0.1.1-604800000;
+        path=/; domain=.api.openai.com; HttpOnly; Secure; SameSite=None
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 88e9124fb873768f-LHR
+      Alt-Svc:
+      - h3=":443"; ma=86400
+    body:
+      encoding: ASCII-8BIT
+      string: |-
+        {
+          "id": "asst_aqB2vA2cMmimPAPMRalsiAS7",
+          "object": "assistant",
+          "created_at": 1717516152,
+          "name": "help-desk",
+          "description": "help-desk",
+          "model": "gpt-4-turbo",
+          "instructions": "matrix plug-and-play networks",
+          "tools": [],
+          "top_p": 1.0,
+          "temperature": 1.0,
+          "tool_resources": {},
+          "metadata": {},
+          "response_format": "auto"
+        }
+  recorded_at: Tue, 04 Jun 2024 15:49:12 GMT
+- request:
+    method: post
+    uri: https://api.openai.com/v1/threads/thread_1zvslmtUe4sEhnpWCzItRY8O/messages
+    body:
+      encoding: UTF-8
+      string: '{"content":"Hi there","role":"user"}'
+    headers:
+      Content-Type:
+      - application/json
+      Authorization:
+      - Bearer sk-AizTVjdUvJmbL4FQrAp3qgRN4RpNudGNatFErFJ2
+      Openai-Organization:
+      - org-Rf437IxKhhQPMiIQ0Es8OwrH
+      Openai-Beta:
+      - assistants=v2
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 04 Jun 2024 15:49:12 GMT
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Openai-Version:
+      - '2020-10-01'
+      Openai-Organization:
+      - user-jxm65ijkzc1qrfhc0ij8moic
+      X-Request-Id:
+      - req_a1e6987493646fcd5d3de522234ac851
+      Openai-Processing-Ms:
+      - '53'
+      Strict-Transport-Security:
+      - max-age=15724800; includeSubDomains
+      Cf-Cache-Status:
+      - DYNAMIC
+      Set-Cookie:
+      - __cf_bm=EMsMDBi_YzjXdNPU2Qnd._YhlpEgzOaXjCh9TLmvvGU-1717516152-1.0.1.1-5vioKJ6fLSznBz5RqJqTY_LTEWnquE3Qqsf8uwtdQc4CoGrmVf23rqdFMpC9GL35h7rDf4UvPJUDIHu688kYAQ;
+        path=/; expires=Tue, 04-Jun-24 16:19:12 GMT; domain=.api.openai.com; HttpOnly;
+        Secure; SameSite=None
+      - _cfuvid=jx2ln.N9B0g3LLilx8qjs84utmIr0eyQDz34KgccFJs-1717516152833-0.0.1.1-604800000;
+        path=/; domain=.api.openai.com; HttpOnly; Secure; SameSite=None
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 88e912521ec793d7-LHR
+      Alt-Svc:
+      - h3=":443"; ma=86400
+    body:
+      encoding: ASCII-8BIT
+      string: |-
+        {
+          "id": "msg_zMpsQ06Yw2Cb9h2LuMGtY8sI",
+          "object": "thread.message",
+          "created_at": 1717516152,
+          "assistant_id": null,
+          "thread_id": "thread_1zvslmtUe4sEhnpWCzItRY8O",
+          "run_id": null,
+          "role": "user",
+          "content": [
+            {
+              "type": "text",
+              "text": {
+                "value": "Hi there",
+                "annotations": []
+              }
+            }
+          ],
+          "attachments": [],
+          "metadata": {}
+        }
+  recorded_at: Tue, 04 Jun 2024 15:49:12 GMT
+- request:
+    method: post
+    uri: https://api.openai.com/v1/threads/thread_1zvslmtUe4sEhnpWCzItRY8O/runs
+    body:
+      encoding: UTF-8
+      string: '{"assistant_id":"asst_aqB2vA2cMmimPAPMRalsiAS7","stream":true}'
+    headers:
+      Content-Type:
+      - application/json
+      Authorization:
+      - Bearer sk-AizTVjdUvJmbL4FQrAp3qgRN4RpNudGNatFErFJ2
+      Openai-Organization:
+      - org-Rf437IxKhhQPMiIQ0Es8OwrH
+      Openai-Beta:
+      - assistants=v2
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 04 Jun 2024 15:49:13 GMT
+      Content-Type:
+      - text/event-stream; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Openai-Version:
+      - '2020-10-01'
+      Openai-Organization:
+      - user-jxm65ijkzc1qrfhc0ij8moic
+      X-Request-Id:
+      - req_825e59bc6a59ba8c42dab2155120e02e
+      Openai-Processing-Ms:
+      - '243'
+      Strict-Transport-Security:
+      - max-age=15724800; includeSubDomains
+      Cf-Cache-Status:
+      - DYNAMIC
+      Set-Cookie:
+      - __cf_bm=bGRj_d51.P7j9FGv6FJPgaINgaQuevP8F0x46KOTl5c-1717516153-1.0.1.1-Z3ezIJf1qaFMZmtTqU4LW7SQfBEsquROnCEUsal54lOa8gpTWl0TwN8Vx7CVYv03WTVfFpNnTRiWp6t.69EYCg;
+        path=/; expires=Tue, 04-Jun-24 16:19:13 GMT; domain=.api.openai.com; HttpOnly;
+        Secure; SameSite=None
+      - _cfuvid=M3x4AksH2BNnkHXHh5KEx3oLCQ6oN_40PLTY8QATeKA-1717516153335-0.0.1.1-604800000;
+        path=/; domain=.api.openai.com; HttpOnly; Secure; SameSite=None
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 88e91253f89c88c2-LHR
+      Alt-Svc:
+      - h3=":443"; ma=86400
+    body:
+      encoding: UTF-8
+      string: |+
+        event: thread.run.created
+        data: {"id":"run_SsEvvwNOhMzofT8H2a5R7UXn","object":"thread.run","created_at":1717516153,"assistant_id":"asst_aqB2vA2cMmimPAPMRalsiAS7","thread_id":"thread_1zvslmtUe4sEhnpWCzItRY8O","status":"queued","started_at":null,"expires_at":1717516753,"cancelled_at":null,"failed_at":null,"completed_at":null,"required_action":null,"last_error":null,"model":"gpt-4-turbo","instructions":"matrix plug-and-play networks","tools":[],"tool_resources":{"code_interpreter":{"file_ids":[]}},"metadata":{},"temperature":1.0,"top_p":1.0,"max_completion_tokens":null,"max_prompt_tokens":null,"truncation_strategy":{"type":"auto","last_messages":null},"incomplete_details":null,"usage":null,"response_format":"auto","tool_choice":"auto"}
+
+        event: thread.run.queued
+        data: {"id":"run_SsEvvwNOhMzofT8H2a5R7UXn","object":"thread.run","created_at":1717516153,"assistant_id":"asst_aqB2vA2cMmimPAPMRalsiAS7","thread_id":"thread_1zvslmtUe4sEhnpWCzItRY8O","status":"queued","started_at":null,"expires_at":1717516753,"cancelled_at":null,"failed_at":null,"completed_at":null,"required_action":null,"last_error":null,"model":"gpt-4-turbo","instructions":"matrix plug-and-play networks","tools":[],"tool_resources":{"code_interpreter":{"file_ids":[]}},"metadata":{},"temperature":1.0,"top_p":1.0,"max_completion_tokens":null,"max_prompt_tokens":null,"truncation_strategy":{"type":"auto","last_messages":null},"incomplete_details":null,"usage":null,"response_format":"auto","tool_choice":"auto"}
+
+        event: thread.run.in_progress
+        data: {"id":"run_SsEvvwNOhMzofT8H2a5R7UXn","object":"thread.run","created_at":1717516153,"assistant_id":"asst_aqB2vA2cMmimPAPMRalsiAS7","thread_id":"thread_1zvslmtUe4sEhnpWCzItRY8O","status":"in_progress","started_at":1717516153,"expires_at":1717516753,"cancelled_at":null,"failed_at":null,"completed_at":null,"required_action":null,"last_error":null,"model":"gpt-4-turbo","instructions":"matrix plug-and-play networks","tools":[],"tool_resources":{"code_interpreter":{"file_ids":[]}},"metadata":{},"temperature":1.0,"top_p":1.0,"max_completion_tokens":null,"max_prompt_tokens":null,"truncation_strategy":{"type":"auto","last_messages":null},"incomplete_details":null,"usage":null,"response_format":"auto","tool_choice":"auto"}
+
+        event: thread.run.step.created
+        data: {"id":"step_bJbRzT1VhpctqF3hgKZLs1QT","object":"thread.run.step","created_at":1717516154,"run_id":"run_SsEvvwNOhMzofT8H2a5R7UXn","assistant_id":"asst_aqB2vA2cMmimPAPMRalsiAS7","thread_id":"thread_1zvslmtUe4sEhnpWCzItRY8O","type":"message_creation","status":"in_progress","cancelled_at":null,"completed_at":null,"expires_at":1717516753,"failed_at":null,"last_error":null,"step_details":{"type":"message_creation","message_creation":{"message_id":"msg_Ts3v3nfh1cFENbQJjfpp40wn"}},"usage":null}
+
+        event: thread.run.step.in_progress
+        data: {"id":"step_bJbRzT1VhpctqF3hgKZLs1QT","object":"thread.run.step","created_at":1717516154,"run_id":"run_SsEvvwNOhMzofT8H2a5R7UXn","assistant_id":"asst_aqB2vA2cMmimPAPMRalsiAS7","thread_id":"thread_1zvslmtUe4sEhnpWCzItRY8O","type":"message_creation","status":"in_progress","cancelled_at":null,"completed_at":null,"expires_at":1717516753,"failed_at":null,"last_error":null,"step_details":{"type":"message_creation","message_creation":{"message_id":"msg_Ts3v3nfh1cFENbQJjfpp40wn"}},"usage":null}
+
+        event: thread.message.created
+        data: {"id":"msg_Ts3v3nfh1cFENbQJjfpp40wn","object":"thread.message","created_at":1717516154,"assistant_id":"asst_aqB2vA2cMmimPAPMRalsiAS7","thread_id":"thread_1zvslmtUe4sEhnpWCzItRY8O","run_id":"run_SsEvvwNOhMzofT8H2a5R7UXn","status":"in_progress","incomplete_details":null,"incomplete_at":null,"completed_at":null,"role":"assistant","content":[],"attachments":[],"metadata":{}}
+
+        event: thread.message.in_progress
+        data: {"id":"msg_Ts3v3nfh1cFENbQJjfpp40wn","object":"thread.message","created_at":1717516154,"assistant_id":"asst_aqB2vA2cMmimPAPMRalsiAS7","thread_id":"thread_1zvslmtUe4sEhnpWCzItRY8O","run_id":"run_SsEvvwNOhMzofT8H2a5R7UXn","status":"in_progress","incomplete_details":null,"incomplete_at":null,"completed_at":null,"role":"assistant","content":[],"attachments":[],"metadata":{}}
+
+        event: thread.message.delta
+        data: {"id":"msg_Ts3v3nfh1cFENbQJjfpp40wn","object":"thread.message.delta","delta":{"content":[{"index":0,"type":"text","text":{"value":"Hello","annotations":[]}}]}}
+
+        event: thread.message.delta
+        data: {"id":"msg_Ts3v3nfh1cFENbQJjfpp40wn","object":"thread.message.delta","delta":{"content":[{"index":0,"type":"text","text":{"value":"!"}}]}}
+
+        event: thread.message.delta
+        data: {"id":"msg_Ts3v3nfh1cFENbQJjfpp40wn","object":"thread.message.delta","delta":{"content":[{"index":0,"type":"text","text":{"value":" How"}}]}}
+
+        event: thread.message.delta
+        data: {"id":"msg_Ts3v3nfh1cFENbQJjfpp40wn","object":"thread.message.delta","delta":{"content":[{"index":0,"type":"text","text":{"value":" can"}}]}}
+
+        event: thread.message.delta
+        data: {"id":"msg_Ts3v3nfh1cFENbQJjfpp40wn","object":"thread.message.delta","delta":{"content":[{"index":0,"type":"text","text":{"value":" I"}}]}}
+
+        event: thread.message.delta
+        data: {"id":"msg_Ts3v3nfh1cFENbQJjfpp40wn","object":"thread.message.delta","delta":{"content":[{"index":0,"type":"text","text":{"value":" help"}}]}}
+
+        event: thread.message.delta
+        data: {"id":"msg_Ts3v3nfh1cFENbQJjfpp40wn","object":"thread.message.delta","delta":{"content":[{"index":0,"type":"text","text":{"value":" you"}}]}}
+
+        event: thread.message.delta
+        data: {"id":"msg_Ts3v3nfh1cFENbQJjfpp40wn","object":"thread.message.delta","delta":{"content":[{"index":0,"type":"text","text":{"value":" today"}}]}}
+
+        event: thread.message.delta
+        data: {"id":"msg_Ts3v3nfh1cFENbQJjfpp40wn","object":"thread.message.delta","delta":{"content":[{"index":0,"type":"text","text":{"value":"?"}}]}}
+
+        event: thread.message.completed
+        data: {"id":"msg_Ts3v3nfh1cFENbQJjfpp40wn","object":"thread.message","created_at":1717516154,"assistant_id":"asst_aqB2vA2cMmimPAPMRalsiAS7","thread_id":"thread_1zvslmtUe4sEhnpWCzItRY8O","run_id":"run_SsEvvwNOhMzofT8H2a5R7UXn","status":"completed","incomplete_details":null,"incomplete_at":null,"completed_at":1717516154,"role":"assistant","content":[{"type":"text","text":{"value":"Hello! How can I help you today?","annotations":[]}}],"attachments":[],"metadata":{}}
+
+        event: thread.run.step.completed
+        data: {"id":"step_bJbRzT1VhpctqF3hgKZLs1QT","object":"thread.run.step","created_at":1717516154,"run_id":"run_SsEvvwNOhMzofT8H2a5R7UXn","assistant_id":"asst_aqB2vA2cMmimPAPMRalsiAS7","thread_id":"thread_1zvslmtUe4sEhnpWCzItRY8O","type":"message_creation","status":"completed","cancelled_at":null,"completed_at":1717516154,"expires_at":1717516753,"failed_at":null,"last_error":null,"step_details":{"type":"message_creation","message_creation":{"message_id":"msg_Ts3v3nfh1cFENbQJjfpp40wn"}},"usage":{"prompt_tokens":32,"completion_tokens":11,"total_tokens":43}}
+
+        event: thread.run.completed
+        data: {"id":"run_SsEvvwNOhMzofT8H2a5R7UXn","object":"thread.run","created_at":1717516153,"assistant_id":"asst_aqB2vA2cMmimPAPMRalsiAS7","thread_id":"thread_1zvslmtUe4sEhnpWCzItRY8O","status":"completed","started_at":1717516153,"expires_at":null,"cancelled_at":null,"failed_at":null,"completed_at":1717516154,"required_action":null,"last_error":null,"model":"gpt-4-turbo","instructions":"matrix plug-and-play networks","tools":[],"tool_resources":{"code_interpreter":{"file_ids":[]}},"metadata":{},"temperature":1.0,"top_p":1.0,"max_completion_tokens":null,"max_prompt_tokens":null,"truncation_strategy":{"type":"auto","last_messages":null},"incomplete_details":null,"usage":{"prompt_tokens":32,"completion_tokens":11,"total_tokens":43},"response_format":"auto","tool_choice":"auto"}
+
+        event: done
+        data: [DONE]
+
+  recorded_at: Tue, 04 Jun 2024 15:49:14 GMT
+- request:
+    method: get
+    uri: https://api.openai.com/v1/threads/thread_1zvslmtUe4sEhnpWCzItRY8O/runs/run_SsEvvwNOhMzofT8H2a5R7UXn
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Content-Type:
+      - application/json
+      Authorization:
+      - Bearer sk-AizTVjdUvJmbL4FQrAp3qgRN4RpNudGNatFErFJ2
+      Openai-Organization:
+      - org-Rf437IxKhhQPMiIQ0Es8OwrH
+      Openai-Beta:
+      - assistants=v2
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 04 Jun 2024 15:49:15 GMT
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Openai-Version:
+      - '2020-10-01'
+      Openai-Organization:
+      - user-jxm65ijkzc1qrfhc0ij8moic
+      X-Request-Id:
+      - req_e25f91e4bbef983c22cea2613751ebf0
+      Openai-Processing-Ms:
+      - '43'
+      Strict-Transport-Security:
+      - max-age=15724800; includeSubDomains
+      Cf-Cache-Status:
+      - DYNAMIC
+      Set-Cookie:
+      - __cf_bm=INORv87TeIWvjtYQSu98EJ_a.ZKTu0k7ANc7JYcnUBc-1717516155-1.0.1.1-nw_FU_6cHAgE28dRRVE0Hf_aFdxTX_xstuZfQ3sc.GRIQKD1BCm.prKKkMf_SDvSkqBO6beBXjdzAXo0t3ShlA;
+        path=/; expires=Tue, 04-Jun-24 16:19:15 GMT; domain=.api.openai.com; HttpOnly;
+        Secure; SameSite=None
+      - _cfuvid=5eFiqPLaa4b2Sbhure9l8NCHrnlXG5UsAHr1xPnmmgE-1717516155025-0.0.1.1-604800000;
+        path=/; domain=.api.openai.com; HttpOnly; Secure; SameSite=None
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 88e9125f9fe8459c-LHR
+      Alt-Svc:
+      - h3=":443"; ma=86400
+    body:
+      encoding: ASCII-8BIT
+      string: |-
+        {
+          "id": "run_SsEvvwNOhMzofT8H2a5R7UXn",
+          "object": "thread.run",
+          "created_at": 1717516153,
+          "assistant_id": "asst_aqB2vA2cMmimPAPMRalsiAS7",
+          "thread_id": "thread_1zvslmtUe4sEhnpWCzItRY8O",
+          "status": "completed",
+          "started_at": 1717516153,
+          "expires_at": null,
+          "cancelled_at": null,
+          "failed_at": null,
+          "completed_at": 1717516154,
+          "required_action": null,
+          "last_error": null,
+          "model": "gpt-4-turbo",
+          "instructions": "matrix plug-and-play networks",
+          "tools": [],
+          "tool_resources": {},
+          "metadata": {},
+          "temperature": 1.0,
+          "top_p": 1.0,
+          "max_completion_tokens": null,
+          "max_prompt_tokens": null,
+          "truncation_strategy": {
+            "type": "auto",
+            "last_messages": null
+          },
+          "incomplete_details": null,
+          "usage": {
+            "prompt_tokens": 32,
+            "completion_tokens": 11,
+            "total_tokens": 43
+          },
+          "response_format": "auto",
+          "tool_choice": "auto"
+        }
+  recorded_at: Tue, 04 Jun 2024 15:49:15 GMT
 recorded_with: VCR 6.2.0

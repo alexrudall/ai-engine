@@ -6,6 +6,9 @@ class CreateStorytellers < ActiveRecord::Migration[7.1]
       t.string :name, null: false
       t.string :model, null: false
       t.string :instructions, null: false
+      t.text :description, null: false
+      t.integer :max_prompt_tokens, null: false
+      t.integer :max_completion_tokens, null: false
 
       t.timestamps
     end

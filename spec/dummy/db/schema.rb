@@ -91,6 +91,9 @@ ActiveRecord::Schema[7.1].define(version: 2024_05_30_135629) do
     t.string "name", null: false
     t.string "model", null: false
     t.string "instructions", null: false
+    t.text "description", null: false
+    t.integer "max_prompt_tokens", null: false
+    t.integer "max_completion_tokens", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["user_id"], name: "index_storytellers_on_user_id"
