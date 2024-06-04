@@ -1,8 +1,8 @@
 FactoryBot.define do
-  factory :message do
-    assistant_thread { create(:assistant_thread) }
-    role { 1 }
-    content { "Hi" }
+  factory :user do
+    avatar_url { Faker::Avatar.image }
+    email { Faker::Internet.email }
+    password { Faker::Internet.password }
   end
 
   factory :storyteller do
@@ -15,13 +15,17 @@ FactoryBot.define do
   end
 
   factory :assistant_thread, class: AI::Engine::AssistantThread do
-    remote_id { Faker::Internet.uuid }
+    remote_id { "#{AI::Engine::AssistantThread.remote_id_prefix}#{Faker::Alphanumeric.alphanumeric(number: 24)}" }
     threadable { create(:user) }
   end
 
-  factory :user do
-    avatar_url { Faker::Avatar.image }
-    email { Faker::Internet.email }
-    password { Faker::Internet.password }
+  factory :assistant, class: AI::Engine::Assistant do
+    remote_id { "#{AI::Engine::Assistant.remote_id_prefix}#{Faker::Alphanumeric.alphanumeric(number: 24)}" }
+  end
+
+  factory :message, class: AI::Engine::Message do
+    assistant_thread { create(:assistant_thread) }
+    role { 1 }
+    content { "Hi" }
   end
 end

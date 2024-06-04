@@ -3,7 +3,7 @@ require "rails_helper"
 RSpec.describe StorytellersController, type: :request do
   let(:current_user) { create(:user) }
   let(:valid_attributes) do
-    build(:storyteller).attributes.except("id", "created_at", "updated_at")
+    build(:storyteller).attributes.except("id", "created_at", "updated_at", "remote_id")
   end
   let(:storyteller) do
     VCR.use_cassette("requests_storytellers_create") do

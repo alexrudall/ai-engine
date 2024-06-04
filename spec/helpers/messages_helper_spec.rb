@@ -11,8 +11,8 @@ RSpec.describe MessagesHelper, type: :helper do
     let(:threads_service) { class_double(AI::Engine::OpenAI::Threads::Create).as_stubbed_const }
 
     before do
-      allow(assistants_service).to receive(:call).and_return(Faker::Alphanumeric.alphanumeric(number: 10))
-      allow(threads_service).to receive(:call).and_return(Faker::Alphanumeric.alphanumeric(number: 10))
+      allow(assistants_service).to receive(:call).and_return(build(:assistant).remote_id)
+      allow(threads_service).to receive(:call).and_return(build(:assistant_thread).remote_id)
       allow(controller).to receive(:current_user).and_return(current_user)
       storyteller1
       storyteller2

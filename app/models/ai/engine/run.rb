@@ -1,5 +1,7 @@
 module AI::Engine
   class Run < ApplicationRecord
+    include AI::Engine::RemoteIdValidatable
+
     belongs_to :assistant, class_name: "AI::Engine::Assistant", foreign_key: "ai_engine_assistant_id"
     belongs_to :assistant_thread, class_name: "AI::Engine::AssistantThread", foreign_key: "ai_engine_assistant_thread_id"
     has_many :messages, class_name: "AI::Engine::Message", foreign_key: "ai_engine_run_id", dependent: :nullify
@@ -46,7 +48,7 @@ module AI::Engine
             save
           end
 
-          if chunk["id"].present? && chunk["id"].start_with?("msg_") && !response_message.remote_id.present?
+          if chunk["id"].present? && chunk["id"].start_with?(AI::Engine::Message.remote_id_prefix) && !response_message.remote_id.present?
             response_message.update(remote_id: chunk["id"])
           end
         end

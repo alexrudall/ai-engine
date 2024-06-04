@@ -1,5 +1,7 @@
 module AI::Engine
   class AssistantThread < ApplicationRecord
+    include RemoteIdValidatable
+
     belongs_to :threadable, polymorphic: true
     has_many :runs, class_name: "AI::Engine::Run", foreign_key: "ai_engine_assistant_thread_id", dependent: :nullify
     has_many :messages, class_name: "AI::Engine::Message", foreign_key: "ai_engine_assistant_thread_id", dependent: :nullify

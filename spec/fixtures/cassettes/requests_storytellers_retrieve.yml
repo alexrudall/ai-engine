@@ -77,4 +77,81 @@ http_interactions:
           "response_format": "auto"
         }
   recorded_at: Tue, 04 Jun 2024 09:55:34 GMT
+- request:
+    method: get
+    uri: https://api.openai.com/v1/assistants/asst_2b2eO2KC8qFajiTzzNEg3lk3
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Content-Type:
+      - application/json
+      Authorization:
+      - Bearer sk-AizTVjdUvJmbL4FQrAp3qgRN4RpNudGNatFErFJ2
+      Openai-Organization:
+      - org-Rf437IxKhhQPMiIQ0Es8OwrH
+      Openai-Beta:
+      - assistants=v2
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 04 Jun 2024 15:49:16 GMT
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Openai-Version:
+      - '2020-10-01'
+      Openai-Organization:
+      - user-jxm65ijkzc1qrfhc0ij8moic
+      X-Request-Id:
+      - req_ea4d241e5f9e2df252aa4d2304481fb5
+      Openai-Processing-Ms:
+      - '66'
+      Strict-Transport-Security:
+      - max-age=15724800; includeSubDomains
+      Cf-Cache-Status:
+      - DYNAMIC
+      Set-Cookie:
+      - __cf_bm=YNfmk3pE9LFpibZzXPq0k5utkaCIDONenz_sNOaKzPc-1717516156-1.0.1.1-XOgg.XAaAmYYDP6VIvl0anVzdetHFM1ChKvXDgC89ckdHwBX213LUzPsLbCTx0vDQUcwG1W.CY3wa9qv0tWGQg;
+        path=/; expires=Tue, 04-Jun-24 16:19:16 GMT; domain=.api.openai.com; HttpOnly;
+        Secure; SameSite=None
+      - _cfuvid=_rPuGO1HwGUj9.XPP6w3qtLgk3S.heTkUF0Tm2Fc2YU-1717516156322-0.0.1.1-604800000;
+        path=/; domain=.api.openai.com; HttpOnly; Secure; SameSite=None
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 88e91267c9c6532d-LHR
+      Alt-Svc:
+      - h3=":443"; ma=86400
+    body:
+      encoding: ASCII-8BIT
+      string: |-
+        {
+          "id": "asst_2b2eO2KC8qFajiTzzNEg3lk3",
+          "object": "assistant",
+          "created_at": 1717516155,
+          "name": "knowledge user",
+          "description": "knowledge user",
+          "model": "gpt-4",
+          "instructions": "Design a big hat",
+          "tools": [],
+          "top_p": 1.0,
+          "temperature": 1.0,
+          "tool_resources": {},
+          "metadata": {},
+          "response_format": "auto"
+        }
+  recorded_at: Tue, 04 Jun 2024 15:49:16 GMT
 recorded_with: VCR 6.2.0
