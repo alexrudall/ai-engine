@@ -1,5 +1,9 @@
 module AI
   module Engine
+    def self.setup(&block)
+      Engine.setup(&block)
+    end
+
     class Engine < ::Rails::Engine
       isolate_namespace AI::Engine
 
