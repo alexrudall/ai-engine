@@ -1,6 +1,6 @@
 FactoryBot.define do
   factory :message do
-    chat { create(:chat) }
+    assistant_thread { create(:assistant_thread) }
     role { 1 }
     content { "Hi" }
   end
@@ -11,7 +11,7 @@ FactoryBot.define do
     instructions { Faker::Company.bs }
   end
 
-  factory :chat, class: AI::Engine::Chat do
+  factory :assistant_thread, class: AI::Engine::AssistantThread do
     remote_id { Faker::Internet.uuid }
     chattable { create(:user) }
   end

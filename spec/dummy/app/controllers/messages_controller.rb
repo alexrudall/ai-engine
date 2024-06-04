@@ -5,13 +5,13 @@ class MessagesController < ApplicationController
 
   def create
     CreateMessageAndRun.perform_async(
-      "chat_id" => params["chat_id"],
+      "assistant_thread_id" => params["assistant_thread_id"],
       "storyteller_id" => message_params[:storyteller_id],
       "content" => message_params[:content],
       "user_id" => current_user.id
     )
 
-    @chat = AI::Engine::Chat.find(params["chat_id"])
+    @assistant_thread = AI::Engine::AssistantThread.find(params["assistant_thread_id"])
     @selected_storyteller_id = message_params[:storyteller_id]
 
     respond_to do |format|

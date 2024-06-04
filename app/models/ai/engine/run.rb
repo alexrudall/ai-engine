@@ -1,8 +1,8 @@
 module AI::Engine
   class Run < ApplicationRecord
     belongs_to :assistant, class_name: "AI::Engine::Assistant", foreign_key: "ai_engine_assistant_id"
-    belongs_to :chat, class_name: "AI::Engine::Chat", foreign_key: "ai_engine_chat_id"
-    has_many :messages, class_name: "AI::Engine::Message", foreign_key: "ai_engine_chat_id", dependent: :nullify
+    belongs_to :assistant_thread, class_name: "AI::Engine::AssistantThread", foreign_key: "ai_engine_assistant_thread_id"
+    has_many :messages, class_name: "AI::Engine::Message", foreign_key: "ai_engine_run_id", dependent: :nullify
 
     after_create :create_openai_run
 
@@ -15,7 +15,7 @@ module AI::Engine
     def create_openai_run
       AI::Engine::OpenAI::Runs::Create.call(
         assistant_id: assistant.remote_id,
-        thread_id: chat.remote_id,
+        thread_id: assistant_thread.remote_id,
         stream: stream
       )
     rescue Faraday::Error => e
@@ -24,7 +24,7 @@ module AI::Engine
     end
 
     def stream
-      response_message = chat.messages.create(
+      response_message = assistant_thread.messages.create(
         ai_engine_run_id: id,
         role: "assistant",
         content: ""
@@ -34,7 +34,7 @@ module AI::Engine
           new_content = chunk.dig("delta", "content", 0, "text", "value")
           response_message.update(content: response_message.content + new_content) if new_content
         elsif chunk["status"] == "completed"
-          remote_run = AI::Engine::OpenAI::Runs::Retrieve.call(remote_id: chunk["run_id"], thread_id: chat.remote_id)
+          remote_run = AI::Engine::OpenAI::Runs::Retrieve.call(remote_id: chunk["run_id"], thread_id: assistant_thread.remote_id)
           if remote_run.present?
             assign_attributes(
               prompt_token_usage: remote_run&.dig("usage", "prompt_tokens"),

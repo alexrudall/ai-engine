@@ -2,7 +2,7 @@ require "sidekiq/web"
 
 Rails.application.routes.draw do
   resources :messages
-  resources :chats do
+  resources :assistant_threads do
     resources :messages, only: %i[create]
   end
   resources :storytellers

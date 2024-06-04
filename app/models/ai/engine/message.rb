@@ -1,6 +1,6 @@
 module AI::Engine
   class Message < ApplicationRecord
-    belongs_to :chat, class_name: "AI::Engine::Chat", foreign_key: "ai_engine_chat_id"
+    belongs_to :assistant_thread, class_name: "AI::Engine::AssistantThread", foreign_key: "ai_engine_assistant_thread_id"
     belongs_to :run, class_name: "AI::Engine::Run", foreign_key: "ai_engine_run_id", optional: true
 
     enum role: {system: 0, assistant: 10, user: 20}
@@ -14,11 +14,11 @@ module AI::Engine
     delegate :completion_token_usage, to: :run, allow_nil: true
 
     def on_create
-      chat.chattable.on_assistant_thread_message_create(message: self)
+      assistant_thread.chattable.on_assistant_thread_message_create(message: self)
     end
 
     def on_ai_response
-      chat.chattable.on_ai_response(message: self)
+      assistant_thread.chattable.on_ai_response(message: self)
     end
 
     def to_partial_path
@@ -28,7 +28,7 @@ module AI::Engine
     private
 
     def create_openai_message
-      self.remote_id = AI::Engine::OpenAI::Messages::Create.call(thread_id: chat.remote_id, content: content, role: role)
+      self.remote_id = AI::Engine::OpenAI::Messages::Create.call(thread_id: assistant_thread.remote_id, content: content, role: role)
     rescue Faraday::Error => e
       errors.add(:base, e.message)
       throw(:abort)

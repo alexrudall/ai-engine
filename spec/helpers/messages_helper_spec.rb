@@ -6,7 +6,7 @@ RSpec.describe MessagesHelper, type: :helper do
     let(:other_user) { create(:user) }
     let(:storyteller1) { create(:storyteller, user: current_user) }
     let(:storyteller2) { create(:storyteller, user: other_user) }
-    let(:chat) { create(:chat, chattable: current_user) }
+    let(:assistant_thread) { create(:assistant_thread, chattable: current_user) }
     let(:assistants_service) { class_double(AI::Engine::OpenAI::Assistants::Create).as_stubbed_const }
     let(:threads_service) { class_double(AI::Engine::OpenAI::Threads::Create).as_stubbed_const }
 
@@ -19,8 +19,8 @@ RSpec.describe MessagesHelper, type: :helper do
     end
 
     it "returns options for the current user's storytellers" do
-      expect(helper.message_storyteller_options(chat: chat)).to include(storyteller1.name)
-      expect(helper.message_storyteller_options(chat: chat)).not_to include(storyteller2.name)
+      expect(helper.message_storyteller_options(assistant_thread: assistant_thread)).to include(storyteller1.name)
+      expect(helper.message_storyteller_options(assistant_thread: assistant_thread)).not_to include(storyteller2.name)
     end
   end
 end
