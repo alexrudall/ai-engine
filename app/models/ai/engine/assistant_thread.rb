@@ -1,8 +1,8 @@
 module AI::Engine
-  class Chat < ApplicationRecord
-    belongs_to :chattable, polymorphic: true
-    has_many :runs, class_name: "AI::Engine::Run", foreign_key: "ai_engine_chat_id", dependent: :nullify
-    has_many :messages, class_name: "AI::Engine::Message", foreign_key: "ai_engine_chat_id", dependent: :nullify
+  class AssistantThread < ApplicationRecord
+    belongs_to :threadable, polymorphic: true
+    has_many :runs, class_name: "AI::Engine::Run", foreign_key: "ai_engine_assistant_thread_id", dependent: :nullify
+    has_many :messages, class_name: "AI::Engine::Message", foreign_key: "ai_engine_assistant_thread_id", dependent: :nullify
 
     before_create :create_openai_thread
 
@@ -15,7 +15,7 @@ module AI::Engine
     end
 
     def to_partial_path
-      "chats/chat"
+      "assistant_threads/assistant_thread"
     end
 
     private

@@ -5,8 +5,8 @@ http_interactions:
     uri: https://api.openai.com/v1/assistants
     body:
       encoding: UTF-8
-      string: '{"name":"intermediate","model":"gpt-4-turbo","description":"intermediate","instructions":"matrix
-        enterprise interfaces"}'
+      string: '{"name":"5th generation","model":"gpt-4o","description":"5th generation","instructions":"matrix
+        cross-platform functionalities"}'
     headers:
       Content-Type:
       - application/json
@@ -28,7 +28,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Mon, 03 Jun 2024 15:15:12 GMT
+      - Tue, 04 Jun 2024 09:55:33 GMT
       Content-Type:
       - application/json
       Transfer-Encoding:
@@ -40,36 +40,36 @@ http_interactions:
       Openai-Organization:
       - user-jxm65ijkzc1qrfhc0ij8moic
       X-Request-Id:
-      - req_93b78d2cfdbaf3560f0f34596a5924ea
+      - req_9a381dfbe739ec8066a5f70b5f32cf69
       Openai-Processing-Ms:
-      - '60'
+      - '59'
       Strict-Transport-Security:
       - max-age=15724800; includeSubDomains
       Cf-Cache-Status:
       - DYNAMIC
       Set-Cookie:
-      - __cf_bm=j8bjA_yNWWFcHA3rjMsB4Q9ydph99E.qsdw0JE0iOF8-1717427712-1.0.1.1-j3YKRoCr1oalAUqj.YJBzhVHllejKpBSYzuAkh4hE7VhgSH3wlVSIxbgilhQ.pSlE6JcZdMFl9At37KUyJA_dA;
-        path=/; expires=Mon, 03-Jun-24 15:45:12 GMT; domain=.api.openai.com; HttpOnly;
+      - __cf_bm=Wn.iRFAtdKrw59Y5OfgIWCm_yHyO6mNlxTu0maqKWfw-1717494933-1.0.1.1-HMbIuGSzip6j3fxHg5NocnEbpIKh6N7Dx6rQSzftsKAenD.ZRw9RlYmQ9JbmjpB3drUZE1PRcHsIbMrabXARjQ;
+        path=/; expires=Tue, 04-Jun-24 10:25:33 GMT; domain=.api.openai.com; HttpOnly;
         Secure; SameSite=None
-      - _cfuvid=3m58xmlzUQYI.ek_APGoaZU1TMIPhMwn3wTaNkADo_A-1717427712655-0.0.1.1-604800000;
+      - _cfuvid=h_fV9qusuhMup3AMLgqiZcu2HmJEOfDrVAKUgxNgW4c-1717494933719-0.0.1.1-604800000;
         path=/; domain=.api.openai.com; HttpOnly; Secure; SameSite=None
       Server:
       - cloudflare
       Cf-Ray:
-      - 88e0a322d80388b3-LHR
+      - 88e70c4698a09484-LHR
       Alt-Svc:
       - h3=":443"; ma=86400
     body:
       encoding: ASCII-8BIT
       string: |-
         {
-          "id": "asst_GYswdP0SGHSON8vgajzdxObu",
+          "id": "asst_MD4N2xsDlTAXefxjRxpBfbRl",
           "object": "assistant",
-          "created_at": 1717427712,
-          "name": "intermediate",
-          "description": "intermediate",
-          "model": "gpt-4-turbo",
-          "instructions": "matrix enterprise interfaces",
+          "created_at": 1717494933,
+          "name": "5th generation",
+          "description": "5th generation",
+          "model": "gpt-4o",
+          "instructions": "matrix cross-platform functionalities",
           "tools": [],
           "top_p": 1.0,
           "temperature": 1.0,
@@ -77,5 +77,5 @@ http_interactions:
           "metadata": {},
           "response_format": "auto"
         }
-  recorded_at: Mon, 03 Jun 2024 15:15:12 GMT
+  recorded_at: Tue, 04 Jun 2024 09:55:33 GMT
 recorded_with: VCR 6.2.0

@@ -1,5 +1,5 @@
 class User < ApplicationRecord
-  include AI::Engine::Chattable
+  include AI::Engine::Threadable
   include ActionView::RecordIdentifier
 
   # Include default devise modules. Others available are:
@@ -9,16 +9,20 @@ class User < ApplicationRecord
 
   has_many :storytellers, dependent: :destroy
 
-  def on_ai_response(message:)
+  def ai_engine_on_message_create(message:)
+    broadcast_ai_response(message:)
+  end
+
+  def ai_engine_on_message_update(message:)
     broadcast_ai_response(message:)
   end
 
   def broadcast_ai_response(message:)
     broadcast_append_to(
-      "#{dom_id(message.chat)}_messages",
+      "#{dom_id(message.assistant_thread)}_messages",
       partial: "messages/message",
       locals: {message: message, scroll_to: true},
-      target: "#{dom_id(message.chat)}_messages"
+      target: "#{dom_id(message.assistant_thread)}_messages"
     )
   end
 

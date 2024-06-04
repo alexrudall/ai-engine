@@ -10,7 +10,7 @@ module AI
         before_update :update_openai_assistant
 
         # Default. Override in including model to customize.
-        def ai_assistant
+        def ai_engine_assistant
           {
             name: "Assistant for #{self.class.name} #{id}",
             model: AI::Engine::Assistant::MODEL_OPTIONS.first,
@@ -19,12 +19,16 @@ module AI
           }
         end
 
+        def ai_engine_run(assistant_thread:, content:)
+          assistant_thread.run(assistant_id: assistant.id, content: content)
+        end
+
         private
 
         def create_openai_assistant
           build_assistant
           begin
-            assistant.remote_id = AI::Engine::OpenAI::Assistants::Create.call(**ai_assistant)
+            assistant.remote_id = AI::Engine::OpenAI::Assistants::Create.call(**ai_engine_assistant)
           rescue Faraday::Error => e
             errors.add(:base, e.message)
             throw(:abort)
@@ -32,7 +36,7 @@ module AI
         end
 
         def update_openai_assistant
-          AI::Engine::OpenAI::Assistants::Update.call(remote_id: assistant&.remote_id, **ai_assistant)
+          AI::Engine::OpenAI::Assistants::Update.call(remote_id: assistant&.remote_id, **ai_engine_assistant)
         rescue Faraday::Error => e
           errors.add(:base, e.message)
           throw(:abort)

@@ -3,7 +3,7 @@ class Storyteller < ApplicationRecord
 
   belongs_to :user
 
-  def ai_assistant
+  def ai_engine_assistant
     {
       name: name,
       model: model,

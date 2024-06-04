@@ -1,5 +1,9 @@
 module AI
   module Engine
+    def self.setup(&)
+      Engine.setup(&)
+    end
+
     class Engine < ::Rails::Engine
       isolate_namespace AI::Engine
 
@@ -27,7 +31,7 @@ module AI
       end
 
       def self.config
-        @config || self.setup
+        @config || setup
       end
     end
   end
