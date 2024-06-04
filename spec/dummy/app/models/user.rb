@@ -9,6 +9,10 @@ class User < ApplicationRecord
 
   has_many :storytellers, dependent: :destroy
 
+  def on_assistant_thread_message_create(message:)
+    broadcast_ai_response(message:)
+  end
+
   def on_ai_response(message:)
     broadcast_ai_response(message:)
   end
