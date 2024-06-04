@@ -8,17 +8,17 @@ module AI::Engine
     before_create :create_openai_message, unless: -> { assistant? } # Assistant messages on the OpenAI side are created by a Run.
 
     after_create_commit :on_create
-    after_update_commit :on_ai_response, if: -> { assistant? }
+    after_update_commit :on_update
 
     delegate :prompt_token_usage, to: :run, allow_nil: true
     delegate :completion_token_usage, to: :run, allow_nil: true
 
     def on_create
-      assistant_thread.chattable.on_assistant_thread_message_create(message: self)
+      assistant_thread.threadable.ai_engine_on_message_create(message: self)
     end
 
-    def on_ai_response
-      assistant_thread.chattable.on_ai_response(message: self)
+    def on_update
+      assistant_thread.threadable.ai_engine_on_message_update(message: self)
     end
 
     def to_partial_path

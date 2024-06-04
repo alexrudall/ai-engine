@@ -17,9 +17,9 @@
       </div>
     </div>
 
-    <%= link_to "Edit this assistant_thread", edit_assistant_thread_path(@assistant_thread), class: "mt-2 rounded-lg py-3 px-5 bg-gray-100 inline-block font-medium" %>
+    <%= link_to "Edit this thread", edit_assistant_thread_path(@assistant_thread), class: "mt-2 rounded-lg py-3 px-5 bg-gray-100 inline-block font-medium" %>
     <div class="inline-block ml-2">
-      <%= button_to "Destroy this assistant_thread", assistant_thread_path(@assistant_thread), method: :delete, class: "mt-2 rounded-lg py-3 px-5 bg-gray-100 font-medium" %>
+      <%= button_to "Destroy this thread", assistant_thread_path(@assistant_thread), method: :delete, class: "mt-2 rounded-lg py-3 px-5 bg-gray-100 font-medium" %>
     </div>
     <%= link_to "Back to threads", assistant_threads_path, class: "ml-2 rounded-lg py-3 px-5 bg-gray-100 inline-block font-medium" %>
   </div>

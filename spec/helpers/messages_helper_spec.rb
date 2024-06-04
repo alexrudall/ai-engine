@@ -6,7 +6,7 @@ RSpec.describe MessagesHelper, type: :helper do
     let(:other_user) { create(:user) }
     let(:storyteller1) { create(:storyteller, user: current_user) }
     let(:storyteller2) { create(:storyteller, user: other_user) }
-    let(:assistant_thread) { create(:assistant_thread, chattable: current_user) }
+    let(:assistant_thread) { create(:assistant_thread, threadable: current_user) }
     let(:assistants_service) { class_double(AI::Engine::OpenAI::Assistants::Create).as_stubbed_const }
     let(:threads_service) { class_double(AI::Engine::OpenAI::Threads::Create).as_stubbed_const }
 

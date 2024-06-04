@@ -13,7 +13,7 @@ FactoryBot.define do
 
   factory :assistant_thread, class: AI::Engine::AssistantThread do
     remote_id { Faker::Internet.uuid }
-    chattable { create(:user) }
+    threadable { create(:user) }
   end
 
   factory :user do

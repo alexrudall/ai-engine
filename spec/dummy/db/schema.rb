@@ -45,11 +45,11 @@ ActiveRecord::Schema[7.1].define(version: 2024_05_30_135629) do
 
   create_table "ai_engine_assistant_threads", force: :cascade do |t|
     t.string "remote_id"
-    t.string "chattable_type"
-    t.bigint "chattable_id"
+    t.string "threadable_type"
+    t.bigint "threadable_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["chattable_type", "chattable_id"], name: "index_ai_engine_assistant_threads_on_chattable"
+    t.index ["threadable_type", "threadable_id"], name: "index_ai_engine_assistant_threads_on_threadable"
   end
 
   create_table "ai_engine_assistants", force: :cascade do |t|
