@@ -4,7 +4,7 @@ class MessagesController < ApplicationController
   before_action :authenticate_user!
 
   def create
-    CreateMessageAndRun.perform_async(
+    CreateMessageAndRun.new.perform(
       "assistant_thread_id" => params["assistant_thread_id"],
       "storyteller_id" => message_params[:storyteller_id],
       "content" => message_params[:content],

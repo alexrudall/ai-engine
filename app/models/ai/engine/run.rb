@@ -34,17 +34,21 @@ module AI::Engine
           new_content = chunk.dig("delta", "content", 0, "text", "value")
           response_message.update(content: response_message.content + new_content) if new_content
         elsif chunk["status"] == "completed"
-          remote_run = AI::Engine::OpenAI::Runs::Retrieve.call(remote_id: chunk["run_id"], thread_id: assistant_thread.remote_id)
-          if remote_run.present?
-            assign_attributes(
-              prompt_token_usage: remote_run&.dig("usage", "prompt_tokens"),
-              completion_token_usage: remote_run.dig("usage", "completion_tokens")
-            )
+          if chunk["run_id"].present? && !remote_id.present?
+            remote_run = AI::Engine::OpenAI::Runs::Retrieve.call(remote_id: chunk["run_id"], thread_id: assistant_thread.remote_id)
+            if remote_run.present?
+              assign_attributes(
+                prompt_token_usage: remote_run&.dig("usage", "prompt_tokens"),
+                completion_token_usage: remote_run.dig("usage", "completion_tokens")
+              )
+            end
+            assign_attributes(remote_id: chunk["run_id"])
+            save
           end
-          assign_attributes(remote_id: chunk["run_id"])
-          save
 
-          response_message.update(remote_id: chunk["id"]) # Do this at the end so that tokens can be fetched on the final message rerender.
+          if chunk["id"].present? && chunk["id"].start_with?("msg_") && !response_message.remote_id.present?
+            response_message.update(remote_id: chunk["id"])
+          end
         end
       end
     end

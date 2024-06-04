@@ -11,6 +11,7 @@ module AI
 
         # Default. Override in including model to customize.
         def ai_engine_assistant
+          Logger.new($stdout).info("ai_engine_assistant called - add `def ai_engine_assistant` to your #{self.class.name} model to define the Assistant params. The method should return a Hash of: {name:, model:, description:, instructions:}.")
           {
             name: "Assistant for #{self.class.name} #{id}",
             model: AI::Engine::Assistant::MODEL_OPTIONS.first,

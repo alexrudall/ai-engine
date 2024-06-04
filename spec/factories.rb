@@ -9,6 +9,9 @@ FactoryBot.define do
     name { Faker::Company.buzzword }
     model { AI::Engine::Assistant::MODEL_OPTIONS.sample }
     instructions { Faker::Company.bs }
+    description { Faker::Company.bs }
+    max_prompt_tokens { AI::Engine::Assistant::MIN_PROMPT_TOKENS }
+    max_completion_tokens { AI::Engine::Assistant::MIN_COMPLETION_TOKENS }
   end
 
   factory :assistant_thread, class: AI::Engine::AssistantThread do
