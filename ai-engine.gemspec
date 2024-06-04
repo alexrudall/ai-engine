@@ -22,7 +22,7 @@ Gem::Specification.new do |spec|
     Dir["{app,config,db,lib}/**/*", "COMMERCIAL-LICENCE.txt", "Rakefile", "README.md"]
   end
 
-  spec.add_dependency "rails", ">= 7.1.3"
+  spec.add_dependency "rails", ">= 5"
   spec.add_dependency "pg", "~> 1.1"
   spec.add_dependency "ruby-openai", "~> 7.0.1"
 
