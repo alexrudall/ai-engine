@@ -8,6 +8,7 @@ class ChatsController < ApplicationController
 
   # GET /chats/1 or /chats/1.json
   def show
+    @selected_storyteller_id = @chat.messages.order(:created_at).last&.run&.assistant&.assistable_id
   end
 
   # GET /chats/new

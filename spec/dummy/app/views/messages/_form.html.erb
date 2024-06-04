@@ -7,7 +7,7 @@
     <div class="flex justify-items-end">
       <div class="mr-auto">
         <%= form.label :storyteller_id, "Storyteller:" %>
-        <%= form.select :storyteller_id, message_storyteller_options(chat: chat), class: "block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-full" %>
+        <%= form.select :storyteller_id, message_storyteller_options(chat: chat, selected_storyteller_id: selected_storyteller_id), class: "block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-full" %>
       </div>
 
       <%= form.button type: :submit, class: "rounded-lg py-3 px-5 bg-red-600 text-white inline-block font-medium cursor-pointer" do %>

@@ -12,6 +12,7 @@ class MessagesController < ApplicationController
     )
 
     @chat = AI::Engine::Chat.find(params["chat_id"])
+    @selected_storyteller_id = message_params[:storyteller_id]
 
     respond_to do |format|
       format.turbo_stream
