@@ -5,18 +5,18 @@ Gem::Specification.new do |spec|
   spec.version = AI::Engine::VERSION
   spec.authors = ["Alex Rudall"]
   spec.email = ["hello@alexrudall.com"]
-  spec.homepage = "https://rubyaiengine.com"
-  spec.summary = "AI Engine is the fastest way to get AI into your Rails app."
-  spec.description = "A Rails Engine from the creator of the ruby-openai, anthropic and midjourney gems."
+  spec.homepage = "https://ai-engine.insertrobot.com/"
+  spec.summary = "AI Engine is the easiest way to get advanced AI into your Rails app."
+  spec.description = "A Rails Engine from the creator of ruby-openai."
   spec.license = "COMMERCIAL-LICENCE.txt"
 
   # Prevent pushing this gem to RubyGems.org. To allow pushes either set the "allowed_push_host"
   # to allow pushing to a single host or delete this section to allow pushing to any host.
-  spec.metadata["allowed_push_host"] = "Set to 'http://mygemserver.com'"
+  spec.metadata["allowed_push_host"] = "http://get.keygen.sh"
 
   spec.metadata["homepage_uri"] = spec.homepage
-  spec.metadata["source_code_uri"] = "https://github.com/alexrudall/rails-ai-starter-kit"
-  spec.metadata["changelog_uri"] = "https://github.com/alexrudall/rails-ai-starter-kit/CHANGELOG.md"
+  spec.metadata["source_code_uri"] = "https://ai-engine.insertrobot.com/"
+  spec.metadata["changelog_uri"] = "https://ai-engine.insertrobot.com/"
 
   spec.files = Dir.chdir(File.expand_path(__dir__)) do
     Dir["{app,config,db,lib}/**/*", "COMMERCIAL-LICENCE.txt", "Rakefile", "README.md"]
