@@ -4,7 +4,7 @@ Short description and motivation.
 
 ## Usage
 
-How to use my plugin.
+How to use AI::Engine.
 
 ## Installation
 
@@ -50,4 +50,4 @@ Contribution directions go here.
 
 ## License
 
-The gem is available as open source under the terms of the [MIT License](https://opensource.org/licenses/MIT).
+The gem is available under the terms of the COMMERCIAL-LICENCE.txt in this repo.
