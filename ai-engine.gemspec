@@ -5,26 +5,26 @@ Gem::Specification.new do |spec|
   spec.version = AI::Engine::VERSION
   spec.authors = ["Alex Rudall"]
   spec.email = ["hello@alexrudall.com"]
-  spec.homepage = "https://ai-engine.insertrobot.com/"
+  spec.homepage = "https://insertrobot.com/"
   spec.summary = "AI Engine is the easiest way to get advanced AI into your Rails app."
   spec.description = "A Rails Engine from the creator of ruby-openai."
-  spec.license = "COMMERCIAL-LICENCE.txt"
+  spec.license = "Nonstandard"
 
   # Prevent pushing this gem to RubyGems.org. To allow pushes either set the "allowed_push_host"
   # to allow pushing to a single host or delete this section to allow pushing to any host.
   spec.metadata["allowed_push_host"] = "http://get.keygen.sh"
 
   spec.metadata["homepage_uri"] = spec.homepage
-  spec.metadata["source_code_uri"] = "https://ai-engine.insertrobot.com/"
+  spec.metadata["source_code_uri"] = "https://railsai.com/docs/ai-engine/"
   spec.metadata["changelog_uri"] = "https://ai-engine.insertrobot.com/"
 
   spec.files = Dir.chdir(File.expand_path(__dir__)) do
     Dir["{app,config,db,lib}/**/*", "COMMERCIAL-LICENCE.txt", "Rakefile", "README.md"]
   end
 
-  spec.add_dependency "rails", ">= 5"
-  spec.add_dependency "pg", "~> 1.1"
-  spec.add_dependency "ruby-openai", "~> 7.0.1"
+  spec.required_ruby_version = ">= 3.0"
+
+  spec.add_dependency "ruby-openai", "~> 7.1.0"
 
   # Test
   spec.add_development_dependency "debug", "~> 1.9.2"
