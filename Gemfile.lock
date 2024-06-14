@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    ai-engine (0.1.0)
+    ai-engine (0.1.1)
       ruby-openai (~> 7.1.0)
 
 GEM

@@ -61,6 +61,18 @@ AI::Engine uses VCR to record HTTP requests and responses. By default, specs are
 
 Set OPENAI_ACCESS_TOKEN= in your .env file to run the specs against a live API and re-record all cassettes - this will cost you money!
 
+## Release
+
+To release, need these set in the environment:
+export KEYGEN_ACCOUNT_ID="<YOUR_KEYGEN_ACCOUNT_UUID>"
+export KEYGEN_PRODUCT_ID="<YOUR_KEYGEN_PRODUCT_UUID>"
+export KEYGEN_PRODUCT_TOKEN="<YOUR_KEYGEN_PRODUCT_API_TOKEN>"
+
+- Update version.rb
+- `bundle`
+- Commit & push
+- `rake 'release[0.1.1]'`
+
 ## Contributing
 
 Contribution directions go here.
