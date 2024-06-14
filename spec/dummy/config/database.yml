@@ -62,7 +62,7 @@ test:
 # ever seen by anyone, they now have access to your database.
 #
 # Instead, provide the password or a full connection URL as an environment
-# variable when you boot the app. For dummy:
+# variable when you boot the app. For example:
 #
 #   DATABASE_URL="postgres://myuser:mypass@localhost/somedatabase"
 #
