@@ -37,7 +37,7 @@ bin/rails ai_engine:install:migrations
 bin/rails db:migration
 ```
 
-## Test local version
+## Test local version in a Rails app
 
 ```bash
 gem "ai-engine", path: "../ai-engine"
@@ -49,7 +49,7 @@ The dummy app needs a .env file in the root of the engine for manual and RSpec t
 
 ## Dummy app
 
-Run the dummy app from the root of the project with `bin/dev`.
+Run the dummy app from the root of the project with `bin/dev` in one tab and `bin/rails s` in another (so debugger will work).
 
 ## Tests
 

@@ -46,6 +46,8 @@ module AI::Engine
             end
             assign_attributes(remote_id: chunk["run_id"])
             save
+            response_message.run.reload # Reload the run to get the updated token usage, otherwise the broadcast of the message uses the cached run without the usage.
+            response_message.on_update # Trigger a broadcast in case tokens need to be fetched.
           end
 
           if chunk["id"].present? && chunk["id"].start_with?(AI::Engine::Message.remote_id_prefix) && !response_message.remote_id.present?
