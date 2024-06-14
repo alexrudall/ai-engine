@@ -26,6 +26,13 @@ Or install it yourself as:
 $ gem install ai-engine
 ```
 
+Add the migrations and run them:
+
+```bash
+bin/rails ai_engine:install:migrations
+bin/rails db:migration
+```
+
 ## ENV
 
 The dummy app needs a .env file in the root of the engine for manual and RSpec testing - see .env.example.
