@@ -71,7 +71,7 @@ export KEYGEN_PRODUCT_TOKEN="<YOUR_KEYGEN_PRODUCT_API_TOKEN>"
 - Update version.rb
 - `bundle`
 - Commit & push
-- `rake 'release[0.1.1]'`
+- `rake 'app:ai_engine:release[0.1.1]'`
 
 ## Contributing
 

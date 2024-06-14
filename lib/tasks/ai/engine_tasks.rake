@@ -1,5 +1,5 @@
 namespace :ai_engine do
-  desc "Build and release a new version of the gem like so: `rake 'release[0.1.1]'`"
+  desc "Build and release a new version of the gem like so: `rake 'app:ai_engine:release[0.1.1]'`"
   task :release, [:version] => :environment do |t, args|
     version = args[:version]
 
