@@ -33,6 +33,12 @@ bin/rails ai_engine:install:migrations
 bin/rails db:migration
 ```
 
+## Test local version
+
+```bash
+gem "ai-engine", path: "../ai-engine"
+```
+
 ## ENV
 
 The dummy app needs a .env file in the root of the engine for manual and RSpec testing - see .env.example.
