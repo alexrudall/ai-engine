@@ -9,8 +9,8 @@ module AI::Engine
 
     before_create :create_openai_message, unless: -> { assistant? } # Assistant messages on the OpenAI side are created by a Run.
 
-    after_create_commit :on_create
-    after_update_commit :on_update
+    after_create :on_create
+    after_update :on_update
 
     delegate :prompt_token_usage, to: :run, allow_nil: true
     delegate :completion_token_usage, to: :run, allow_nil: true
