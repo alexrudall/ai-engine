@@ -1,10 +1,14 @@
 # AI::Engine
 
-Short description and motivation.
+The easiest way to add AI to your Rails app!
 
 ## Usage
 
-How to use AI::Engine.
+Full usage documentation can be found in the [AI Engine Starter Kit README](https://github.com/alexrudall/ai-engine-starter-kit).
+
+## Changelog
+
+The Changelog is also kept in the [AI Engine Starter Kit CHANGELOG](https://github.com/alexrudall/ai-engine-starter-kit/blob/main/CHANGELOG.md)
 
 ## Installation
 
