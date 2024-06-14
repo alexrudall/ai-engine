@@ -11,12 +11,7 @@ class MessagesController < ApplicationController
       "user_id" => current_user.id
     )
 
-    @assistant_thread = AI::Engine::AssistantThread.find(params["assistant_thread_id"])
-    @selected_storyteller_id = message_params[:storyteller_id]
-
-    respond_to do |format|
-      format.turbo_stream
-    end
+    head :ok
   end
 
   private
