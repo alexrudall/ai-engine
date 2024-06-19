@@ -17,16 +17,15 @@ RSpec.describe MessagesController, type: :request do
           current_user.storytellers << build(:storyteller)
           current_user.storytellers.last
         end
-        let(:valid_attributes) { {storyteller_id: storyteller.id, content: "Hi there"} }
+        let(:assistant_thread) { current_user.assistant_threads.create }
+        let(:valid_attributes) { {assistant_thread_id: assistant_thread.id, storyteller_id: storyteller.id, content: "Hi there"} }
 
         it "creates a new Message" do
           # Creates an assistant, thread, run and request and response messages on the OpenAI API.
           VCR.use_cassette("requests_messages_create_and_run") do
-            assistant_thread = current_user.assistant_threads.create
-
             expect {
-              post messages_url(assistant_thread_id: assistant_thread.id), as: :turbo_stream, params: {message: valid_attributes}
-            }.to change(current_user.assistant_threads.last.messages, :count).by(2)
+              post messages_url, as: :turbo_stream, params: {message: valid_attributes}
+            }.to change(assistant_thread.messages, :count).by(2)
           end
 
           assistant_thread = current_user.assistant_threads.last
