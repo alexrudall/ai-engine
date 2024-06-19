@@ -1,4 +1,5 @@
 class User < ApplicationRecord
+  include AI::Engine::Chattable
   include AI::Engine::Threadable
   include ActionView::RecordIdentifier
 

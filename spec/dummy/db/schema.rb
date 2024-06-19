@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2024_05_30_135629) do
+ActiveRecord::Schema[7.1].define(version: 2024_06_19_150010) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "citext"
   enable_extension "plpgsql"
@@ -62,16 +62,25 @@ ActiveRecord::Schema[7.1].define(version: 2024_05_30_135629) do
     t.index ["assistable_type", "assistable_id"], name: "index_ai_engine_assistants_on_assistable"
   end
 
+  create_table "ai_engine_chats", force: :cascade do |t|
+    t.string "chattable_type"
+    t.bigint "chattable_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["chattable_type", "chattable_id"], name: "index_ai_engine_chats_on_chattable"
+  end
+
   create_table "ai_engine_messages", force: :cascade do |t|
     t.string "remote_id"
     t.bigint "ai_engine_run_id"
-    t.bigint "ai_engine_assistant_thread_id"
+    t.string "messagable_type"
+    t.bigint "messagable_id"
     t.integer "role", default: 0, null: false
     t.string "content", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["ai_engine_assistant_thread_id"], name: "index_ai_engine_messages_on_ai_engine_assistant_thread_id"
     t.index ["ai_engine_run_id"], name: "index_ai_engine_messages_on_ai_engine_run_id"
+    t.index ["messagable_type", "messagable_id"], name: "index_ai_engine_messages_on_messagable"
   end
 
   create_table "ai_engine_runs", force: :cascade do |t|
@@ -114,7 +123,6 @@ ActiveRecord::Schema[7.1].define(version: 2024_05_30_135629) do
 
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
   add_foreign_key "active_storage_variant_records", "active_storage_blobs", column: "blob_id"
-  add_foreign_key "ai_engine_messages", "ai_engine_assistant_threads"
   add_foreign_key "ai_engine_messages", "ai_engine_runs"
   add_foreign_key "ai_engine_runs", "ai_engine_assistant_threads"
   add_foreign_key "ai_engine_runs", "ai_engine_assistants"

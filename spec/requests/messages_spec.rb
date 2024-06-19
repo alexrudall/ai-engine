@@ -2,11 +2,6 @@ require "rails_helper"
 
 RSpec.describe MessagesController, type: :request do
   let(:current_user) { create(:user) }
-  let(:storyteller) do
-    current_user.storytellers << build(:storyteller)
-    current_user.storytellers.last
-  end
-  let(:valid_attributes) { {storyteller_id: storyteller.id, content: "Hi there"} }
 
   before do
     sign_in current_user
@@ -14,7 +9,16 @@ RSpec.describe MessagesController, type: :request do
 
   describe "POST /create" do
     context "with valid parameters" do
+      context "with a chat" do
+      end
+
       context "with an assistant" do
+        let(:storyteller) do
+          current_user.storytellers << build(:storyteller)
+          current_user.storytellers.last
+        end
+        let(:valid_attributes) { {storyteller_id: storyteller.id, content: "Hi there"} }
+
         it "creates a new Message" do
           # Creates an assistant, thread, run and request and response messages on the OpenAI API.
           VCR.use_cassette("requests_messages_create_and_run") do
