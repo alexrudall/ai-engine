@@ -5,15 +5,15 @@ http_interactions:
     uri: https://api.openai.com/v1/assistants
     body:
       encoding: UTF-8
-      string: '{"name":"knowledge user","model":"gpt-4","description":"knowledge user","instructions":"optimize
-        magnetic infomediaries"}'
+      string: '{"name":"bifurcated","model":"gpt-4o","description":"bifurcated","instructions":"aggregate
+        distributed deliverables"}'
     headers:
       Content-Type:
       - application/json
       Authorization:
-      - Bearer sk-AizTVjdUvJmbL4FQrAp3qgRN4RpNudGNatFErFJ2
+      - Bearer <OPENAI_ACCESS_TOKEN>
       Openai-Organization:
-      - org-Rf437IxKhhQPMiIQ0Es8OwrH
+      - "<OPENAI_ORGANIZATION_ID>"
       Openai-Beta:
       - assistants=v2
       Accept-Encoding:
@@ -28,7 +28,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Tue, 04 Jun 2024 15:49:15 GMT
+      - Wed, 19 Jun 2024 13:49:25 GMT
       Content-Type:
       - application/json
       Transfer-Encoding:
@@ -40,36 +40,36 @@ http_interactions:
       Openai-Organization:
       - user-jxm65ijkzc1qrfhc0ij8moic
       X-Request-Id:
-      - req_bbc27dec75ad87b68a31822748f1636c
+      - req_a063b48e92bed56d679cdb1d8dd281ff
       Openai-Processing-Ms:
-      - '68'
+      - '90'
       Strict-Transport-Security:
       - max-age=15724800; includeSubDomains
       Cf-Cache-Status:
       - DYNAMIC
       Set-Cookie:
-      - __cf_bm=30mxyWwdNqZLXuAD6OnH.sONMNLzpHgaC4uc_8jrBgY-1717516155-1.0.1.1-fefVheE.sM97j6EGMq_P4ecU94zaFvn2bhHwgKO_uzmjYqztZETa3QBb5PHLwUYPYgPWg1Ep7rBS15wfsr2AwQ;
-        path=/; expires=Tue, 04-Jun-24 16:19:15 GMT; domain=.api.openai.com; HttpOnly;
+      - __cf_bm=NnDSVgoETSISNafXC4AaFAwx26fJVRkPjDu1MheRZM4-1718804965-1.0.1.1-7LaWAnAmr_vuYzr0dHm9L2WzOfHUOt5IBTmw1T3oDK0hLlfrPSr_kaupnLDRCKkBNGa2ZDEuRQ46Lc4S2BLBpw;
+        path=/; expires=Wed, 19-Jun-24 14:19:25 GMT; domain=.api.openai.com; HttpOnly;
         Secure; SameSite=None
-      - _cfuvid=zd0k5nMVVQMHcNiYSkm7FUDI2vM8Cs4WQHdvb8omf8A-1717516155705-0.0.1.1-604800000;
+      - _cfuvid=Zs4395G1v_i2gLC5.bLkO5tY3oZrlgWRaPrWltI7y7E-1718804965625-0.0.1.1-604800000;
         path=/; domain=.api.openai.com; HttpOnly; Secure; SameSite=None
       Server:
       - cloudflare
       Cf-Ray:
-      - 88e91263ebf44969-LHR
+      - 8963fb79aaed886e-LHR
       Alt-Svc:
       - h3=":443"; ma=86400
     body:
       encoding: ASCII-8BIT
       string: |-
         {
-          "id": "asst_2b2eO2KC8qFajiTzzNEg3lk3",
+          "id": "asst_MzWUoh1SPXAadOFlPxOGRAOL",
           "object": "assistant",
-          "created_at": 1717516155,
-          "name": "knowledge user",
-          "description": "knowledge user",
-          "model": "gpt-4",
-          "instructions": "optimize magnetic infomediaries",
+          "created_at": 1718804965,
+          "name": "bifurcated",
+          "description": "bifurcated",
+          "model": "gpt-4o",
+          "instructions": "aggregate distributed deliverables",
           "tools": [],
           "top_p": 1.0,
           "temperature": 1.0,
@@ -77,5 +77,5 @@ http_interactions:
           "metadata": {},
           "response_format": "auto"
         }
-  recorded_at: Tue, 04 Jun 2024 15:49:15 GMT
+  recorded_at: Wed, 19 Jun 2024 13:49:25 GMT
 recorded_with: VCR 6.2.0

@@ -10,9 +10,9 @@ http_interactions:
       Content-Type:
       - application/json
       Authorization:
-      - Bearer sk-AizTVjdUvJmbL4FQrAp3qgRN4RpNudGNatFErFJ2
+      - Bearer <OPENAI_ACCESS_TOKEN>
       Openai-Organization:
-      - org-Rf437IxKhhQPMiIQ0Es8OwrH
+      - "<OPENAI_ORGANIZATION_ID>"
       Openai-Beta:
       - assistants=v2
       Accept-Encoding:
@@ -27,7 +27,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Tue, 04 Jun 2024 15:49:11 GMT
+      - Wed, 19 Jun 2024 13:49:21 GMT
       Content-Type:
       - application/json
       Transfer-Encoding:
@@ -39,34 +39,34 @@ http_interactions:
       Openai-Organization:
       - user-jxm65ijkzc1qrfhc0ij8moic
       X-Request-Id:
-      - req_a9509d6b77f46ed85488bab3da2dff10
+      - req_56c3be676cea7dcd708de953160db873
       Openai-Processing-Ms:
-      - '23'
+      - '49'
       Strict-Transport-Security:
       - max-age=15724800; includeSubDomains
       Cf-Cache-Status:
       - DYNAMIC
       Set-Cookie:
-      - __cf_bm=AiWfC1yETFEKnBBweEj6mX7Gfxyx3oIySHJKKzvGVn8-1717516151-1.0.1.1-EoEbsSuqImceSumTAvsai08EL6FehBPy18JjdoHLD6TFDkZa2uJO08OK4c9crkG0p7_l0tju7nMbjJ728EOwFw;
-        path=/; expires=Tue, 04-Jun-24 16:19:11 GMT; domain=.api.openai.com; HttpOnly;
+      - __cf_bm=riAYPvaMTtW_RfrYwmBzMbj2AckrwEbzq2bIt_scv08-1718804961-1.0.1.1-xirq3rEjQqFqv5nbD8QrfaJ8sgZzYYvxRH8t5nyrJFc2ZZTBZunO4mHE_HlCeHD_8fSrnpEM9tZsoH6Qou0jcg;
+        path=/; expires=Wed, 19-Jun-24 14:19:21 GMT; domain=.api.openai.com; HttpOnly;
         Secure; SameSite=None
-      - _cfuvid=nyhnn4IUml_m4cQP72Sy5NTMNPAeXCATpN9L82GoVDo-1717516151985-0.0.1.1-604800000;
+      - _cfuvid=.Qb2LC4vhEwsw.P9RB50sHl2L7j9XpPV.Nq6on47cuo-1718804961476-0.0.1.1-604800000;
         path=/; domain=.api.openai.com; HttpOnly; Secure; SameSite=None
       Server:
       - cloudflare
       Cf-Ray:
-      - 88e9124ccc94944f-LHR
+      - 8963fb5fc8da9407-LHR
       Alt-Svc:
       - h3=":443"; ma=86400
     body:
       encoding: ASCII-8BIT
       string: |-
         {
-          "id": "thread_LZL2j2IIIW1gZKKdUNUbghB4",
+          "id": "thread_QKjccJnOa5ceTA1RlVHw5ott",
           "object": "thread",
-          "created_at": 1717516151,
+          "created_at": 1718804961,
           "metadata": {},
           "tool_resources": {}
         }
-  recorded_at: Tue, 04 Jun 2024 15:49:11 GMT
+  recorded_at: Wed, 19 Jun 2024 13:49:21 GMT
 recorded_with: VCR 6.2.0
