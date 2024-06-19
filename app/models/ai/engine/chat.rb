@@ -8,7 +8,11 @@ module AI::Engine
       messages.create(content: content, role: "user")
 
       # Run the Chat, sending the complete message history to OpenAI.
-      AI::Engine::Chat.call(chat_id: id)
+      AI::Engine::OpenAI::Chats::Respond.call(chat_id: id)
+    end
+
+    def for_openai
+      messages.order(:created_at).slice(:role, :content)
     end
 
     def to_partial_path

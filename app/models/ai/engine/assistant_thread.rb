@@ -10,7 +10,7 @@ module AI::Engine
 
     def run(assistant_id:, content:)
       # Create the request Message, locally and remotely on OpenAI.
-      messages.create(content: content, role: "user")
+      AI::Engine::Message.create(messagable: self, content: content, role: "user")
 
       # Run the Thread using the selected Assistant.
       runs.create(ai_engine_assistant_id: assistant_id)

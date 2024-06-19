@@ -20,10 +20,10 @@ class User < ApplicationRecord
 
   def broadcast_ai_response(message:)
     broadcast_append_to(
-      "#{dom_id(message.assistant_thread)}_messages",
+      "#{dom_id(message.messagable)}_messages",
       partial: "messages/message",
       locals: {message: message, scroll_to: true},
-      target: "#{dom_id(message.assistant_thread)}_messages"
+      target: "#{dom_id(message.messagable)}_messages"
     )
   end
 

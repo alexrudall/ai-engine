@@ -10,8 +10,8 @@ module AI::Engine
     before_create :create_openai_message,
       if: -> { in_assistant_thread? }, # Chat messages are only stored locally.
       unless: -> { assistant? } # Checking the role - assistant messages on the OpenAI side are created by a Run.
-    after_create :add_to_remote_thread, if: -> { in_assistant_thread? }
-    after_update :update_remote_message, if: -> { in_assistant_thread? }
+    after_create :on_create, if: -> { in_assistant_thread? }
+    after_update :on_update, if: -> { in_assistant_thread? }
 
     delegate :prompt_token_usage, to: :run, allow_nil: true
     delegate :completion_token_usage, to: :run, allow_nil: true
@@ -24,11 +24,11 @@ module AI::Engine
       messagable.is_a?(AI::Engine::AssistantThread)
     end
 
-    def add_to_remote_thread
+    def on_create
       messagable.threadable.ai_engine_on_message_create(message: self)
     end
 
-    def update_remote_message
+    def on_update
       messagable.threadable.ai_engine_on_message_update(message: self)
     end
 
@@ -39,7 +39,7 @@ module AI::Engine
     private
 
     def create_openai_message
-      self.remote_id = AI::Engine::OpenAI::Messages::Create.call(thread_id: assistant_thread.remote_id, content: content, role: role)
+      self.remote_id = AI::Engine::OpenAI::Messages::Create.call(thread_id: messagable.remote_id, content: content, role: role)
     rescue Faraday::Error => e
       errors.add(:base, e.message)
       throw(:abort)
