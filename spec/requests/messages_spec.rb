@@ -25,7 +25,7 @@ RSpec.describe MessagesController, type: :request do
             assistant_thread = current_user.assistant_threads.create
 
             expect {
-              post assistant_thread_messages_url(assistant_thread_id: assistant_thread.id), as: :turbo_stream, params: {message: valid_attributes}
+              post messages_url(assistant_thread_id: assistant_thread.id), as: :turbo_stream, params: {message: valid_attributes}
             }.to change(current_user.assistant_threads.last.messages, :count).by(2)
           end
 
