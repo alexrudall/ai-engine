@@ -10,6 +10,22 @@ RSpec.describe MessagesController, type: :request do
   describe "POST /create" do
     context "with valid parameters" do
       context "with a chat" do
+        let(:chat) { current_user.chats.create }
+        let(:valid_attributes) { {chat_id: chat.id, content: "Hi there"} }
+
+        it "creates a new Message" do
+          # Sends the message history off to OpenAI and gets the response.
+          VCR.use_cassette("requests_chat_messages_create_and_run") do
+            expect {
+              post messages_url, as: :turbo_stream, params: {message: valid_attributes}
+            }.to change(chat.messages, :count).by(2)
+          end
+
+          expect(chat.messages.count).to eq(2)
+          response = chat.messages.last
+          expect(response.content).to be_present
+          expect(response.remote_id).to eq(nil)
+        end
       end
 
       context "with an assistant" do
@@ -22,13 +38,12 @@ RSpec.describe MessagesController, type: :request do
 
         it "creates a new Message" do
           # Creates an assistant, thread, run and request and response messages on the OpenAI API.
-          VCR.use_cassette("requests_messages_create_and_run") do
+          VCR.use_cassette("requests_assistant_messages_create_and_run") do
             expect {
               post messages_url, as: :turbo_stream, params: {message: valid_attributes}
             }.to change(assistant_thread.messages, :count).by(2)
           end
 
-          assistant_thread = current_user.assistant_threads.last
           expect(assistant_thread.messages.count).to eq(2)
           response = assistant_thread.messages.last
           expect(response.remote_id).to be_present

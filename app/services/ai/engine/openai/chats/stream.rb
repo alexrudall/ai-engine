@@ -1,15 +1,15 @@
-class AI::Engine::OpenAI::Chats::Respond
+class AI::Engine::OpenAI::Chats::Stream
   # Gets the next message response to a set of messages.
-  def self.call(chat_id:)
-    response = client.messages.create(
-      thread_id: thread_id,
+  def self.call(chat_id:, stream:)
+    chat = AI::Engine::Chat.find(chat_id)
+
+    client.chat(
       parameters: {
-        content: content,
-        role: role
+        model: "gpt-4o",
+        messages: chat.messages_for_openai,
+        stream: stream
       }
     )
-
-    response["id"]
   end
 
   private_class_method def self.client
