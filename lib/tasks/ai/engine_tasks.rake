@@ -3,6 +3,10 @@ namespace :ai_engine do
   task :release, [:version] => :environment do |t, args|
     version = args[:version]
 
+    # Clean up the previous gem
+    sh "rm -rf build"
+    sh "mkdir -p build/gems"
+
     # Build the gem
     sh "gem build ai-engine.gemspec --output=build/gems/ai-engine-#{version}.gem"
     sh "gem generate_index --directory build/"
