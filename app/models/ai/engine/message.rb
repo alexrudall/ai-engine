@@ -10,8 +10,8 @@ module AI::Engine
     before_create :create_openai_message,
       if: -> { in_assistant_thread? }, # Chat messages are only stored locally.
       unless: -> { assistant? } # Checking the role - assistant messages on the OpenAI side are created by a Run.
-    after_create :on_create, if: -> { in_assistant_thread? }
-    after_update :on_update, if: -> { in_assistant_thread? }
+    after_create :on_create
+    after_update :on_update
 
     delegate :prompt_token_usage, to: :run, allow_nil: true
     delegate :completion_token_usage, to: :run, allow_nil: true
@@ -29,11 +29,19 @@ module AI::Engine
     end
 
     def on_create
-      messagable.threadable.ai_engine_on_message_create(message: self)
+      if in_chat?
+        messagable.chattable.ai_engine_on_message_create(message: self)
+      else
+        messagable.threadable.ai_engine_on_message_create(message: self)
+      end
     end
 
     def on_update
-      messagable.threadable.ai_engine_on_message_update(message: self)
+      if in_chat?
+        messagable.chattable.ai_engine_on_message_update(message: self)
+      else
+        messagable.threadable.ai_engine_on_message_update(message: self)
+      end
     end
 
     def to_partial_path
