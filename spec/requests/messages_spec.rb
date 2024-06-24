@@ -48,8 +48,8 @@ RSpec.describe MessagesController, type: :request do
           response = assistant_thread.messages.last
           expect(response.remote_id).to be_present
           expect(response.run).to be_present
-          expect(response.run.prompt_token_usage).to be_present
-          expect(response.run.completion_token_usage).to be_present
+          expect(response.prompt_token_usage).to be_present
+          expect(response.completion_token_usage).to be_present
         end
       end
     end

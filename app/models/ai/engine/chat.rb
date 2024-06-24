@@ -28,6 +28,12 @@ module AI::Engine
           new_content = chunk.dig("choices", 0, "delta", "content")
           response_message.update(content: response_message.content + new_content) if new_content
         end
+        if chunk["usage"]
+          response_message.update(
+            prompt_token_usage: chunk.dig("usage", "prompt_tokens"),
+            completion_token_usage: chunk.dig("usage", "completion_tokens")
+          )
+        end
       end
     end
 

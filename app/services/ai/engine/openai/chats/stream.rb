@@ -7,7 +7,8 @@ class AI::Engine::OpenAI::Chats::Stream
       parameters: {
         model: "gpt-4o",
         messages: chat.messages_for_openai,
-        stream: stream
+        stream: stream,
+        stream_options: {include_usage: true}
       }
     )
   end

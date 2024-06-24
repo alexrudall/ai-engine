@@ -13,9 +13,6 @@ module AI::Engine
     after_create :on_create
     after_update :on_update
 
-    delegate :prompt_token_usage, to: :run, allow_nil: true
-    delegate :completion_token_usage, to: :run, allow_nil: true
-
     def user
       in_chat? ? messagable.chattable : messagable.threadable
     end

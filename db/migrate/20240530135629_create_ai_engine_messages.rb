@@ -6,6 +6,8 @@ class CreateAIEngineMessages < ActiveRecord::Migration[7.1]
       t.references :messagable, polymorphic: true
       t.integer :role, null: false, default: 0
       t.string :content, null: false
+      t.integer :prompt_token_usage
+      t.integer :completion_token_usage
 
       t.timestamps
     end
