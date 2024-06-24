@@ -16,6 +16,10 @@ module AI::Engine
     delegate :prompt_token_usage, to: :run, allow_nil: true
     delegate :completion_token_usage, to: :run, allow_nil: true
 
+    def user
+      in_chat? ? messagable.chattable : messagable.threadable
+    end
+
     def in_chat?
       messagable.is_a?(AI::Engine::Chat)
     end

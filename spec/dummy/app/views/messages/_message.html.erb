@@ -4,7 +4,7 @@
   <li id="<%= dom_id message %>" class="py-4">
 <% end %>
   <div class="flex items-center gap-x-3">
-    <% user = message.messagable.chattable %>
+    <% user = message.user %>
     <% if message.user? %>
       <%= image_tag(user.avatar_url, class: "h-6 w-6 flex-none rounded-full bg-gray-800") %>
       <h3 class="flex-auto truncate font-semibold leading-6 text-gray-900"><%= user.full_name %></h3>
