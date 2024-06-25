@@ -1,9 +1,7 @@
 import { Controller } from "@hotwired/stimulus";
 
 export default class extends Controller {
-  static targets = ["content"];
-
-  reset() {
-    this.contentTarget.value = "";
+  submit(event) {
+    event.currentTarget.requestSubmit();
   }
 }

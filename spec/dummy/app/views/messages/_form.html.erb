@@ -1,7 +1,10 @@
 <%= turbo_frame_tag "#{dom_id(messageable)}_message_form" do %>
-  <%= form_with(model: AI::Engine::Message.new, url: [messageable.messages.new], data: { controller: "reset-form", action: "turbo:submit-start->reset-form#reset" }) do |form| %>
+  <%= form_with(model: AI::Engine::Message.new, url: [messageable.messages.new], data: {
+      controller: "reset-form submit-form-on-enter",
+      action: "turbo:submit-start->reset-form#reset keydown.enter->submit-form-on-enter#submit:prevent"
+    }) do |form| %>
     <div class="my-5">
-      <%= form.text_area :content, rows: 4, class: "block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-full focus:border-red-600 focus:ring-red-600", autofocus: true, "x-on:keydown.cmd.enter" => "$event.target.form.requestSubmit();" %>
+      <%= form.text_area :content, rows: 4, class: "block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-full focus:border-red-600 focus:ring-red-600", autofocus: true, "data-reset-form-target" => "content" %>
     </div>
 
     <div class="flex justify-items-end">
