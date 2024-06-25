@@ -1,11 +1,11 @@
 class AI::Engine::OpenAI::Chats::Stream
   # Gets the next message response to a set of messages.
-  def self.call(chat_id:, stream:)
+  def self.call(chat_id:, stream:, model:)
     chat = AI::Engine::Chat.find(chat_id)
 
     client.chat(
       parameters: {
-        model: "gpt-4o",
+        model: model,
         messages: chat.messages_for_openai,
         stream: stream,
         stream_options: {include_usage: true}

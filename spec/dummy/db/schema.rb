@@ -77,6 +77,7 @@ ActiveRecord::Schema[7.1].define(version: 2024_06_19_150010) do
     t.bigint "messagable_id"
     t.integer "role", default: 0, null: false
     t.string "content", null: false
+    t.string "model"
     t.integer "prompt_token_usage"
     t.integer "completion_token_usage"
     t.datetime "created_at", null: false

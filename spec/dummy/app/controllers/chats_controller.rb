@@ -8,6 +8,7 @@ class ChatsController < ApplicationController
 
   # GET /chats/1 or /chats/1.json
   def show
+    @selected_model = @chat.messages.order(:created_at).last&.model
   end
 
   # GET /chats/new

@@ -15,6 +15,7 @@ class MessagesController < ApplicationController
       CreateChatMessageAndStream.perform_async(
         "chat_id" => message_params[:chat_id],
         "content" => message_params[:content],
+        "model" => message_params[:model],
         "user_id" => current_user.id
       )
     end
@@ -25,6 +26,6 @@ class MessagesController < ApplicationController
   private
 
   def message_params
-    params.require(:message).permit(:assistant_thread_id, :chat_id, :storyteller_id, :content)
+    params.require(:message).permit(:assistant_thread_id, :chat_id, :content, :model, :storyteller_id)
   end
 end

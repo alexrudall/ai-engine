@@ -6,6 +6,11 @@
 
     <div class="flex justify-items-end">
       <% if messageable.is_a?(AI::Engine::Chat) %>
+        <div class="mr-auto">
+          <%= form.label :model, "Model:" %>
+          <%= form.select :model, message_model_options(selected_model: selected_model), class: "block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-full" %>
+        </div>
+
         <%= form.hidden_field :chat_id, value: messageable.id %>
       <% else %>
         <div class="mr-auto">

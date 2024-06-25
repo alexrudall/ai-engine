@@ -28,6 +28,7 @@ module AI::Engine
     def stream
       response_message = assistant_thread.messages.create(
         ai_engine_run_id: id,
+        model: assistant.assistable.model,
         role: "assistant",
         content: ""
       )

@@ -11,7 +11,8 @@ RSpec.describe MessagesController, type: :request do
     context "with valid parameters" do
       context "with a chat" do
         let(:chat) { current_user.chats.create }
-        let(:valid_attributes) { {chat_id: chat.id, content: "Hi there"} }
+        let(:model) { AI::Engine::Chat::MODEL_OPTIONS.sample }
+        let(:valid_attributes) { {chat_id: chat.id, content: "Hi there", model: model} }
 
         it "creates a new Message" do
           # Sends the message history off to OpenAI and gets the response.
@@ -24,6 +25,7 @@ RSpec.describe MessagesController, type: :request do
           expect(chat.messages.count).to eq(2)
           response = chat.messages.last
           expect(response.content).to be_present
+          expect(response.model).to eq(model)
           expect(response.remote_id).to eq(nil)
         end
       end
@@ -48,6 +50,7 @@ RSpec.describe MessagesController, type: :request do
           response = assistant_thread.messages.last
           expect(response.remote_id).to be_present
           expect(response.run).to be_present
+          expect(response.model).to eq(storyteller.model)
           expect(response.prompt_token_usage).to be_present
           expect(response.completion_token_usage).to be_present
         end
