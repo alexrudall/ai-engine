@@ -73,8 +73,8 @@ ActiveRecord::Schema[7.1].define(version: 2024_06_19_150010) do
   create_table "ai_engine_messages", force: :cascade do |t|
     t.string "remote_id"
     t.bigint "ai_engine_run_id"
-    t.string "messagable_type"
-    t.bigint "messagable_id"
+    t.string "messageable_type"
+    t.bigint "messageable_id"
     t.integer "role", default: 0, null: false
     t.string "content", null: false
     t.string "model"
@@ -83,7 +83,7 @@ ActiveRecord::Schema[7.1].define(version: 2024_06_19_150010) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["ai_engine_run_id"], name: "index_ai_engine_messages_on_ai_engine_run_id"
-    t.index ["messagable_type", "messagable_id"], name: "index_ai_engine_messages_on_messagable"
+    t.index ["messageable_type", "messageable_id"], name: "index_ai_engine_messages_on_messageable"
   end
 
   create_table "ai_engine_runs", force: :cascade do |t|

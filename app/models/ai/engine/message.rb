@@ -2,7 +2,7 @@ module AI::Engine
   class Message < ApplicationRecord
     include RemoteIdValidatable
 
-    belongs_to :messagable, polymorphic: true # AI::Engine::Chat or AI::Engine::AssistantThread
+    belongs_to :messageable, polymorphic: true # AI::Engine::Chat or AI::Engine::AssistantThread
     belongs_to :run, class_name: "AI::Engine::Run", foreign_key: "ai_engine_run_id", optional: true
 
     enum role: {system: 0, assistant: 10, user: 20}
@@ -14,30 +14,30 @@ module AI::Engine
     after_update :on_update
 
     def user
-      in_chat? ? messagable.chattable : messagable.threadable
+      in_chat? ? messageable.chattable : messageable.threadable
     end
 
     def in_chat?
-      messagable.is_a?(AI::Engine::Chat)
+      messageable.is_a?(AI::Engine::Chat)
     end
 
     def in_assistant_thread?
-      messagable.is_a?(AI::Engine::AssistantThread)
+      messageable.is_a?(AI::Engine::AssistantThread)
     end
 
     def on_create
       if in_chat?
-        messagable.chattable.ai_engine_on_message_create(message: self)
+        messageable.chattable.ai_engine_on_message_create(message: self)
       else
-        messagable.threadable.ai_engine_on_message_create(message: self)
+        messageable.threadable.ai_engine_on_message_create(message: self)
       end
     end
 
     def on_update
       if in_chat?
-        messagable.chattable.ai_engine_on_message_update(message: self)
+        messageable.chattable.ai_engine_on_message_update(message: self)
       else
-        messagable.threadable.ai_engine_on_message_update(message: self)
+        messageable.threadable.ai_engine_on_message_update(message: self)
       end
     end
 
@@ -48,7 +48,7 @@ module AI::Engine
     private
 
     def create_openai_message
-      self.remote_id = AI::Engine::OpenAI::Messages::Create.call(thread_id: messagable.remote_id, content: content, role: role)
+      self.remote_id = AI::Engine::OpenAI::Messages::Create.call(thread_id: messageable.remote_id, content: content, role: role)
     rescue Faraday::Error => e
       errors.add(:base, e.message)
       throw(:abort)

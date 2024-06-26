@@ -8,7 +8,7 @@ module AI::Engine
     ].freeze
 
     belongs_to :chattable, polymorphic: true
-    has_many :messages, as: :messagable, class_name: "AI::Engine::Message", foreign_key: "messagable_id", dependent: :nullify
+    has_many :messages, as: :messageable, class_name: "AI::Engine::Message", foreign_key: "messageable_id", dependent: :nullify
 
     def run(model:)
       # Run the Chat, sending the complete message history to OpenAI.
