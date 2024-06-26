@@ -1,4 +1,12 @@
 module MessagesHelper
+  def created_by(message:)
+    return message.user.full_name if message.user?
+
+    return message.model if message.in_chat?
+
+    message.run&.assistant&.assistable&.name
+  end
+
   def message_model_options(selected_model: nil)
     options_for_select(
       AI::Engine::Chat::MODEL_OPTIONS,
