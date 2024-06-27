@@ -1,12 +1,5 @@
 module AI::Engine
   class Chat < ApplicationRecord
-    MODEL_OPTIONS = %w[
-      gpt-3.5-turbo
-      gpt-4
-      gpt-4-turbo
-      gpt-4o
-    ].freeze
-
     belongs_to :chattable, polymorphic: true
     has_many :messages, as: :messageable, class_name: "AI::Engine::Message", foreign_key: "messageable_id", dependent: :nullify
 

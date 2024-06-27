@@ -13,6 +13,22 @@ module AI::Engine
     after_create :on_create
     after_update :on_update
 
+    def input_cost
+      return unless assistant?
+
+      return unless prompt_token_usage.present? && model.present?
+
+      (prompt_token_usage.to_i * AI::Engine::DOLLAR_COST_PER_1K_TOKENS[model]["input"] / 1000).round(4)
+    end
+
+    def output_cost
+      return unless assistant?
+
+      return unless completion_token_usage.present? && model.present?
+
+      (completion_token_usage.to_i * AI::Engine::DOLLAR_COST_PER_1K_TOKENS[model]["output"] / 1000).round(4)
+    end
+
     def user
       in_chat? ? messageable.chattable : messageable.threadable
     end
