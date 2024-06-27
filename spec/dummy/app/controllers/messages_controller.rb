@@ -1,8 +1,6 @@
 class MessagesController < ApplicationController
   include ActionView::RecordIdentifier
 
-  before_action :authenticate_user!
-
   def create
     if message_params[:assistant_thread_id].present?
       CreateAssistantMessageAndRun.perform_async(
