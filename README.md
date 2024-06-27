@@ -10,33 +10,6 @@ Full usage documentation can be found in the [AI Engine Starter Kit README](http
 
 The Changelog is also kept in the [AI Engine Starter Kit CHANGELOG](https://github.com/alexrudall/ai-engine-starter-kit/blob/main/CHANGELOG.md)
 
-## Installation
-
-Add this line to your application's Gemfile:
-
-```ruby
-gem "ai-engine"
-```
-
-And then execute:
-
-```bash
-$ bundle
-```
-
-Or install it yourself as:
-
-```bash
-$ gem install ai-engine
-```
-
-Add the migrations and run them:
-
-```bash
-bin/rails ai_engine:install:migrations
-bin/rails db:migration
-```
-
 ## Test local version in a Rails app
 
 ```bash
@@ -71,11 +44,7 @@ export KEYGEN_PRODUCT_TOKEN="<YOUR_KEYGEN_PRODUCT_API_TOKEN>"
 - Update version.rb
 - `bundle`
 - Commit & push
-- `rake 'app:ai_engine:release[0.1.1]'`
-
-## Contributing
-
-Contribution directions go here.
+- `rake app:ai_engine:release\[0.2.0\]`
 
 ## License
 
