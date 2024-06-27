@@ -2,10 +2,10 @@
 http_interactions:
 - request:
     method: post
-    uri: https://api.openai.com/v1/assistants/asst_MzWUoh1SPXAadOFlPxOGRAOL
+    uri: https://api.openai.com/v1/assistants/asst_TMSfah1vBOJo15vIpNcW9iWC
     body:
       encoding: UTF-8
-      string: '{"name":"bifurcated","model":"gpt-4o","description":"bifurcated","instructions":"Design
+      string: '{"name":"portal","model":"gpt-3.5-turbo","description":"portal","instructions":"Design
         a big hat"}'
     headers:
       Content-Type:
@@ -28,7 +28,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Wed, 19 Jun 2024 13:49:26 GMT
+      - Mon, 24 Jun 2024 15:50:23 GMT
       Content-Type:
       - application/json
       Transfer-Encoding:
@@ -40,35 +40,35 @@ http_interactions:
       Openai-Organization:
       - user-jxm65ijkzc1qrfhc0ij8moic
       X-Request-Id:
-      - req_6c1f4f6d364ff10d3de7fc421c2264b2
+      - req_ae164bb06a895263019111e3abf9ce1b
       Openai-Processing-Ms:
-      - '197'
+      - '99'
       Strict-Transport-Security:
       - max-age=15724800; includeSubDomains
       Cf-Cache-Status:
       - DYNAMIC
       Set-Cookie:
-      - __cf_bm=WvnS5wlEE.ZzMpDAB0cgaysMGGAbds4tefB8rZ5XRn4-1718804966-1.0.1.1-2t2WCUrBK_0wYj.FqDiaeT7afU8bJ66UjTU9Vrmxnm0Msznpn39DxxsKGDmB6dItUiq11hHiIWKxPCwgJWzjYg;
-        path=/; expires=Wed, 19-Jun-24 14:19:26 GMT; domain=.api.openai.com; HttpOnly;
+      - __cf_bm=YnL05YO6_9WW6xz9vbJAjvn5MZZ3_G3h400K42Jbk70-1719244223-1.0.1.1-BwQIl03uIJI8AMzzKBJAtYRuEFe96LdmTdo7U2Zo4y0rTyIMdV66TAXNMv_gQPjyrrD9Lj5_2bWqFGGt2hfrNw;
+        path=/; expires=Mon, 24-Jun-24 16:20:23 GMT; domain=.api.openai.com; HttpOnly;
         Secure; SameSite=None
-      - _cfuvid=mx6hManTQCUXfwwsX1w17vA_xtCt7Jb.o4f9YHIh0ZM-1718804966157-0.0.1.1-604800000;
+      - _cfuvid=tDD9YqQIKL3gwZcfBOZdbjMFtshiwE0kJH6pQyVbZ9A-1719244223942-0.0.1.1-604800000;
         path=/; domain=.api.openai.com; HttpOnly; Secure; SameSite=None
       Server:
       - cloudflare
       Cf-Ray:
-      - 8963fb7c4e046352-LHR
+      - 898ddf8e092360f8-LHR
       Alt-Svc:
       - h3=":443"; ma=86400
     body:
       encoding: ASCII-8BIT
       string: |-
         {
-          "id": "asst_MzWUoh1SPXAadOFlPxOGRAOL",
+          "id": "asst_TMSfah1vBOJo15vIpNcW9iWC",
           "object": "assistant",
-          "created_at": 1718804965,
-          "name": "bifurcated",
-          "description": "bifurcated",
-          "model": "gpt-4o",
+          "created_at": 1719244223,
+          "name": "portal",
+          "description": "portal",
+          "model": "gpt-3.5-turbo",
           "instructions": "Design a big hat",
           "tools": [],
           "top_p": 1.0,
@@ -77,5 +77,5 @@ http_interactions:
           "metadata": {},
           "response_format": "auto"
         }
-  recorded_at: Wed, 19 Jun 2024 13:49:26 GMT
+  recorded_at: Mon, 24 Jun 2024 15:50:23 GMT
 recorded_with: VCR 6.2.0

@@ -28,6 +28,7 @@ module AI::Engine
     def stream
       response_message = assistant_thread.messages.create(
         ai_engine_run_id: id,
+        model: assistant.assistable.model,
         role: "assistant",
         content: ""
       )
@@ -37,17 +38,14 @@ module AI::Engine
           response_message.update(content: response_message.content + new_content) if new_content
         elsif chunk["status"] == "completed"
           if chunk["run_id"].present? && !remote_id.present?
+            update(remote_id: chunk["run_id"])
             remote_run = AI::Engine::OpenAI::Runs::Retrieve.call(remote_id: chunk["run_id"], thread_id: assistant_thread.remote_id)
             if remote_run.present?
-              assign_attributes(
-                prompt_token_usage: remote_run&.dig("usage", "prompt_tokens"),
+              response_message.update(
+                prompt_token_usage: remote_run.dig("usage", "prompt_tokens"),
                 completion_token_usage: remote_run.dig("usage", "completion_tokens")
               )
             end
-            assign_attributes(remote_id: chunk["run_id"])
-            save
-            response_message.run.reload # Reload the run to get the updated token usage, otherwise the broadcast of the message uses the cached run without the usage.
-            response_message.on_update # Trigger a broadcast in case tokens need to be fetched.
           end
 
           if chunk["id"].present? && chunk["id"].start_with?(AI::Engine::Message.remote_id_prefix) && !response_message.remote_id.present?
