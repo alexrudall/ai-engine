@@ -1,6 +1,6 @@
 # AI::Engine
 
-The easiest way to add AI to your Rails app!
+An experimental, easy-ish way to add AI assistants to your Rails app!
 
 ## Usage
 
