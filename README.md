@@ -1,6 +1,6 @@
 # AI::Engine
 
-AI::Engine is the fastest way to add AI Assistants to your Rails app! It's a Rails Engine which sets up everything you need to start streaming from OpenAI Assistants in your Rails app.
+AI::Engine is the fastest way to get AI Assistants into your Rails app! It's a Rails Engine which sets up everything you need to start streaming from OpenAI Assistants in your Rails app.
 
 Full docs can be found at [RailsAI.com](https://railsai.com/docs/installation).
 
