@@ -1,6 +1,8 @@
 # AI::Engine
 
-An experimental, easy-ish way to add AI assistants to your Rails app!
+AI::Engine is the fastest way to add AI Assistants to your Rails app! It's a Rails Engine which sets up everything you need to start streaming from OpenAI Assistants in your Rails app.
+
+Full docs can be found at [RailsAI.com](https://railsai.com/docs/installation).
 
 ## Usage
 
@@ -22,7 +24,7 @@ And run them:
 bundle exec rails db:migrate
 ```
 
-Full usage documentation can be found at [RailsAI.com](https://railsai.com/docs/installation).
+Full docs can be found at [RailsAI.com](https://railsai.com/docs/installation).
 
 ## Engine Development
 
