@@ -4,27 +4,43 @@ An experimental, easy-ish way to add AI assistants to your Rails app!
 
 ## Usage
 
-Full usage documentation can be found in the [AI Engine Starter Kit README](https://github.com/alexrudall/ai-engine-starter-kit).
+You can add AI::Engine to your Gemfile like this:
 
-## Changelog
+```
+gem "ai-engine", "~> 0.3.0"
+```
 
-The Changelog is also kept in the [AI Engine Starter Kit CHANGELOG](https://github.com/alexrudall/ai-engine-starter-kit/blob/main/CHANGELOG.md)
+You then need to add the migrations for the gem:
 
-## Test local version in a Rails app
+```
+bundle exec rails ai_engine:install:migrations
+```
+
+And run them:
+
+```
+bundle exec rails db:migrate
+```
+
+Full usage documentation can be found at [RailsAI.com](https://railsai.com/docs/installation).
+
+## Engine Development
+
+### Test local version in a Rails app
 
 ```bash
 gem "ai-engine", path: "../ai-engine"
 ```
 
-## ENV
+### ENV
 
 The dummy app needs a .env file in the root of the engine for manual and RSpec testing - see .env.example.
 
-## Dummy app
+### Dummy app
 
 Run the dummy app from the root of the project with `bin/dev` in one tab and `bin/rails s` in another (so debugger will work).
 
-## Tests
+### Tests
 
 Run the tests from the root of the project with `rspec`.
 
@@ -34,18 +50,12 @@ AI::Engine uses VCR to record HTTP requests and responses. By default, specs are
 
 Set OPENAI_ACCESS_TOKEN= in your .env file to run the specs against a live API and re-record all cassettes - this will cost you money!
 
-## Release
+### Release
 
-To release, need these set in the environment:
-export KEYGEN_ACCOUNT_ID="<YOUR_KEYGEN_ACCOUNT_UUID>"
-export KEYGEN_PRODUCT_ID="<YOUR_KEYGEN_PRODUCT_UUID>"
-export KEYGEN_PRODUCT_TOKEN="<YOUR_KEYGEN_PRODUCT_API_TOKEN>"
+First run the specs without VCR so they actually hit the API. This will cost 2 cents or more. Set OPENAI_ACCESS_TOKEN in your environment or pass it in like this:
 
-- Update version.rb
-- `bundle`
-- Commit & push
-- `rake app:ai_engine:release\[0.2.0\]`
+```
+OPENAI_ACCESS_TOKEN=123abc bundle exec rspec
+```
 
-## License
-
-The gem is available under the terms of the COMMERCIAL-LICENCE.txt in this repo.
+Then update the version number in `version.rb`, update `CHANGELOG.md`, run `bundle install` to update Gemfile.lock, and then run `bundle exec rake release`, which will create a git tag for the version, push git commits and tags, and push the `.gem` file to [rubygems.org](https://rubygems.org).
