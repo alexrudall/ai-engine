@@ -6,8 +6,8 @@ Gem::Specification.new do |spec|
   spec.authors = ["Alex Rudall"]
   spec.email = ["hello@alexrudall.com"]
   spec.homepage = "https://railsai.com/docs/installation"
-  spec.summary = "The easiest way to get AI into your Rails app."
-  spec.description = "A Rails Engine from the creator of ruby-openai."
+  spec.summary = "The easiest way to get AI Assistants into your Rails app."
+  spec.description = "The easiest way to get AI Assistants into your Rails app."
   spec.license = "MIT"
 
   spec.metadata["homepage_uri"] = spec.homepage
