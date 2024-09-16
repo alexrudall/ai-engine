@@ -1,14 +1,9 @@
 class AI::Engine::OpenAI::Assistants::Create
   # Creates a new Assistant on the OpenAI API.
   # Returns the OpenAI ID of the new Assistant.
-  def self.call(name:, model:, description:, instructions:)
+  def self.call(parameters)
     response = client.assistants.create(
-      parameters: {
-        name: name,
-        model: model,
-        description: description,
-        instructions: instructions
-      }
+      parameters: parameters
     )
 
     response["id"]

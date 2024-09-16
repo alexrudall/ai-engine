@@ -29,7 +29,7 @@ module AI
         def create_openai_assistant
           build_assistant
           begin
-            assistant.remote_id = AI::Engine::OpenAI::Assistants::Create.call(**ai_engine_assistant)
+            assistant.remote_id = AI::Engine::OpenAI::Assistants::Create.call(ai_engine_assistant)
           rescue Faraday::Error => e
             errors.add(:base, e.message)
             throw(:abort)
@@ -37,7 +37,7 @@ module AI
         end
 
         def update_openai_assistant
-          AI::Engine::OpenAI::Assistants::Update.call(remote_id: assistant&.remote_id, **ai_engine_assistant)
+          AI::Engine::OpenAI::Assistants::Update.call(remote_id: assistant&.remote_id, parameters: ai_engine_assistant)
         rescue Faraday::Error => e
           errors.add(:base, e.message)
           throw(:abort)

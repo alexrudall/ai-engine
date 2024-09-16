@@ -7,6 +7,6 @@ class CreateAIEngineAssistants < ActiveRecord::Migration[7.1]
       t.timestamps
     end
 
-    add_index :ai_engine_assistants, %i[assistable_type assistable_id remote_id], unique: true
+    add_index :ai_engine_assistants, %i[assistable_type assistable_id remote_id], unique: true, name: "ai_engine_assistants_unique_index"
   end
 end
