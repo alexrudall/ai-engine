@@ -4,6 +4,8 @@ AI::Engine is the fastest way to get AI Assistants into your Rails app! It's a R
 
 Full docs can be found at [RailsAI.com](https://railsai.com/docs/installation).
 
+A demo app can be found [here](https://github.com/alexrudall/ai-engine-starter-kit/).
+
 ## Usage
 
 You can add AI::Engine to your Gemfile like this:
