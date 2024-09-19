@@ -2,10 +2,10 @@
 http_interactions:
 - request:
     method: post
-    uri: https://api.openai.com/v1/assistants/asst_aNP6iznUZQtY7T20f5zzEmQJ
+    uri: https://api.openai.com/v1/assistants/asst_nul07MIHPypS8vnnch9X7RfG
     body:
       encoding: UTF-8
-      string: '{"name":"Cross-platform","model":"gpt-3.5-turbo","description":"Cross-platform","instructions":"Design
+      string: '{"name":"Assimilated","model":"gpt-4-turbo","description":"Assimilated","instructions":"Design
         a big hat"}'
     headers:
       Content-Type:
@@ -28,7 +28,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Thu, 19 Sep 2024 17:25:45 GMT
+      - Thu, 19 Sep 2024 18:02:31 GMT
       Content-Type:
       - application/json
       Transfer-Encoding:
@@ -40,37 +40,37 @@ http_interactions:
       Openai-Organization:
       - user-jxm65ijkzc1qrfhc0ij8moic
       X-Request-Id:
-      - req_2a7d3795a0df8b8cb5403ad2ede1a864
+      - req_43e03fd6479fef41e84c1bab5c0110c2
       Openai-Processing-Ms:
-      - '202'
+      - '241'
       Strict-Transport-Security:
       - max-age=15552000; includeSubDomains; preload
       Cf-Cache-Status:
       - DYNAMIC
       Set-Cookie:
-      - __cf_bm=Kd8zl35.txtn0ThAR.Nt0nwNAVAey385K5Ek1SD7pes-1726766745-1.0.1.1-6Rah4SJT5N0Jvzcj7waypI._A1kTF9Xoi8OMSXO3ueXTvAKLhR1lXOSbDxmg8doHnZKMtInioZFPjXQlISEwdw;
-        path=/; expires=Thu, 19-Sep-24 17:55:45 GMT; domain=.api.openai.com; HttpOnly;
+      - __cf_bm=TekMe15LtByJ2ltRJItOxYIGHCpVqDXVP9yo_NZG1z4-1726768951-1.0.1.1-IxjlevcN4U8ObYLkkMwNMGGnuTypKZciUa0Yc0keoj6.rpHaFSrZEnXJR8CtW4Dn19CAaYM50qR3sudq7qMPYA;
+        path=/; expires=Thu, 19-Sep-24 18:32:31 GMT; domain=.api.openai.com; HttpOnly;
         Secure; SameSite=None
-      - _cfuvid=sp5kpQAh26CbfhPrTuaSzwm7l1bjs2YchiZJl_Kw9DA-1726766745760-0.0.1.1-604800000;
+      - _cfuvid=du_yyRuArgBRCIR3uUHcNlpElpkSsY1QhBRCL7jkc7o-1726768951433-0.0.1.1-604800000;
         path=/; domain=.api.openai.com; HttpOnly; Secure; SameSite=None
       X-Content-Type-Options:
       - nosniff
       Server:
       - cloudflare
       Cf-Ray:
-      - 8c5b46ded9f7bd84-LHR
+      - 8c5b7cb7eb1b63dd-LHR
       Alt-Svc:
       - h3=":443"; ma=86400
     body:
       encoding: ASCII-8BIT
       string: |-
         {
-          "id": "asst_aNP6iznUZQtY7T20f5zzEmQJ",
+          "id": "asst_nul07MIHPypS8vnnch9X7RfG",
           "object": "assistant",
-          "created_at": 1726766745,
-          "name": "Cross-platform",
-          "description": "Cross-platform",
-          "model": "gpt-3.5-turbo",
+          "created_at": 1726768950,
+          "name": "Assimilated",
+          "description": "Assimilated",
+          "model": "gpt-4-turbo",
           "instructions": "Design a big hat",
           "tools": [],
           "top_p": 1.0,
@@ -79,5 +79,5 @@ http_interactions:
           "metadata": {},
           "response_format": "auto"
         }
-  recorded_at: Thu, 19 Sep 2024 17:25:45 GMT
+  recorded_at: Thu, 19 Sep 2024 18:02:31 GMT
 recorded_with: VCR 6.2.0

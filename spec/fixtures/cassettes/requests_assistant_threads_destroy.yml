@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: delete
-    uri: https://api.openai.com/v1/threads/thread_fdiSzRXhf9twSN42CxDEz3AL
+    uri: https://api.openai.com/v1/threads/thread_CxU9IwtvUrb0qD5NOpA8zKwy
     body:
       encoding: US-ASCII
       string: ''
@@ -27,7 +27,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Thu, 19 Sep 2024 17:25:30 GMT
+      - Thu, 19 Sep 2024 18:02:18 GMT
       Content-Type:
       - application/json
       Transfer-Encoding:
@@ -39,37 +39,39 @@ http_interactions:
       Openai-Organization:
       - user-jxm65ijkzc1qrfhc0ij8moic
       X-Request-Id:
-      - req_d7a228a43a45f6e8a86f3bedd547aad0
+      - req_c04e4b997f1843020fc80e641d156e80
       Openai-Processing-Ms:
-      - '1379'
+      - '92'
       Strict-Transport-Security:
       - max-age=15552000; includeSubDomains; preload
       Cf-Cache-Status:
       - DYNAMIC
       Set-Cookie:
-      - __cf_bm=Qwjvz3qLlWs8ZKDgT2nTbWWtBEbHU4LpqeFUJxmKOH8-1726766730-1.0.1.1-NHtKKRAUEgSjVn1BtYbZ_BEaqVsj6ewK9J4VjOho8_yeqiNelrXeh58JD2KOTeTEaMzqn9JaIwhraBOwDffULg;
-        path=/; expires=Thu, 19-Sep-24 17:55:30 GMT; domain=.api.openai.com; HttpOnly;
+      - __cf_bm=va8Mujugg0qBZZXxZlEOi3D.wklUMUTn5a4cMDqgd68-1726768938-1.0.1.1-3VKtt7aNWGBYErm1wEUcZHor0rMFua05.oK_C75ZOdHkHjNV7pZvA5zbCA.uRCNGGZdtb0pa5XuH_ewn3KHWmQ;
+        path=/; expires=Thu, 19-Sep-24 18:32:18 GMT; domain=.api.openai.com; HttpOnly;
         Secure; SameSite=None
-      - _cfuvid=0_MZCAKKWvzrkATREe05i1io96gXFH_VRFpiLgN2aYM-1726766730784-0.0.1.1-604800000;
+      - _cfuvid=WCICUTRDOWuqW2Lf2QkZ5MG52fhZNVcCh9dtICx90OI-1726768938393-0.0.1.1-604800000;
         path=/; domain=.api.openai.com; HttpOnly; Secure; SameSite=None
       X-Content-Type-Options:
       - nosniff
       Server:
       - cloudflare
       Cf-Ray:
-      - 8c5b467738ae94db-LHR
+      - 8c5b7c678c43d1fa-LHR
+      Alt-Svc:
+      - h3=":443"; ma=86400
     body:
       encoding: ASCII-8BIT
       string: |-
         {
-          "id": "thread_fdiSzRXhf9twSN42CxDEz3AL",
+          "id": "thread_CxU9IwtvUrb0qD5NOpA8zKwy",
           "object": "thread.deleted",
           "deleted": true
         }
-  recorded_at: Thu, 19 Sep 2024 17:25:30 GMT
+  recorded_at: Thu, 19 Sep 2024 18:02:18 GMT
 - request:
     method: delete
-    uri: https://api.openai.com/v1/threads/thread_D4n9B77MOxks8lwCHvZQPTuE
+    uri: https://api.openai.com/v1/threads/thread_RF3uXSEAX720bhUk71C2gm6l
     body:
       encoding: US-ASCII
       string: ''
@@ -94,7 +96,7 @@ http_interactions:
       message: Not Found
     headers:
       Date:
-      - Thu, 19 Sep 2024 17:51:34 GMT
+      - Thu, 19 Sep 2024 18:02:20 GMT
       Content-Type:
       - application/json
       Transfer-Encoding:
@@ -106,25 +108,25 @@ http_interactions:
       Openai-Organization:
       - user-jxm65ijkzc1qrfhc0ij8moic
       X-Request-Id:
-      - req_37e016474ab91cb13d056d6312215fb8
+      - req_4c9f409739e1e6e60eeea4e67173f1fb
       Openai-Processing-Ms:
-      - '73'
+      - '168'
       Strict-Transport-Security:
       - max-age=15552000; includeSubDomains; preload
       Cf-Cache-Status:
       - DYNAMIC
       Set-Cookie:
-      - __cf_bm=av56kLKwYg38B75_mg9QtbIuQdewXRyhV1xQ3JRTi.Q-1726768294-1.0.1.1-piqknXVecqCVaIYjw6YglyUOjp3MW_h9uP1appkEqzVHNCh_CamA7zIczGrd6ZeDzbFwKXUgsJ0B63Bs1GLINw;
-        path=/; expires=Thu, 19-Sep-24 18:21:34 GMT; domain=.api.openai.com; HttpOnly;
+      - __cf_bm=jyOq_kXLUN87TaLw6vNA67zLVPyeRZqrJn.DoxC5kZA-1726768940-1.0.1.1-WqIO2R08TTYkQGtnuGiGUFIGE5ujNMnZhmw1cax5sS9vIAxl3isDV_cz_VOMPAIH1HdqN1yIXEVjKfOSJfFuEg;
+        path=/; expires=Thu, 19-Sep-24 18:32:20 GMT; domain=.api.openai.com; HttpOnly;
         Secure; SameSite=None
-      - _cfuvid=GwY8NcvajRRa4ZCsPiASHxEOpK5prSjAb4Z5DxhQtr8-1726768294180-0.0.1.1-604800000;
+      - _cfuvid=YBm2MgxpBUkHwtZtOOK0GcyMRm8UvwTv1z_OrdosaFA-1726768940694-0.0.1.1-604800000;
         path=/; domain=.api.openai.com; HttpOnly; Secure; SameSite=None
       X-Content-Type-Options:
       - nosniff
       Server:
       - cloudflare
       Cf-Ray:
-      - 8c5b6cad3fa7774f-LHR
+      - 8c5b7c6f999e944f-LHR
       Alt-Svc:
       - h3=":443"; ma=86400
     body:
@@ -132,227 +134,11 @@ http_interactions:
       string: |-
         {
           "error": {
-            "message": "No thread found with id 'thread_D4n9B77MOxks8lwCHvZQPTuE'.",
+            "message": "No thread found with id 'thread_RF3uXSEAX720bhUk71C2gm6l'.",
             "type": "invalid_request_error",
             "param": null,
             "code": null
           }
         }
-  recorded_at: Thu, 19 Sep 2024 17:51:34 GMT
-- request:
-    method: delete
-    uri: https://api.openai.com/v1/threads/thread_rni006xexShR5bL89aVIPFNN
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      Content-Type:
-      - application/json
-      Authorization:
-      - Bearer <OPENAI_ACCESS_TOKEN>
-      Openai-Organization:
-      - "<OPENAI_ORGANIZATION_ID>"
-      Openai-Beta:
-      - assistants=v2
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      Accept:
-      - "*/*"
-      User-Agent:
-      - Ruby
-  response:
-    status:
-      code: 404
-      message: Not Found
-    headers:
-      Date:
-      - Thu, 19 Sep 2024 17:53:30 GMT
-      Content-Type:
-      - application/json
-      Transfer-Encoding:
-      - chunked
-      Connection:
-      - keep-alive
-      Openai-Version:
-      - '2020-10-01'
-      Openai-Organization:
-      - user-jxm65ijkzc1qrfhc0ij8moic
-      X-Request-Id:
-      - req_2337bc7ca8a1c9fa68a5790d452b6ca8
-      Openai-Processing-Ms:
-      - '64'
-      Strict-Transport-Security:
-      - max-age=15552000; includeSubDomains; preload
-      Cf-Cache-Status:
-      - DYNAMIC
-      Set-Cookie:
-      - __cf_bm=bZW_tPuJGlGnd.yFp4tkG2k5RinB5LErHRVBR.lk9cM-1726768410-1.0.1.1-y0TI6qvF8OD1MA2toOskfjo7clO8hO.xx62XcqG7neLHNE7O7Gm4DX_.fsFMBxZpKIOljdqVUtvSfb._p2tb5g;
-        path=/; expires=Thu, 19-Sep-24 18:23:30 GMT; domain=.api.openai.com; HttpOnly;
-        Secure; SameSite=None
-      - _cfuvid=KE6ShUA7DRTqjaODHYgeN.Xs8DM2_UriLfRyzAcCfWo-1726768410902-0.0.1.1-604800000;
-        path=/; domain=.api.openai.com; HttpOnly; Secure; SameSite=None
-      X-Content-Type-Options:
-      - nosniff
-      Server:
-      - cloudflare
-      Cf-Ray:
-      - 8c5b6f86d9109553-LHR
-      Alt-Svc:
-      - h3=":443"; ma=86400
-    body:
-      encoding: ASCII-8BIT
-      string: |-
-        {
-          "error": {
-            "message": "No thread found with id 'thread_rni006xexShR5bL89aVIPFNN'.",
-            "type": "invalid_request_error",
-            "param": null,
-            "code": null
-          }
-        }
-  recorded_at: Thu, 19 Sep 2024 17:53:30 GMT
-- request:
-    method: delete
-    uri: https://api.openai.com/v1/threads/thread_8BXJ2b6GtWvZLlfLAneSyXrw
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      Content-Type:
-      - application/json
-      Authorization:
-      - Bearer <OPENAI_ACCESS_TOKEN>
-      Openai-Organization:
-      - "<OPENAI_ORGANIZATION_ID>"
-      Openai-Beta:
-      - assistants=v2
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      Accept:
-      - "*/*"
-      User-Agent:
-      - Ruby
-  response:
-    status:
-      code: 404
-      message: Not Found
-    headers:
-      Date:
-      - Thu, 19 Sep 2024 17:53:45 GMT
-      Content-Type:
-      - application/json
-      Transfer-Encoding:
-      - chunked
-      Connection:
-      - keep-alive
-      Openai-Version:
-      - '2020-10-01'
-      Openai-Organization:
-      - user-jxm65ijkzc1qrfhc0ij8moic
-      X-Request-Id:
-      - req_6c1f91d79405f15b0bbab10cc3677022
-      Openai-Processing-Ms:
-      - '42'
-      Strict-Transport-Security:
-      - max-age=15552000; includeSubDomains; preload
-      Cf-Cache-Status:
-      - DYNAMIC
-      Set-Cookie:
-      - __cf_bm=e6oQJpMU0RxYMtdjXQxZ.VxdkAsF.9gxumuRdDyGEDo-1726768425-1.0.1.1-AbZrFPY_cJlCywWs36R_V0az4EwVxr_MGEFBzB7LirtAtuu8twnCA3O4snJLRKlv76uWsn5Prk6iHKbfkJjRUA;
-        path=/; expires=Thu, 19-Sep-24 18:23:45 GMT; domain=.api.openai.com; HttpOnly;
-        Secure; SameSite=None
-      - _cfuvid=vU3X5qcf65ks_pCiaWzJBTZe6RRzgUgIvm_mgnWp1ws-1726768425568-0.0.1.1-604800000;
-        path=/; domain=.api.openai.com; HttpOnly; Secure; SameSite=None
-      X-Content-Type-Options:
-      - nosniff
-      Server:
-      - cloudflare
-      Cf-Ray:
-      - 8c5b6fe2aa9779bd-LHR
-      Alt-Svc:
-      - h3=":443"; ma=86400
-    body:
-      encoding: ASCII-8BIT
-      string: |-
-        {
-          "error": {
-            "message": "No thread found with id 'thread_8BXJ2b6GtWvZLlfLAneSyXrw'.",
-            "type": "invalid_request_error",
-            "param": null,
-            "code": null
-          }
-        }
-  recorded_at: Thu, 19 Sep 2024 17:53:45 GMT
-- request:
-    method: delete
-    uri: https://api.openai.com/v1/threads/thread_Hzo2z3nMRKQVwSs7wSOoyL2F
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      Content-Type:
-      - application/json
-      Authorization:
-      - Bearer <OPENAI_ACCESS_TOKEN>
-      Openai-Organization:
-      - "<OPENAI_ORGANIZATION_ID>"
-      Openai-Beta:
-      - assistants=v2
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      Accept:
-      - "*/*"
-      User-Agent:
-      - Ruby
-  response:
-    status:
-      code: 404
-      message: Not Found
-    headers:
-      Date:
-      - Thu, 19 Sep 2024 17:56:23 GMT
-      Content-Type:
-      - application/json
-      Transfer-Encoding:
-      - chunked
-      Connection:
-      - keep-alive
-      Openai-Version:
-      - '2020-10-01'
-      Openai-Organization:
-      - user-jxm65ijkzc1qrfhc0ij8moic
-      X-Request-Id:
-      - req_47516e2551252264112480005cfc7d52
-      Openai-Processing-Ms:
-      - '140'
-      Strict-Transport-Security:
-      - max-age=15552000; includeSubDomains; preload
-      Cf-Cache-Status:
-      - DYNAMIC
-      Set-Cookie:
-      - __cf_bm=kfygUVzsBlJ6J_kBYY35hpAeDa9jTO_kj1IAH6tJFU8-1726768583-1.0.1.1-TXwyIzPuo7cu6YpRxZii0tCgNEq8RM6p54cbycZ5TO4cviElWa8v_ERqNezsVN2cEmaeHxzWhMqwdetXAGEzSQ;
-        path=/; expires=Thu, 19-Sep-24 18:26:23 GMT; domain=.api.openai.com; HttpOnly;
-        Secure; SameSite=None
-      - _cfuvid=pZwZGa.8ECMggBL1Ph2qhWxcv5P6bJozpVhVc1Ouz3o-1726768583037-0.0.1.1-604800000;
-        path=/; domain=.api.openai.com; HttpOnly; Secure; SameSite=None
-      X-Content-Type-Options:
-      - nosniff
-      Server:
-      - cloudflare
-      Cf-Ray:
-      - 8c5b73b77f34cdba-LHR
-      Alt-Svc:
-      - h3=":443"; ma=86400
-    body:
-      encoding: ASCII-8BIT
-      string: |-
-        {
-          "error": {
-            "message": "No thread found with id 'thread_Hzo2z3nMRKQVwSs7wSOoyL2F'.",
-            "type": "invalid_request_error",
-            "param": null,
-            "code": null
-          }
-        }
-  recorded_at: Thu, 19 Sep 2024 17:56:23 GMT
+  recorded_at: Thu, 19 Sep 2024 18:02:20 GMT
 recorded_with: VCR 6.2.0

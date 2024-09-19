@@ -5,8 +5,8 @@ http_interactions:
     uri: https://api.openai.com/v1/assistants
     body:
       encoding: UTF-8
-      string: '{"name":"matrices","model":"gpt-4o","description":"matrices","instructions":"orchestrate
-        innovative solutions"}'
+      string: '{"name":"Extended","model":"gpt-3.5-turbo","description":"Extended","instructions":"incentivize
+        cutting-edge e-tailers"}'
     headers:
       Content-Type:
       - application/json
@@ -28,7 +28,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Thu, 19 Sep 2024 18:01:43 GMT
+      - Thu, 19 Sep 2024 18:02:32 GMT
       Content-Type:
       - application/json
       Transfer-Encoding:
@@ -40,38 +40,36 @@ http_interactions:
       Openai-Organization:
       - user-jxm65ijkzc1qrfhc0ij8moic
       X-Request-Id:
-      - req_36de48d608f426ab8eeca8a74a1e44b6
+      - req_71b88532e6f87a6a3c5e000070445c1a
       Openai-Processing-Ms:
-      - '162'
+      - '175'
       Strict-Transport-Security:
       - max-age=15552000; includeSubDomains; preload
       Cf-Cache-Status:
       - DYNAMIC
       Set-Cookie:
-      - __cf_bm=5o00xWpe3KxT9llmgnzinAys2TQgKiJjpbQYvalcK0c-1726768903-1.0.1.1-eznnKWK9vv4lPEUOWT1fEyOO8l8TquMqXGW.bSjQsXAcw4YNFCk3Fd3xZr6tky7Q7L4XdC4iTzNaooxVCxESyg;
-        path=/; expires=Thu, 19-Sep-24 18:31:43 GMT; domain=.api.openai.com; HttpOnly;
+      - __cf_bm=60ru1axC3XfK7gxmCPqpncOraob2iWkG.hG6.qFkMd0-1726768952-1.0.1.1-71GomrdZwvUuVjoDB5oPfgRmsxHjHtRX3QHh3qrlVtHerm21mgPVf6xfPakKjW4wuAf9kVrmYcP9BWxhZcfM8g;
+        path=/; expires=Thu, 19-Sep-24 18:32:32 GMT; domain=.api.openai.com; HttpOnly;
         Secure; SameSite=None
-      - _cfuvid=rIMLfznxIPEMlvS0.v9vDvZDyLT75xNPFdxXA09OC78-1726768903888-0.0.1.1-604800000;
+      - _cfuvid=x43bRS_rolUFSoEqzYRuTcsh9TDMzQWjLGXjKTac1KY-1726768952918-0.0.1.1-604800000;
         path=/; domain=.api.openai.com; HttpOnly; Secure; SameSite=None
       X-Content-Type-Options:
       - nosniff
       Server:
       - cloudflare
       Cf-Ray:
-      - 8c5b7b8f6b4260f3-LHR
-      Alt-Svc:
-      - h3=":443"; ma=86400
+      - 8c5b7cc1af5c718c-LHR
     body:
       encoding: ASCII-8BIT
       string: |-
         {
-          "id": "asst_k4OOQXG5NYdKjizvpUiV4dwz",
+          "id": "asst_c3L5UH91fL9uETle7ElOcgsO",
           "object": "assistant",
-          "created_at": 1726768903,
-          "name": "matrices",
-          "description": "matrices",
-          "model": "gpt-4o",
-          "instructions": "orchestrate innovative solutions",
+          "created_at": 1726768952,
+          "name": "Extended",
+          "description": "Extended",
+          "model": "gpt-3.5-turbo",
+          "instructions": "incentivize cutting-edge e-tailers",
           "tools": [],
           "top_p": 1.0,
           "temperature": 1.0,
@@ -79,5 +77,5 @@ http_interactions:
           "metadata": {},
           "response_format": "auto"
         }
-  recorded_at: Thu, 19 Sep 2024 18:01:43 GMT
+  recorded_at: Thu, 19 Sep 2024 18:02:33 GMT
 recorded_with: VCR 6.2.0
