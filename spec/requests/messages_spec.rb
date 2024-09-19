@@ -58,26 +58,6 @@ RSpec.describe MessagesController, type: :request do
     end
   end
 
-  # describe "DELETE /destroy" do
-  #   it "deletes the requested AssistantThread and calls the remote delete method" do
-  #     assistant_thread # Ensure the thread is created before attempting to delete it
-  #     remote_id = assistant_thread.remote_id
-
-  #     VCR.use_cassette("requests_assistant_threads_destroy") do
-  #       allow(AI::Engine::OpenAI::Threads::Delete).to receive(:call).and_call_original
-
-  #       expect {
-  #         delete assistant_thread_url(assistant_thread)
-  #       }.to change(AI::Engine::AssistantThread, :count).by(-1)
-
-  #       expect { assistant_thread.reload }.to raise_error(ActiveRecord::RecordNotFound)
-  #       expect(AI::Engine::OpenAI::Threads::Delete).to have_received(:call).with(remote_id: remote_id)
-  #     end
-
-  #     expect(response).to redirect_to(assistant_threads_url)
-  #   end
-  # end
-
   describe "Deleting the AssistantThread" do
     let(:storyteller) do
       current_user.storytellers << build(:storyteller)
@@ -114,6 +94,36 @@ RSpec.describe MessagesController, type: :request do
         expect { response_message.reload }.to raise_error(ActiveRecord::RecordNotFound)
 
         expect(AI::Engine::OpenAI::Threads::Delete).to have_received(:call).with(remote_id: assistant_thread.remote_id)
+      end
+    end
+  end
+
+  describe "Deleting the Chat" do
+    let(:chat) { current_user.chats.create }
+    let(:model) { AI::Engine::MODEL_OPTIONS.sample }
+    let(:valid_attributes) { {chat_id: chat.id, content: "Hi there", model: model} }
+
+    before do
+      # Sends the message history off to OpenAI and gets the response.
+      VCR.use_cassette("requests_chat_messages_create_and_run") do
+        expect {
+          post messages_url, as: :turbo_stream, params: {message: valid_attributes}
+        }.to change(chat.messages, :count).by(2)
+      end
+    end
+
+    it "deletes the requested Chat and Messages" do
+      request_message = chat.messages.user.first
+      response_message = chat.messages.assistant.first
+
+      VCR.use_cassette("requests_chat_message_destroy") do
+        expect {
+          delete chat_url(chat)
+        }.to change(AI::Engine::Chat, :count).by(-1)
+
+        expect { chat.reload }.to raise_error(ActiveRecord::RecordNotFound)
+        expect { request_message.reload }.to raise_error(ActiveRecord::RecordNotFound)
+        expect { response_message.reload }.to raise_error(ActiveRecord::RecordNotFound)
       end
     end
   end

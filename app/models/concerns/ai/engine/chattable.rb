@@ -4,7 +4,7 @@ module AI
       extend ActiveSupport::Concern
 
       included do
-        has_many :chats, as: :chattable, class_name: "AI::Engine::Chat"
+        has_many :chats, as: :chattable, class_name: "AI::Engine::Chat", dependent: :destroy
 
         def ai_engine_on_message_create(message:)
           # This is a hook for the AI Engine to notify the Chattable that a Message has been updated.
