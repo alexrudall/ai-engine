@@ -59,31 +59,69 @@ RSpec.describe StorytellersController, type: :request do
   end
 
   describe "DELETE /destroy" do
-    let(:storyteller) do
-      VCR.use_cassette("requests_storytellers_delete_create") do
-        expect {
-          post storytellers_url, params: {storyteller: valid_attributes}
-        }.to change(Storyteller, :count).by(1)
+    context "with a remote Assistant" do
+      let(:storyteller) do
+        VCR.use_cassette("requests_storytellers_delete_create") do
+          expect {
+            post storytellers_url, params: {storyteller: valid_attributes}
+          }.to change(Storyteller, :count).by(1)
+        end
+        Storyteller.last
       end
-      Storyteller.last
+
+      it "deletes the requested storyteller and calls the remote delete method" do
+        storyteller # Ensure the storyteller is created before attempting to delete it
+        assistant = storyteller.assistant
+        remote_id = storyteller.assistant.remote_id
+
+        VCR.use_cassette("requests_storytellers_destroy") do
+          allow(AI::Engine::OpenAI::Assistants::Delete).to receive(:call).and_call_original
+
+          expect {
+            delete storyteller_url(storyteller)
+          }.to change(Storyteller, :count).by(-1)
+
+          expect { assistant.reload }.to raise_error(ActiveRecord::RecordNotFound)
+          expect(AI::Engine::OpenAI::Assistants::Delete).to have_received(:call).with(remote_id: remote_id)
+        end
+
+        expect(response).to redirect_to(storytellers_url)
+      end
     end
-    it "deletes the requested storyteller and calls the remote delete method" do
-      storyteller # Ensure the storyteller is created before attempting to delete it
-      assistant = storyteller.assistant
-      remote_id = storyteller.assistant.remote_id
 
-      VCR.use_cassette("requests_storytellers_destroy") do
-        allow(AI::Engine::OpenAI::Assistants::Delete).to receive(:call).and_call_original
-
-        expect {
-          delete storyteller_url(storyteller)
-        }.to change(Storyteller, :count).by(-1)
-
-        expect { assistant.reload }.to raise_error(ActiveRecord::RecordNotFound)
-        expect(AI::Engine::OpenAI::Assistants::Delete).to have_received(:call).with(remote_id: remote_id)
+    context "when the remote Assistant has already been deleted" do
+      let(:storyteller) do
+        VCR.use_cassette("requests_storytellers_double_delete_create") do
+          expect {
+            post storytellers_url, params: {storyteller: valid_attributes}
+          }.to change(Storyteller, :count).by(1)
+        end
+        Storyteller.last
       end
 
-      expect(response).to redirect_to(storytellers_url)
+      it "deletes the requested storyteller and calls the remote delete method" do
+        storyteller # Ensure the storyteller is created before attempting to delete it
+        assistant = storyteller.assistant
+        remote_id = storyteller.assistant.remote_id
+
+        # For the test, the remote assistant is already deleted:
+        VCR.use_cassette("requests_storytellers_predestroy") do
+          AI::Engine::OpenAI::Assistants::Delete.call(remote_id: remote_id)
+        end
+
+        VCR.use_cassette("requests_storytellers_double_destroy") do
+          allow(AI::Engine::OpenAI::Assistants::Delete).to receive(:call).and_call_original
+
+          expect {
+            delete storyteller_url(storyteller)
+          }.to change(Storyteller, :count).by(-1)
+
+          expect { assistant.reload }.to raise_error(ActiveRecord::RecordNotFound)
+          expect(AI::Engine::OpenAI::Assistants::Delete).to have_received(:call).with(remote_id: remote_id)
+        end
+
+        expect(response).to redirect_to(storytellers_url)
+      end
     end
   end
 end

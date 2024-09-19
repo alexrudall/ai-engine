@@ -1,0 +1,83 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://api.openai.com/v1/assistants
+    body:
+      encoding: UTF-8
+      string: '{"name":"matrices","model":"gpt-4o","description":"matrices","instructions":"orchestrate
+        innovative solutions"}'
+    headers:
+      Content-Type:
+      - application/json
+      Authorization:
+      - Bearer <OPENAI_ACCESS_TOKEN>
+      Openai-Organization:
+      - "<OPENAI_ORGANIZATION_ID>"
+      Openai-Beta:
+      - assistants=v2
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Thu, 19 Sep 2024 18:01:43 GMT
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Openai-Version:
+      - '2020-10-01'
+      Openai-Organization:
+      - user-jxm65ijkzc1qrfhc0ij8moic
+      X-Request-Id:
+      - req_36de48d608f426ab8eeca8a74a1e44b6
+      Openai-Processing-Ms:
+      - '162'
+      Strict-Transport-Security:
+      - max-age=15552000; includeSubDomains; preload
+      Cf-Cache-Status:
+      - DYNAMIC
+      Set-Cookie:
+      - __cf_bm=5o00xWpe3KxT9llmgnzinAys2TQgKiJjpbQYvalcK0c-1726768903-1.0.1.1-eznnKWK9vv4lPEUOWT1fEyOO8l8TquMqXGW.bSjQsXAcw4YNFCk3Fd3xZr6tky7Q7L4XdC4iTzNaooxVCxESyg;
+        path=/; expires=Thu, 19-Sep-24 18:31:43 GMT; domain=.api.openai.com; HttpOnly;
+        Secure; SameSite=None
+      - _cfuvid=rIMLfznxIPEMlvS0.v9vDvZDyLT75xNPFdxXA09OC78-1726768903888-0.0.1.1-604800000;
+        path=/; domain=.api.openai.com; HttpOnly; Secure; SameSite=None
+      X-Content-Type-Options:
+      - nosniff
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 8c5b7b8f6b4260f3-LHR
+      Alt-Svc:
+      - h3=":443"; ma=86400
+    body:
+      encoding: ASCII-8BIT
+      string: |-
+        {
+          "id": "asst_k4OOQXG5NYdKjizvpUiV4dwz",
+          "object": "assistant",
+          "created_at": 1726768903,
+          "name": "matrices",
+          "description": "matrices",
+          "model": "gpt-4o",
+          "instructions": "orchestrate innovative solutions",
+          "tools": [],
+          "top_p": 1.0,
+          "temperature": 1.0,
+          "tool_resources": {},
+          "metadata": {},
+          "response_format": "auto"
+        }
+  recorded_at: Thu, 19 Sep 2024 18:01:43 GMT
+recorded_with: VCR 6.2.0

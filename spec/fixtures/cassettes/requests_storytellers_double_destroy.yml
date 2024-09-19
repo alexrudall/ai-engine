@@ -1,0 +1,147 @@
+---
+http_interactions:
+- request:
+    method: delete
+    uri: https://api.openai.com/v1/assistants/asst_pZ6sdiqpbDGwIz1SUmV5K8hl
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Content-Type:
+      - application/json
+      Authorization:
+      - Bearer <OPENAI_ACCESS_TOKEN>
+      Openai-Organization:
+      - "<OPENAI_ORGANIZATION_ID>"
+      Openai-Beta:
+      - assistants=v2
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 404
+      message: Not Found
+    headers:
+      Date:
+      - Thu, 19 Sep 2024 18:01:18 GMT
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Openai-Version:
+      - '2020-10-01'
+      Openai-Organization:
+      - user-jxm65ijkzc1qrfhc0ij8moic
+      X-Request-Id:
+      - req_7c0b3cc0ae254eb927f779f623f485b2
+      Openai-Processing-Ms:
+      - '16'
+      Strict-Transport-Security:
+      - max-age=15552000; includeSubDomains; preload
+      Cf-Cache-Status:
+      - DYNAMIC
+      Set-Cookie:
+      - __cf_bm=hku9BFOKEsNSXxeZVoN5DQaURzzodDWF2bvTYToazCk-1726768878-1.0.1.1-xfLy9_g_UIlZklxnuSMR5HtPXKyi5kSMZ9ZlgitnHeZuJYppo_5.49M7qrGW.0CeQR17PPukmQw_oGCpoH85pA;
+        path=/; expires=Thu, 19-Sep-24 18:31:18 GMT; domain=.api.openai.com; HttpOnly;
+        Secure; SameSite=None
+      - _cfuvid=17MMJEyCdNDYnYJe3K7dM266U0MfdsoGKRuPOeO8HCE-1726768878028-0.0.1.1-604800000;
+        path=/; domain=.api.openai.com; HttpOnly; Secure; SameSite=None
+      X-Content-Type-Options:
+      - nosniff
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 8c5b7aee8b84bf07-LHR
+      Alt-Svc:
+      - h3=":443"; ma=86400
+    body:
+      encoding: ASCII-8BIT
+      string: |-
+        {
+          "error": {
+            "message": "No assistant found with id 'asst_pZ6sdiqpbDGwIz1SUmV5K8hl'.",
+            "type": "invalid_request_error",
+            "param": null,
+            "code": null
+          }
+        }
+  recorded_at: Thu, 19 Sep 2024 18:01:18 GMT
+- request:
+    method: delete
+    uri: https://api.openai.com/v1/assistants/asst_k4OOQXG5NYdKjizvpUiV4dwz
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Content-Type:
+      - application/json
+      Authorization:
+      - Bearer <OPENAI_ACCESS_TOKEN>
+      Openai-Organization:
+      - "<OPENAI_ORGANIZATION_ID>"
+      Openai-Beta:
+      - assistants=v2
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 404
+      message: Not Found
+    headers:
+      Date:
+      - Thu, 19 Sep 2024 18:01:44 GMT
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Openai-Version:
+      - '2020-10-01'
+      Openai-Organization:
+      - user-jxm65ijkzc1qrfhc0ij8moic
+      X-Request-Id:
+      - req_9360094fbad526adeca2d80bbdff14cc
+      Openai-Processing-Ms:
+      - '29'
+      Strict-Transport-Security:
+      - max-age=15552000; includeSubDomains; preload
+      Cf-Cache-Status:
+      - DYNAMIC
+      Set-Cookie:
+      - __cf_bm=uwo2ZlZwvwwwC0V8zsWoEKTCnyRQi.sd2ghApNXpGUU-1726768904-1.0.1.1-ySFwEc4BuycIREIA68Hclg8NNw4rgwTy22dqHJ6674AnC6emsQOlgfeZKHXfDT2HG_tYrnFyAOlOqMfXk_p5RA;
+        path=/; expires=Thu, 19-Sep-24 18:31:44 GMT; domain=.api.openai.com; HttpOnly;
+        Secure; SameSite=None
+      - _cfuvid=1M66cdBkH4RcNz2qgAGURj2_8Rf1U8OkNocEMwU9Vfs-1726768904653-0.0.1.1-604800000;
+        path=/; domain=.api.openai.com; HttpOnly; Secure; SameSite=None
+      X-Content-Type-Options:
+      - nosniff
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 8c5b7b94ea1503b9-LHR
+      Alt-Svc:
+      - h3=":443"; ma=86400
+    body:
+      encoding: ASCII-8BIT
+      string: |-
+        {
+          "error": {
+            "message": "No assistant found with id 'asst_k4OOQXG5NYdKjizvpUiV4dwz'.",
+            "type": "invalid_request_error",
+            "param": null,
+            "code": null
+          }
+        }
+  recorded_at: Thu, 19 Sep 2024 18:01:44 GMT
+recorded_with: VCR 6.2.0
