@@ -4,6 +4,8 @@ class AI::Engine::OpenAI::Threads::Delete
     response = client.threads.delete(id: remote_id)
 
     response["id"]
+  rescue Faraday::ResourceNotFound => e
+    Rails.logger.error("#{self} - #{e.response.dig(:body, "error", "message")}")
   end
 
   private_class_method def self.client
