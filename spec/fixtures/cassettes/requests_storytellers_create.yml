@@ -5,8 +5,8 @@ http_interactions:
     uri: https://api.openai.com/v1/assistants
     body:
       encoding: UTF-8
-      string: '{"name":"24 hour","model":"gpt-4-turbo","description":"24 hour","instructions":"mesh
-        leading-edge systems"}'
+      string: '{"name":"Reduced","model":"gpt-4-turbo","description":"Reduced","instructions":"cultivate
+        best-of-breed methodologies"}'
     headers:
       Content-Type:
       - application/json
@@ -28,7 +28,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Thu, 19 Sep 2024 16:33:14 GMT
+      - Thu, 19 Sep 2024 17:23:39 GMT
       Content-Type:
       - application/json
       Transfer-Encoding:
@@ -40,38 +40,38 @@ http_interactions:
       Openai-Organization:
       - user-jxm65ijkzc1qrfhc0ij8moic
       X-Request-Id:
-      - req_bc2f184b47774a5a65b32188c90daea6
+      - req_52be142fb9ce1bae8d79ae0f3d9ba3ff
       Openai-Processing-Ms:
-      - '166'
+      - '176'
       Strict-Transport-Security:
       - max-age=15552000; includeSubDomains; preload
       Cf-Cache-Status:
       - DYNAMIC
       Set-Cookie:
-      - __cf_bm=ItVgLBG4BcY.E58foTZJ.1lE6JnTT.ELEaV_bdJ0T2A-1726763594-1.0.1.1-zFKo2fX4pM2D7lZOhEouYZlnlah7hien687m_iTPvFQZPPGv6PeXzgBo9h27XnkVvuBlg9YOB1hLbiyPvMuggQ;
-        path=/; expires=Thu, 19-Sep-24 17:03:14 GMT; domain=.api.openai.com; HttpOnly;
+      - __cf_bm=ZxtuzH9SeHq35SJ431vDjgJjwDbAoCvsREDnXv526EE-1726766619-1.0.1.1-0dxS.znbBQqICPDPXeLWXToRuyEXiZqbTfy.91MomHdMmUjAJJvRDIUd5nob1xkGNm78MS0ba6ofHvLAaAayNw;
+        path=/; expires=Thu, 19-Sep-24 17:53:39 GMT; domain=.api.openai.com; HttpOnly;
         Secure; SameSite=None
-      - _cfuvid=u_IgzJ1kchNawlEFLboQnn.C_fXMZJ749MjqdIdhKbM-1726763594192-0.0.1.1-604800000;
+      - _cfuvid=BONZrEtKs7ZSOx_HOo9Qs_WXwbPP2fNT_e_62zg8RXQ-1726766619692-0.0.1.1-604800000;
         path=/; domain=.api.openai.com; HttpOnly; Secure; SameSite=None
       X-Content-Type-Options:
       - nosniff
       Server:
       - cloudflare
       Cf-Ray:
-      - 8c5af9edccc094cf-LHR
+      - 8c5b43cacaf660f9-LHR
       Alt-Svc:
       - h3=":443"; ma=86400
     body:
       encoding: ASCII-8BIT
       string: |-
         {
-          "id": "asst_GxHwz2oQDFiw7KVpgOZp4frz",
+          "id": "asst_o0Un8ZcscIrFSA24sFwxshQ0",
           "object": "assistant",
-          "created_at": 1726763594,
-          "name": "24 hour",
-          "description": "24 hour",
+          "created_at": 1726766619,
+          "name": "Reduced",
+          "description": "Reduced",
           "model": "gpt-4-turbo",
-          "instructions": "mesh leading-edge systems",
+          "instructions": "cultivate best-of-breed methodologies",
           "tools": [],
           "top_p": 1.0,
           "temperature": 1.0,
@@ -79,5 +79,5 @@ http_interactions:
           "metadata": {},
           "response_format": "auto"
         }
-  recorded_at: Thu, 19 Sep 2024 16:33:14 GMT
+  recorded_at: Thu, 19 Sep 2024 17:23:39 GMT
 recorded_with: VCR 6.2.0

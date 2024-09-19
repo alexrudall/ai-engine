@@ -2,10 +2,10 @@
 http_interactions:
 - request:
     method: post
-    uri: https://api.openai.com/v1/assistants/asst_TMSfah1vBOJo15vIpNcW9iWC
+    uri: https://api.openai.com/v1/assistants/asst_4bMOisKcF4L3peOeEBPTgIGc
     body:
       encoding: UTF-8
-      string: '{"name":"portal","model":"gpt-3.5-turbo","description":"portal","instructions":"Design
+      string: '{"name":"algorithm","model":"gpt-3.5-turbo","description":"algorithm","instructions":"Design
         a big hat"}'
     headers:
       Content-Type:
@@ -28,7 +28,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Mon, 24 Jun 2024 15:50:23 GMT
+      - Thu, 19 Sep 2024 17:23:38 GMT
       Content-Type:
       - application/json
       Transfer-Encoding:
@@ -40,34 +40,36 @@ http_interactions:
       Openai-Organization:
       - user-jxm65ijkzc1qrfhc0ij8moic
       X-Request-Id:
-      - req_ae164bb06a895263019111e3abf9ce1b
+      - req_f63ee519a504fb1a5ac5a43c2f755c78
       Openai-Processing-Ms:
-      - '99'
+      - '180'
       Strict-Transport-Security:
-      - max-age=15724800; includeSubDomains
+      - max-age=15552000; includeSubDomains; preload
       Cf-Cache-Status:
       - DYNAMIC
       Set-Cookie:
-      - __cf_bm=YnL05YO6_9WW6xz9vbJAjvn5MZZ3_G3h400K42Jbk70-1719244223-1.0.1.1-BwQIl03uIJI8AMzzKBJAtYRuEFe96LdmTdo7U2Zo4y0rTyIMdV66TAXNMv_gQPjyrrD9Lj5_2bWqFGGt2hfrNw;
-        path=/; expires=Mon, 24-Jun-24 16:20:23 GMT; domain=.api.openai.com; HttpOnly;
+      - __cf_bm=zWtRmj7OjxkLX3dYxn9nOsrOh.bgQ_Fa4iPB6dMqJhk-1726766618-1.0.1.1-44S5kZEVy7Nx.FUHIssa9waNI5pm8KHi3bzvWCyegzpDHCmdmVl5mxQG0cgO8qSYtUF_UjpqpoL41k0.sdlBng;
+        path=/; expires=Thu, 19-Sep-24 17:53:38 GMT; domain=.api.openai.com; HttpOnly;
         Secure; SameSite=None
-      - _cfuvid=tDD9YqQIKL3gwZcfBOZdbjMFtshiwE0kJH6pQyVbZ9A-1719244223942-0.0.1.1-604800000;
+      - _cfuvid=hPs.v8KYENFQ7h_BxkEiGsdu.mc591MzX5eAWrrRlsI-1726766618954-0.0.1.1-604800000;
         path=/; domain=.api.openai.com; HttpOnly; Secure; SameSite=None
+      X-Content-Type-Options:
+      - nosniff
       Server:
       - cloudflare
       Cf-Ray:
-      - 898ddf8e092360f8-LHR
+      - 8c5b43c67c3f5326-LHR
       Alt-Svc:
       - h3=":443"; ma=86400
     body:
       encoding: ASCII-8BIT
       string: |-
         {
-          "id": "asst_TMSfah1vBOJo15vIpNcW9iWC",
+          "id": "asst_4bMOisKcF4L3peOeEBPTgIGc",
           "object": "assistant",
-          "created_at": 1719244223,
-          "name": "portal",
-          "description": "portal",
+          "created_at": 1726766618,
+          "name": "algorithm",
+          "description": "algorithm",
           "model": "gpt-3.5-turbo",
           "instructions": "Design a big hat",
           "tools": [],
@@ -77,76 +79,5 @@ http_interactions:
           "metadata": {},
           "response_format": "auto"
         }
-  recorded_at: Mon, 24 Jun 2024 15:50:23 GMT
-- request:
-    method: post
-    uri: https://api.openai.com/v1/assistants/asst_GxHwz2oQDFiw7KVpgOZp4frz
-    body:
-      encoding: UTF-8
-      string: '{"name":"flexibility","model":"gpt-3.5-turbo","description":"flexibility","instructions":"Design
-        a big hat"}'
-    headers:
-      Content-Type:
-      - application/json
-      Authorization:
-      - Bearer dummy-token
-      Openai-Beta:
-      - assistants=v2
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      Accept:
-      - "*/*"
-      User-Agent:
-      - Ruby
-  response:
-    status:
-      code: 401
-      message: Unauthorized
-    headers:
-      Date:
-      - Thu, 19 Sep 2024 17:19:40 GMT
-      Content-Type:
-      - application/json
-      Content-Length:
-      - '240'
-      Connection:
-      - keep-alive
-      Www-Authenticate:
-      - Bearer realm="OpenAI API"
-      Openai-Version:
-      - '2020-10-01'
-      X-Request-Id:
-      - req_dff393f3d274b55910da95845cf5961f
-      Openai-Processing-Ms:
-      - '57'
-      Strict-Transport-Security:
-      - max-age=15552000; includeSubDomains; preload
-      Cf-Cache-Status:
-      - DYNAMIC
-      Set-Cookie:
-      - __cf_bm=dMe96.5Jhyj.cKSf.oN9sLCi6pD7BrkNADAsRH.i9zY-1726766380-1.0.1.1-Rf7O89qLQA2YAvQQSbgXpz13pYZ_XAe.jKhj4cGKb5oz3nt9FLk5qUv7l7uTdamLAfD5uLzA10rCsLn4PQdtxQ;
-        path=/; expires=Thu, 19-Sep-24 17:49:40 GMT; domain=.api.openai.com; HttpOnly;
-        Secure; SameSite=None
-      - _cfuvid=NX44YD5Ia81YAY7SNsyACSarTA1g56qzJZI1ziTQ5ms-1726766380003-0.0.1.1-604800000;
-        path=/; domain=.api.openai.com; HttpOnly; Secure; SameSite=None
-      X-Content-Type-Options:
-      - nosniff
-      Server:
-      - cloudflare
-      Cf-Ray:
-      - 8c5b3df18f6b48bc-LHR
-      Alt-Svc:
-      - h3=":443"; ma=86400
-    body:
-      encoding: UTF-8
-      string: |-
-        {
-          "error": {
-            "message": "Incorrect API key provided: dummy-token. You can find your API key at https://platform.openai.com/account/api-keys.",
-            "type": "invalid_request_error",
-            "param": null,
-            "code": "invalid_api_key"
-          }
-        }
-  recorded_at: Thu, 19 Sep 2024 17:19:40 GMT
+  recorded_at: Thu, 19 Sep 2024 17:23:38 GMT
 recorded_with: VCR 6.2.0
