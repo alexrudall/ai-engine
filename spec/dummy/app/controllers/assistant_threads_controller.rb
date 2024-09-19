@@ -47,7 +47,6 @@ class AssistantThreadsController < ApplicationController
   # DELETE /assistant_threads/1 or /assistant_threads/1.json
   def destroy
     @assistant_thread.destroy!
-
     respond_to do |format|
       format.html { redirect_to assistant_threads_url, notice: "AssistantThread was successfully destroyed." }
     end

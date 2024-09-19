@@ -5,8 +5,8 @@ http_interactions:
     uri: https://api.openai.com/v1/assistants
     body:
       encoding: UTF-8
-      string: '{"name":"cohesive","model":"gpt-4-turbo","description":"cohesive","instructions":"revolutionize
-        integrated infomediaries"}'
+      string: '{"name":"24 hour","model":"gpt-4-turbo","description":"24 hour","instructions":"mesh
+        leading-edge systems"}'
     headers:
       Content-Type:
       - application/json
@@ -28,7 +28,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Thu, 19 Sep 2024 16:17:48 GMT
+      - Thu, 19 Sep 2024 16:33:14 GMT
       Content-Type:
       - application/json
       Transfer-Encoding:
@@ -40,38 +40,38 @@ http_interactions:
       Openai-Organization:
       - user-jxm65ijkzc1qrfhc0ij8moic
       X-Request-Id:
-      - req_d298b8473d70778b69ec936a2bfad31b
+      - req_bc2f184b47774a5a65b32188c90daea6
       Openai-Processing-Ms:
-      - '195'
+      - '166'
       Strict-Transport-Security:
       - max-age=15552000; includeSubDomains; preload
       Cf-Cache-Status:
       - DYNAMIC
       Set-Cookie:
-      - __cf_bm=TODYreFiIcuVYnklfxr6HQr5Avzcc6HtCkW3M33O0Os-1726762668-1.0.1.1-fayewzGqA59dson5nBTXkLS4_0wcAg8xO4N_gTlRYZGoVQiDWA36R6Kbni0bTREmvUmFrPkLm125wJyWWWWFwA;
-        path=/; expires=Thu, 19-Sep-24 16:47:48 GMT; domain=.api.openai.com; HttpOnly;
+      - __cf_bm=ItVgLBG4BcY.E58foTZJ.1lE6JnTT.ELEaV_bdJ0T2A-1726763594-1.0.1.1-zFKo2fX4pM2D7lZOhEouYZlnlah7hien687m_iTPvFQZPPGv6PeXzgBo9h27XnkVvuBlg9YOB1hLbiyPvMuggQ;
+        path=/; expires=Thu, 19-Sep-24 17:03:14 GMT; domain=.api.openai.com; HttpOnly;
         Secure; SameSite=None
-      - _cfuvid=xLF4xcXpQ_HLU7fJyAglhIb_NaL_Yfoi2owPClJi6cY-1726762668348-0.0.1.1-604800000;
+      - _cfuvid=u_IgzJ1kchNawlEFLboQnn.C_fXMZJ749MjqdIdhKbM-1726763594192-0.0.1.1-604800000;
         path=/; domain=.api.openai.com; HttpOnly; Secure; SameSite=None
       X-Content-Type-Options:
       - nosniff
       Server:
       - cloudflare
       Cf-Ray:
-      - 8c5ae352df16949a-LHR
+      - 8c5af9edccc094cf-LHR
       Alt-Svc:
       - h3=":443"; ma=86400
     body:
       encoding: ASCII-8BIT
       string: |-
         {
-          "id": "asst_R9Rinc7UnR9Ep1U1oAcmXJ0N",
+          "id": "asst_GxHwz2oQDFiw7KVpgOZp4frz",
           "object": "assistant",
-          "created_at": 1726762668,
-          "name": "cohesive",
-          "description": "cohesive",
+          "created_at": 1726763594,
+          "name": "24 hour",
+          "description": "24 hour",
           "model": "gpt-4-turbo",
-          "instructions": "revolutionize integrated infomediaries",
+          "instructions": "mesh leading-edge systems",
           "tools": [],
           "top_p": 1.0,
           "temperature": 1.0,
@@ -79,5 +79,5 @@ http_interactions:
           "metadata": {},
           "response_format": "auto"
         }
-  recorded_at: Thu, 19 Sep 2024 16:17:48 GMT
+  recorded_at: Thu, 19 Sep 2024 16:33:14 GMT
 recorded_with: VCR 6.2.0
