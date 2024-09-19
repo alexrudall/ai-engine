@@ -5,6 +5,16 @@ All notable changes to the AI::Engine project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.4.2] - 2024-09-19
+
+### Fixed
+
+- Add cascading deletion of all objects and remotely, where appropriate:
+  - Deleting Assistable deletes local & remote Assistant, nullifies Run
+  - Deleting Chattable deletes local Chat, deletes local Messages
+  - Deleting Threadable deletes local AssistantThreads & remote Threads, deletes local Runs & Messages.
+  - OpenAI should automatically delete remote Messages belonging to a remote Thread, when the Thread is deleted.
+
 ## [0.4.1] - 2024-09-19
 
 ### Fixed
