@@ -4,7 +4,7 @@ module AI
       extend ActiveSupport::Concern
 
       included do
-        has_one :assistant, as: :assistable, class_name: "AI::Engine::Assistant"
+        has_one :assistant, as: :assistable, class_name: "AI::Engine::Assistant", dependent: :nullify
 
         before_create :create_openai_assistant
         before_update :update_openai_assistant

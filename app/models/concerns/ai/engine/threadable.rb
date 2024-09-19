@@ -4,7 +4,7 @@ module AI
       extend ActiveSupport::Concern
 
       included do
-        has_many :assistant_threads, as: :threadable, class_name: "AI::Engine::AssistantThread"
+        has_many :assistant_threads, as: :threadable, class_name: "AI::Engine::AssistantThread", dependent: :nullify
 
         def ai_engine_on_message_create(message:)
           # This is a hook for the AI Engine to notify the AssistantThreadtable that a Message has been updated.
