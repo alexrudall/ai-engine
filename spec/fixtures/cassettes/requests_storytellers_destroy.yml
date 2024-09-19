@@ -1,0 +1,482 @@
+---
+http_interactions:
+- request:
+    method: delete
+    uri: https://api.openai.com/v1/assistants/asst_D6II7hl5EpLIGs890vlgrXtF
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Content-Type:
+      - application/json
+      Authorization:
+      - Bearer <OPENAI_ACCESS_TOKEN>
+      Openai-Organization:
+      - "<OPENAI_ORGANIZATION_ID>"
+      Openai-Beta:
+      - assistants=v2
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Thu, 19 Sep 2024 16:08:44 GMT
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Openai-Version:
+      - '2020-10-01'
+      Openai-Organization:
+      - user-jxm65ijkzc1qrfhc0ij8moic
+      X-Request-Id:
+      - req_8bfd8ea4673cc02e0965c398ed366e2a
+      Openai-Processing-Ms:
+      - '312'
+      Strict-Transport-Security:
+      - max-age=15552000; includeSubDomains; preload
+      Cf-Cache-Status:
+      - DYNAMIC
+      Set-Cookie:
+      - __cf_bm=cdiz78WvrPkGEKftXZVCol83i9bgGwEV_eLxWOumaE0-1726762124-1.0.1.1-kvkH_hawvCcHxaitoHxyyHLGU05bvsad8Uy9LQeY_p8wavO97wr4VMJRlGU_EDONGQhIWpDQculQpj3ClhW1yg;
+        path=/; expires=Thu, 19-Sep-24 16:38:44 GMT; domain=.api.openai.com; HttpOnly;
+        Secure; SameSite=None
+      - _cfuvid=h5_lsh9FSxlROyPIgdToSNaM.ndIGPV2DhZVrx0JqSA-1726762124281-0.0.1.1-604800000;
+        path=/; domain=.api.openai.com; HttpOnly; Secure; SameSite=None
+      X-Content-Type-Options:
+      - nosniff
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 8c5ad609c92d9484-LHR
+      Alt-Svc:
+      - h3=":443"; ma=86400
+    body:
+      encoding: ASCII-8BIT
+      string: |-
+        {
+          "id": "asst_D6II7hl5EpLIGs890vlgrXtF",
+          "object": "assistant.deleted",
+          "deleted": true
+        }
+  recorded_at: Thu, 19 Sep 2024 16:08:44 GMT
+- request:
+    method: delete
+    uri: https://api.openai.com/v1/assistants/asst_bTYRdWDkSpVdl6m5M7YbdpBd
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Content-Type:
+      - application/json
+      Authorization:
+      - Bearer <OPENAI_ACCESS_TOKEN>
+      Openai-Organization:
+      - "<OPENAI_ORGANIZATION_ID>"
+      Openai-Beta:
+      - assistants=v2
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Thu, 19 Sep 2024 16:09:01 GMT
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Openai-Version:
+      - '2020-10-01'
+      Openai-Organization:
+      - user-jxm65ijkzc1qrfhc0ij8moic
+      X-Request-Id:
+      - req_794c3a4d1670aba6bf4a6cbf47267a67
+      Openai-Processing-Ms:
+      - '118'
+      Strict-Transport-Security:
+      - max-age=15552000; includeSubDomains; preload
+      Cf-Cache-Status:
+      - DYNAMIC
+      Set-Cookie:
+      - __cf_bm=ruFpq.yeFaEU4dvfOYWxuv2Gqg3FuW2dSQYowoWBKXc-1726762141-1.0.1.1-o.DPbno_p7hXAUNooapdoOwVRocpvuO_AipiQyZewBmIYA_L2BaIPXIKHV6qCJHiSr7ZvqTMuwceF1ek4olGqw;
+        path=/; expires=Thu, 19-Sep-24 16:39:01 GMT; domain=.api.openai.com; HttpOnly;
+        Secure; SameSite=None
+      - _cfuvid=7.NKjBACNpxT7b9FoXbwgjkgAy59RBn1ldumTEJ.FJc-1726762141367-0.0.1.1-604800000;
+        path=/; domain=.api.openai.com; HttpOnly; Secure; SameSite=None
+      X-Content-Type-Options:
+      - nosniff
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 8c5ad675d88771aa-LHR
+      Alt-Svc:
+      - h3=":443"; ma=86400
+    body:
+      encoding: ASCII-8BIT
+      string: |-
+        {
+          "id": "asst_bTYRdWDkSpVdl6m5M7YbdpBd",
+          "object": "assistant.deleted",
+          "deleted": true
+        }
+  recorded_at: Thu, 19 Sep 2024 16:09:01 GMT
+- request:
+    method: delete
+    uri: https://api.openai.com/v1/assistants/asst_Q9yDktEbszAVyRPhzwAhJYtI
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Content-Type:
+      - application/json
+      Authorization:
+      - Bearer <OPENAI_ACCESS_TOKEN>
+      Openai-Organization:
+      - "<OPENAI_ORGANIZATION_ID>"
+      Openai-Beta:
+      - assistants=v2
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Thu, 19 Sep 2024 16:16:25 GMT
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Openai-Version:
+      - '2020-10-01'
+      Openai-Organization:
+      - user-jxm65ijkzc1qrfhc0ij8moic
+      X-Request-Id:
+      - req_10642c1ed1e6381f3748d441b7f25005
+      Openai-Processing-Ms:
+      - '74'
+      Strict-Transport-Security:
+      - max-age=15552000; includeSubDomains; preload
+      Cf-Cache-Status:
+      - DYNAMIC
+      Set-Cookie:
+      - __cf_bm=hVyjsr76XVTQRbFQHumZMdGjMSV0rZkp2SJQkv3D0r8-1726762585-1.0.1.1-Q3rjX3tIiaKSWYBotZrIiNtHpdj0yzOVH3Px804kkN5wph024wU2pEWTnADa1S3GLUJcGdHuETaKztKQsLb95g;
+        path=/; expires=Thu, 19-Sep-24 16:46:25 GMT; domain=.api.openai.com; HttpOnly;
+        Secure; SameSite=None
+      - _cfuvid=e2DeuTpBhd3g1CHAX9e36WdtrwaSEkpAFm4jn5Q1v9A-1726762585406-0.0.1.1-604800000;
+        path=/; domain=.api.openai.com; HttpOnly; Secure; SameSite=None
+      X-Content-Type-Options:
+      - nosniff
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 8c5ae14d7ed3947e-LHR
+    body:
+      encoding: ASCII-8BIT
+      string: |-
+        {
+          "id": "asst_Q9yDktEbszAVyRPhzwAhJYtI",
+          "object": "assistant.deleted",
+          "deleted": true
+        }
+  recorded_at: Thu, 19 Sep 2024 16:16:25 GMT
+- request:
+    method: delete
+    uri: https://api.openai.com/v1/assistants/asst_gPhKHgcYSTZVqPJdTL6PXdul
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Content-Type:
+      - application/json
+      Authorization:
+      - Bearer <OPENAI_ACCESS_TOKEN>
+      Openai-Organization:
+      - "<OPENAI_ORGANIZATION_ID>"
+      Openai-Beta:
+      - assistants=v2
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Thu, 19 Sep 2024 16:16:35 GMT
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Openai-Version:
+      - '2020-10-01'
+      Openai-Organization:
+      - user-jxm65ijkzc1qrfhc0ij8moic
+      X-Request-Id:
+      - req_cbe6528d1f95d00b84cfe6f25d4bd3f2
+      Openai-Processing-Ms:
+      - '102'
+      Strict-Transport-Security:
+      - max-age=15552000; includeSubDomains; preload
+      Cf-Cache-Status:
+      - DYNAMIC
+      Set-Cookie:
+      - __cf_bm=iqkyT0Oz6ERGlnqrN_OSULR_CfKgZT6XEEh2qb0lKHE-1726762595-1.0.1.1-gqfcj_s7bvTflI.Xt_EtWOFumjNHsuoFh2QiV2P0M5GQpzclYoDSQQxl6St.4MzSEQV3YN3SiSWPWeZ_90SdfQ;
+        path=/; expires=Thu, 19-Sep-24 16:46:35 GMT; domain=.api.openai.com; HttpOnly;
+        Secure; SameSite=None
+      - _cfuvid=Ty6oY4OysTTNekUDStB3qdfEWuMkWKaJRRtb87pPKYk-1726762595547-0.0.1.1-604800000;
+        path=/; domain=.api.openai.com; HttpOnly; Secure; SameSite=None
+      X-Content-Type-Options:
+      - nosniff
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 8c5ae18c5a3a76f5-LHR
+      Alt-Svc:
+      - h3=":443"; ma=86400
+    body:
+      encoding: ASCII-8BIT
+      string: |-
+        {
+          "id": "asst_gPhKHgcYSTZVqPJdTL6PXdul",
+          "object": "assistant.deleted",
+          "deleted": true
+        }
+  recorded_at: Thu, 19 Sep 2024 16:16:35 GMT
+- request:
+    method: delete
+    uri: https://api.openai.com/v1/assistants/asst_6AgGEcelLiso1k1ilvCnq4zl
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Content-Type:
+      - application/json
+      Authorization:
+      - Bearer <OPENAI_ACCESS_TOKEN>
+      Openai-Organization:
+      - "<OPENAI_ORGANIZATION_ID>"
+      Openai-Beta:
+      - assistants=v2
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Thu, 19 Sep 2024 16:16:45 GMT
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Openai-Version:
+      - '2020-10-01'
+      Openai-Organization:
+      - user-jxm65ijkzc1qrfhc0ij8moic
+      X-Request-Id:
+      - req_8131714d9a9304307352a5efe02765bd
+      Openai-Processing-Ms:
+      - '89'
+      Strict-Transport-Security:
+      - max-age=15552000; includeSubDomains; preload
+      Cf-Cache-Status:
+      - DYNAMIC
+      Set-Cookie:
+      - __cf_bm=O7w1T0J3GtrvsNVLysGR0MEobC.fEpV3d5mzn2IqyaY-1726762605-1.0.1.1-rmhcn8BwxO8s3LrGHNHd1S2KYCo99ZdQMJtEjFdZBLOb5nvkxsWyspdhUXOaVQK2kx8ujNgKjvDWSyKxMhOzlg;
+        path=/; expires=Thu, 19-Sep-24 16:46:45 GMT; domain=.api.openai.com; HttpOnly;
+        Secure; SameSite=None
+      - _cfuvid=HK8f5bZMEiNymh0Fxvg1QnAui3GYP6qwvTqvB6S7jfI-1726762605338-0.0.1.1-604800000;
+        path=/; domain=.api.openai.com; HttpOnly; Secure; SameSite=None
+      X-Content-Type-Options:
+      - nosniff
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 8c5ae1c9edb7947e-LHR
+    body:
+      encoding: ASCII-8BIT
+      string: |-
+        {
+          "id": "asst_6AgGEcelLiso1k1ilvCnq4zl",
+          "object": "assistant.deleted",
+          "deleted": true
+        }
+  recorded_at: Thu, 19 Sep 2024 16:16:45 GMT
+- request:
+    method: delete
+    uri: https://api.openai.com/v1/assistants/asst_Hh0EmijrrqQNbuMG0Q9eVCky
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Content-Type:
+      - application/json
+      Authorization:
+      - Bearer <OPENAI_ACCESS_TOKEN>
+      Openai-Organization:
+      - "<OPENAI_ORGANIZATION_ID>"
+      Openai-Beta:
+      - assistants=v2
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Thu, 19 Sep 2024 16:16:57 GMT
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Openai-Version:
+      - '2020-10-01'
+      Openai-Organization:
+      - user-jxm65ijkzc1qrfhc0ij8moic
+      X-Request-Id:
+      - req_56435f466dad119f7210c7d9cf062af6
+      Openai-Processing-Ms:
+      - '47'
+      Strict-Transport-Security:
+      - max-age=15552000; includeSubDomains; preload
+      Cf-Cache-Status:
+      - DYNAMIC
+      Set-Cookie:
+      - __cf_bm=LRotE_64FBxF4NHHwY6nqFWyka7B9dEv1RH4NEk7dyk-1726762617-1.0.1.1-Tmv702oepgQ8WslZXnX.fgCr1v2JD6lAYeODwLW3mH0xnDKmSE0G65qc.uiIc2uwZ04An46DluTH4Efj_7z1nQ;
+        path=/; expires=Thu, 19-Sep-24 16:46:57 GMT; domain=.api.openai.com; HttpOnly;
+        Secure; SameSite=None
+      - _cfuvid=XKRPIJQEc1BwOd1VJb0GL0zoZc64_VXT0q_QUsmyzCs-1726762617993-0.0.1.1-604800000;
+        path=/; domain=.api.openai.com; HttpOnly; Secure; SameSite=None
+      X-Content-Type-Options:
+      - nosniff
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 8c5ae21938f13861-LHR
+      Alt-Svc:
+      - h3=":443"; ma=86400
+    body:
+      encoding: ASCII-8BIT
+      string: |-
+        {
+          "id": "asst_Hh0EmijrrqQNbuMG0Q9eVCky",
+          "object": "assistant.deleted",
+          "deleted": true
+        }
+  recorded_at: Thu, 19 Sep 2024 16:16:57 GMT
+- request:
+    method: delete
+    uri: https://api.openai.com/v1/assistants/asst_R9Rinc7UnR9Ep1U1oAcmXJ0N
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Content-Type:
+      - application/json
+      Authorization:
+      - Bearer <OPENAI_ACCESS_TOKEN>
+      Openai-Organization:
+      - "<OPENAI_ORGANIZATION_ID>"
+      Openai-Beta:
+      - assistants=v2
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Thu, 19 Sep 2024 16:17:48 GMT
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Openai-Version:
+      - '2020-10-01'
+      Openai-Organization:
+      - user-jxm65ijkzc1qrfhc0ij8moic
+      X-Request-Id:
+      - req_e3211a6cf20a26f25e634c4ded85e55f
+      Openai-Processing-Ms:
+      - '64'
+      Strict-Transport-Security:
+      - max-age=15552000; includeSubDomains; preload
+      Cf-Cache-Status:
+      - DYNAMIC
+      Set-Cookie:
+      - __cf_bm=PNivprEu2mmzI.lx3DsAJbMV3chD4mcAm7.tWbXBY3c-1726762668-1.0.1.1-TU8IvKMXmmcObd6WoqxTHGhZYiizul_Lmx9HqR6z77BWuG3PsIArEcNqD4tW7grBKN249Nd1_DM1AICpDpTEsw;
+        path=/; expires=Thu, 19-Sep-24 16:47:48 GMT; domain=.api.openai.com; HttpOnly;
+        Secure; SameSite=None
+      - _cfuvid=nP25fZUfDQ387v_aAF2u06Q6tr8KMaSrAYLARIzxfC4-1726762668844-0.0.1.1-604800000;
+        path=/; domain=.api.openai.com; HttpOnly; Secure; SameSite=None
+      X-Content-Type-Options:
+      - nosniff
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 8c5ae356ce0b48c7-LHR
+      Alt-Svc:
+      - h3=":443"; ma=86400
+    body:
+      encoding: ASCII-8BIT
+      string: |-
+        {
+          "id": "asst_R9Rinc7UnR9Ep1U1oAcmXJ0N",
+          "object": "assistant.deleted",
+          "deleted": true
+        }
+  recorded_at: Thu, 19 Sep 2024 16:17:48 GMT
+recorded_with: VCR 6.2.0
