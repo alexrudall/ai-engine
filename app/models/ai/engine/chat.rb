@@ -1,7 +1,7 @@
 module AI::Engine
   class Chat < ApplicationRecord
     belongs_to :chattable, polymorphic: true
-    has_many :messages, as: :messageable, class_name: "AI::Engine::Message", foreign_key: "messageable_id", dependent: :nullify
+    has_many :messages, as: :messageable, class_name: "AI::Engine::Message", foreign_key: "messageable_id", dependent: :destroy
 
     def run(model:)
       # Run the Chat, sending the complete message history to OpenAI.

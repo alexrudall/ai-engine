@@ -1,8 +1,8 @@
 ---
 http_interactions:
 - request:
-    method: get
-    uri: https://api.openai.com/v1/assistants/asst_aNP6iznUZQtY7T20f5zzEmQJ
+    method: delete
+    uri: https://api.openai.com/v1/threads/thread_fdiSzRXhf9twSN42CxDEz3AL
     body:
       encoding: US-ASCII
       string: ''
@@ -27,7 +27,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Thu, 19 Sep 2024 17:25:46 GMT
+      - Thu, 19 Sep 2024 17:25:30 GMT
       Content-Type:
       - application/json
       Transfer-Encoding:
@@ -39,44 +39,32 @@ http_interactions:
       Openai-Organization:
       - user-jxm65ijkzc1qrfhc0ij8moic
       X-Request-Id:
-      - req_b52cef556498813fe6331a8d4aedd47e
+      - req_d7a228a43a45f6e8a86f3bedd547aad0
       Openai-Processing-Ms:
-      - '49'
+      - '1379'
       Strict-Transport-Security:
       - max-age=15552000; includeSubDomains; preload
       Cf-Cache-Status:
       - DYNAMIC
       Set-Cookie:
-      - __cf_bm=jTmjU1mdjcBFdYjM_CqknmcM10oVe4T3E8u7de1WtEA-1726766746-1.0.1.1-FfZ6Vy6hO2kTTFiVEHPS5pi5D5N964O28XJfBQhXW9aB1KFVTvRCrlIDYZYFd5K7ewq9jVQcht.7N5nJCDu96w;
-        path=/; expires=Thu, 19-Sep-24 17:55:46 GMT; domain=.api.openai.com; HttpOnly;
+      - __cf_bm=Qwjvz3qLlWs8ZKDgT2nTbWWtBEbHU4LpqeFUJxmKOH8-1726766730-1.0.1.1-NHtKKRAUEgSjVn1BtYbZ_BEaqVsj6ewK9J4VjOho8_yeqiNelrXeh58JD2KOTeTEaMzqn9JaIwhraBOwDffULg;
+        path=/; expires=Thu, 19-Sep-24 17:55:30 GMT; domain=.api.openai.com; HttpOnly;
         Secure; SameSite=None
-      - _cfuvid=PkfoU9TkSmjqE1XIITOjTiMSd1xgXljwhY67MfRK.jQ-1726766746219-0.0.1.1-604800000;
+      - _cfuvid=0_MZCAKKWvzrkATREe05i1io96gXFH_VRFpiLgN2aYM-1726766730784-0.0.1.1-604800000;
         path=/; domain=.api.openai.com; HttpOnly; Secure; SameSite=None
       X-Content-Type-Options:
       - nosniff
       Server:
       - cloudflare
       Cf-Ray:
-      - 8c5b46e29f7c531e-LHR
-      Alt-Svc:
-      - h3=":443"; ma=86400
+      - 8c5b467738ae94db-LHR
     body:
       encoding: ASCII-8BIT
       string: |-
         {
-          "id": "asst_aNP6iznUZQtY7T20f5zzEmQJ",
-          "object": "assistant",
-          "created_at": 1726766745,
-          "name": "Cross-platform",
-          "description": "Cross-platform",
-          "model": "gpt-3.5-turbo",
-          "instructions": "Design a big hat",
-          "tools": [],
-          "top_p": 1.0,
-          "temperature": 1.0,
-          "tool_resources": {},
-          "metadata": {},
-          "response_format": "auto"
+          "id": "thread_fdiSzRXhf9twSN42CxDEz3AL",
+          "object": "thread.deleted",
+          "deleted": true
         }
-  recorded_at: Thu, 19 Sep 2024 17:25:46 GMT
+  recorded_at: Thu, 19 Sep 2024 17:25:30 GMT
 recorded_with: VCR 6.2.0

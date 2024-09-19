@@ -4,10 +4,11 @@ module AI
       extend ActiveSupport::Concern
 
       included do
-        has_one :assistant, as: :assistable, class_name: "AI::Engine::Assistant", dependent: :nullify
+        has_one :assistant, as: :assistable, class_name: "AI::Engine::Assistant", dependent: :destroy
 
         before_create :create_openai_assistant
         before_update :update_openai_assistant
+        before_destroy :delete_openai_assistant
 
         # Default. Override in including model to customize.
         def ai_engine_assistant
@@ -38,6 +39,13 @@ module AI
 
         def update_openai_assistant
           AI::Engine::OpenAI::Assistants::Update.call(remote_id: assistant&.remote_id, parameters: ai_engine_assistant)
+        rescue Faraday::Error => e
+          errors.add(:base, e.message)
+          throw(:abort)
+        end
+
+        def delete_openai_assistant
+          AI::Engine::OpenAI::Assistants::Delete.call(remote_id: assistant&.remote_id)
         rescue Faraday::Error => e
           errors.add(:base, e.message)
           throw(:abort)

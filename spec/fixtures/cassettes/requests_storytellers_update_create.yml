@@ -2,11 +2,11 @@
 http_interactions:
 - request:
     method: post
-    uri: https://api.openai.com/v1/assistants/asst_aNP6iznUZQtY7T20f5zzEmQJ
+    uri: https://api.openai.com/v1/assistants
     body:
       encoding: UTF-8
-      string: '{"name":"Cross-platform","model":"gpt-3.5-turbo","description":"Cross-platform","instructions":"Design
-        a big hat"}'
+      string: '{"name":"Cross-platform","model":"gpt-3.5-turbo","description":"Cross-platform","instructions":"e-enable
+        scalable eyeballs"}'
     headers:
       Content-Type:
       - application/json
@@ -40,25 +40,25 @@ http_interactions:
       Openai-Organization:
       - user-jxm65ijkzc1qrfhc0ij8moic
       X-Request-Id:
-      - req_2a7d3795a0df8b8cb5403ad2ede1a864
+      - req_ca70c3928d630538047ee3cf15a7ce39
       Openai-Processing-Ms:
-      - '202'
+      - '132'
       Strict-Transport-Security:
       - max-age=15552000; includeSubDomains; preload
       Cf-Cache-Status:
       - DYNAMIC
       Set-Cookie:
-      - __cf_bm=Kd8zl35.txtn0ThAR.Nt0nwNAVAey385K5Ek1SD7pes-1726766745-1.0.1.1-6Rah4SJT5N0Jvzcj7waypI._A1kTF9Xoi8OMSXO3ueXTvAKLhR1lXOSbDxmg8doHnZKMtInioZFPjXQlISEwdw;
+      - __cf_bm=VeC05STH4WnduVtK3DzKuxCVEFuFjmugNhiB0B0wFgk-1726766745-1.0.1.1-Vfjtqx.DM3KRfEzlRvvJd3vILT9icM371kO.0ay9Dk3xVkq3ZJOBe4aPniPf6QZeLokmCZlhtSfnrD6eHW8vDw;
         path=/; expires=Thu, 19-Sep-24 17:55:45 GMT; domain=.api.openai.com; HttpOnly;
         Secure; SameSite=None
-      - _cfuvid=sp5kpQAh26CbfhPrTuaSzwm7l1bjs2YchiZJl_Kw9DA-1726766745760-0.0.1.1-604800000;
+      - _cfuvid=inln2CD33Bpen_I_hhpYdZJy4p3KKXKjo2wumuAK.xY-1726766745285-0.0.1.1-604800000;
         path=/; domain=.api.openai.com; HttpOnly; Secure; SameSite=None
       X-Content-Type-Options:
       - nosniff
       Server:
       - cloudflare
       Cf-Ray:
-      - 8c5b46ded9f7bd84-LHR
+      - 8c5b46dc489794a8-LHR
       Alt-Svc:
       - h3=":443"; ma=86400
     body:
@@ -71,7 +71,7 @@ http_interactions:
           "name": "Cross-platform",
           "description": "Cross-platform",
           "model": "gpt-3.5-turbo",
-          "instructions": "Design a big hat",
+          "instructions": "e-enable scalable eyeballs",
           "tools": [],
           "top_p": 1.0,
           "temperature": 1.0,

@@ -1,12 +1,11 @@
 ---
 http_interactions:
 - request:
-    method: post
-    uri: https://api.openai.com/v1/assistants/asst_aNP6iznUZQtY7T20f5zzEmQJ
+    method: delete
+    uri: https://api.openai.com/v1/assistants/asst_jAosvaYvwACfGOaMC2GRAaYu
     body:
-      encoding: UTF-8
-      string: '{"name":"Cross-platform","model":"gpt-3.5-turbo","description":"Cross-platform","instructions":"Design
-        a big hat"}'
+      encoding: US-ASCII
+      string: ''
     headers:
       Content-Type:
       - application/json
@@ -28,7 +27,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Thu, 19 Sep 2024 17:25:45 GMT
+      - Thu, 19 Sep 2024 17:25:46 GMT
       Content-Type:
       - application/json
       Transfer-Encoding:
@@ -40,44 +39,34 @@ http_interactions:
       Openai-Organization:
       - user-jxm65ijkzc1qrfhc0ij8moic
       X-Request-Id:
-      - req_2a7d3795a0df8b8cb5403ad2ede1a864
+      - req_fe13e8b3261f88f332d3a57322c4cb81
       Openai-Processing-Ms:
-      - '202'
+      - '98'
       Strict-Transport-Security:
       - max-age=15552000; includeSubDomains; preload
       Cf-Cache-Status:
       - DYNAMIC
       Set-Cookie:
-      - __cf_bm=Kd8zl35.txtn0ThAR.Nt0nwNAVAey385K5Ek1SD7pes-1726766745-1.0.1.1-6Rah4SJT5N0Jvzcj7waypI._A1kTF9Xoi8OMSXO3ueXTvAKLhR1lXOSbDxmg8doHnZKMtInioZFPjXQlISEwdw;
-        path=/; expires=Thu, 19-Sep-24 17:55:45 GMT; domain=.api.openai.com; HttpOnly;
+      - __cf_bm=Q11M5wUvvWYhyRpF54L...V3CTj8T264C8VrCLJRGTY-1726766746-1.0.1.1-PczzR5PxaWHOrrNkFwKrKeo52y0vGI1dPIUq8Co95l0UF5GEKW0Fgj9oBjAB5LeSSYys5fc1TKIyQCYoaVf90w;
+        path=/; expires=Thu, 19-Sep-24 17:55:46 GMT; domain=.api.openai.com; HttpOnly;
         Secure; SameSite=None
-      - _cfuvid=sp5kpQAh26CbfhPrTuaSzwm7l1bjs2YchiZJl_Kw9DA-1726766745760-0.0.1.1-604800000;
+      - _cfuvid=56ItUBrqLXM1f85DO6OTIMEWRscyqKY.10V2c8r_MwQ-1726766746892-0.0.1.1-604800000;
         path=/; domain=.api.openai.com; HttpOnly; Secure; SameSite=None
       X-Content-Type-Options:
       - nosniff
       Server:
       - cloudflare
       Cf-Ray:
-      - 8c5b46ded9f7bd84-LHR
+      - 8c5b46e67ca894cc-LHR
       Alt-Svc:
       - h3=":443"; ma=86400
     body:
       encoding: ASCII-8BIT
       string: |-
         {
-          "id": "asst_aNP6iznUZQtY7T20f5zzEmQJ",
-          "object": "assistant",
-          "created_at": 1726766745,
-          "name": "Cross-platform",
-          "description": "Cross-platform",
-          "model": "gpt-3.5-turbo",
-          "instructions": "Design a big hat",
-          "tools": [],
-          "top_p": 1.0,
-          "temperature": 1.0,
-          "tool_resources": {},
-          "metadata": {},
-          "response_format": "auto"
+          "id": "asst_jAosvaYvwACfGOaMC2GRAaYu",
+          "object": "assistant.deleted",
+          "deleted": true
         }
-  recorded_at: Thu, 19 Sep 2024 17:25:45 GMT
+  recorded_at: Thu, 19 Sep 2024 17:25:46 GMT
 recorded_with: VCR 6.2.0

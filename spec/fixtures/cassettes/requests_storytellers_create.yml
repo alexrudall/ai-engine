@@ -5,8 +5,8 @@ http_interactions:
     uri: https://api.openai.com/v1/assistants
     body:
       encoding: UTF-8
-      string: '{"name":"portal","model":"gpt-3.5-turbo","description":"portal","instructions":"synthesize
-        visionary infrastructures"}'
+      string: '{"name":"Compatible","model":"gpt-4","description":"Compatible","instructions":"target
+        proactive eyeballs"}'
     headers:
       Content-Type:
       - application/json
@@ -28,7 +28,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Mon, 24 Jun 2024 15:50:23 GMT
+      - Thu, 19 Sep 2024 17:25:44 GMT
       Content-Type:
       - application/json
       Transfer-Encoding:
@@ -40,36 +40,38 @@ http_interactions:
       Openai-Organization:
       - user-jxm65ijkzc1qrfhc0ij8moic
       X-Request-Id:
-      - req_673db20cdd59eadb8e783693aa18e050
+      - req_0adc864b6b6739d738b36b8bd3375e06
       Openai-Processing-Ms:
-      - '48'
+      - '129'
       Strict-Transport-Security:
-      - max-age=15724800; includeSubDomains
+      - max-age=15552000; includeSubDomains; preload
       Cf-Cache-Status:
       - DYNAMIC
       Set-Cookie:
-      - __cf_bm=jPgS1Stdd22qILrN0w_LO3nGze5TGEKglvnw5u1sa4Q-1719244223-1.0.1.1-uHndaQM0KAFmoW7lRCxiaB2rzYnegNnXRD1i7Zdfs8EIu3VQW81MPq0fEArNWNMXu86OKBsqJejd2Jd7i8XLug;
-        path=/; expires=Mon, 24-Jun-24 16:20:23 GMT; domain=.api.openai.com; HttpOnly;
+      - __cf_bm=7ygHvjtRXnRYuxn7QAK6hToXU2ltXoPBz25Grmkqnk8-1726766744-1.0.1.1-zvj2wG0bamsMNEUG8i.DuY3SlVFGxbnfu6AF8v3Kmmo3iaxU71oTZ1mixNc1c_Kw1av13iksPv85l0xRGNRpwg;
+        path=/; expires=Thu, 19-Sep-24 17:55:44 GMT; domain=.api.openai.com; HttpOnly;
         Secure; SameSite=None
-      - _cfuvid=05DExZcd7QcEgKVVOdv9eQdNOMDlDGGySv7NGjblWGQ-1719244223418-0.0.1.1-604800000;
+      - _cfuvid=52T5mBzuhO9jpjZMV3iYInJwhlpV4ojWLaCWTDduvDY-1726766744805-0.0.1.1-604800000;
         path=/; domain=.api.openai.com; HttpOnly; Secure; SameSite=None
+      X-Content-Type-Options:
+      - nosniff
       Server:
       - cloudflare
       Cf-Ray:
-      - 898ddf8b28894189-LHR
+      - 8c5b46d93fe67773-LHR
       Alt-Svc:
       - h3=":443"; ma=86400
     body:
       encoding: ASCII-8BIT
       string: |-
         {
-          "id": "asst_TMSfah1vBOJo15vIpNcW9iWC",
+          "id": "asst_vAiWTWbFT5gKnrjrsESm5F8E",
           "object": "assistant",
-          "created_at": 1719244223,
-          "name": "portal",
-          "description": "portal",
-          "model": "gpt-3.5-turbo",
-          "instructions": "synthesize visionary infrastructures",
+          "created_at": 1726766744,
+          "name": "Compatible",
+          "description": "Compatible",
+          "model": "gpt-4",
+          "instructions": "target proactive eyeballs",
           "tools": [],
           "top_p": 1.0,
           "temperature": 1.0,
@@ -77,5 +79,5 @@ http_interactions:
           "metadata": {},
           "response_format": "auto"
         }
-  recorded_at: Mon, 24 Jun 2024 15:50:23 GMT
+  recorded_at: Thu, 19 Sep 2024 17:25:44 GMT
 recorded_with: VCR 6.2.0

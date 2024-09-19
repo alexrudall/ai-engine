@@ -3,10 +3,11 @@ module AI::Engine
     include RemoteIdValidatable
 
     belongs_to :threadable, polymorphic: true
-    has_many :runs, class_name: "AI::Engine::Run", foreign_key: "ai_engine_assistant_thread_id", dependent: :nullify
-    has_many :messages, as: :messageable, class_name: "AI::Engine::Message", foreign_key: "messageable_id", dependent: :nullify
+    has_many :runs, class_name: "AI::Engine::Run", foreign_key: "ai_engine_assistant_thread_id", dependent: :destroy
+    has_many :messages, as: :messageable, class_name: "AI::Engine::Message", foreign_key: "messageable_id", dependent: :destroy
 
     before_create :create_openai_thread
+    before_destroy :delete_openai_thread
 
     def run(assistant_id:, content:)
       # Create the request Message, locally and remotely on OpenAI.
@@ -24,6 +25,13 @@ module AI::Engine
 
     def create_openai_thread
       self.remote_id = AI::Engine::OpenAI::Threads::Create.call
+    rescue Faraday::Error => e
+      errors.add(:base, e.message)
+      throw(:abort)
+    end
+
+    def delete_openai_thread
+      AI::Engine::OpenAI::Threads::Delete.call(remote_id: remote_id)
     rescue Faraday::Error => e
       errors.add(:base, e.message)
       throw(:abort)
