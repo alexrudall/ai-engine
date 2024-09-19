@@ -1,11 +1,12 @@
 ---
 http_interactions:
 - request:
-    method: delete
-    uri: https://api.openai.com/v1/threads/thread_bTZEYZA1H8qAJLQhLA96AAoi
+    method: post
+    uri: https://api.openai.com/v1/assistants
     body:
-      encoding: US-ASCII
-      string: ''
+      encoding: UTF-8
+      string: '{"name":"interactive","model":"gpt-3.5-turbo","description":"interactive","instructions":"drive
+        sexy methodologies"}'
     headers:
       Content-Type:
       - application/json
@@ -27,7 +28,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Thu, 19 Sep 2024 17:25:42 GMT
+      - Thu, 19 Sep 2024 17:25:46 GMT
       Content-Type:
       - application/json
       Transfer-Encoding:
@@ -39,34 +40,44 @@ http_interactions:
       Openai-Organization:
       - user-jxm65ijkzc1qrfhc0ij8moic
       X-Request-Id:
-      - req_3c286a34c6fff282132517896f190964
+      - req_cb338553417ca5351ee911837e851887
       Openai-Processing-Ms:
-      - '51'
+      - '118'
       Strict-Transport-Security:
       - max-age=15552000; includeSubDomains; preload
       Cf-Cache-Status:
       - DYNAMIC
       Set-Cookie:
-      - __cf_bm=ip95CJUN6nApHkNjD_pXxf3c6StnG2E5o8uIHzXHNjA-1726766742-1.0.1.1-DMHb3bldzjJEICuEi8ib6axTZFr5BVm1xoEkoJyHv5KKE89rjnlPenUtpiBwEfLsDJr5_X2cZVI_.Xo9WkFqhg;
-        path=/; expires=Thu, 19-Sep-24 17:55:42 GMT; domain=.api.openai.com; HttpOnly;
+      - __cf_bm=e8rk8H9ngzXDU.dgWFqCD58rHUgxi0Nqwby1Nurpgzs-1726766746-1.0.1.1-YztC.rWMBlTX5p130PE3GKtfAW2ImQGZXWopzIqh6W.DOhABP6pAIiP8VvGh1CqHnVD7tMwobyDSgae43YHNfw;
+        path=/; expires=Thu, 19-Sep-24 17:55:46 GMT; domain=.api.openai.com; HttpOnly;
         Secure; SameSite=None
-      - _cfuvid=.iIPLMvbfEVDkaSZ1tJ1XDOUWO1eGaqe8LKwdyKCybo-1726766742568-0.0.1.1-604800000;
+      - _cfuvid=ovm3dih.dO2Al1zRpOCA.ZAeJXB3VfZFSrN55KRXqA0-1726766746555-0.0.1.1-604800000;
         path=/; domain=.api.openai.com; HttpOnly; Secure; SameSite=None
       X-Content-Type-Options:
       - nosniff
       Server:
       - cloudflare
       Cf-Ray:
-      - 8c5b46cbcef06389-LHR
+      - 8c5b46e44cf77786-LHR
       Alt-Svc:
       - h3=":443"; ma=86400
     body:
       encoding: ASCII-8BIT
       string: |-
         {
-          "id": "thread_bTZEYZA1H8qAJLQhLA96AAoi",
-          "object": "thread.deleted",
-          "deleted": true
+          "id": "asst_jAosvaYvwACfGOaMC2GRAaYu",
+          "object": "assistant",
+          "created_at": 1726766746,
+          "name": "interactive",
+          "description": "interactive",
+          "model": "gpt-3.5-turbo",
+          "instructions": "drive sexy methodologies",
+          "tools": [],
+          "top_p": 1.0,
+          "temperature": 1.0,
+          "tool_resources": {},
+          "metadata": {},
+          "response_format": "auto"
         }
-  recorded_at: Thu, 19 Sep 2024 17:25:42 GMT
+  recorded_at: Thu, 19 Sep 2024 17:25:46 GMT
 recorded_with: VCR 6.2.0

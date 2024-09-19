@@ -5,8 +5,8 @@ http_interactions:
     uri: https://api.openai.com/v1/assistants
     body:
       encoding: UTF-8
-      string: '{"name":"Reduced","model":"gpt-4-turbo","description":"Reduced","instructions":"cultivate
-        best-of-breed methodologies"}'
+      string: '{"name":"Compatible","model":"gpt-4","description":"Compatible","instructions":"target
+        proactive eyeballs"}'
     headers:
       Content-Type:
       - application/json
@@ -28,7 +28,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Thu, 19 Sep 2024 17:23:39 GMT
+      - Thu, 19 Sep 2024 17:25:44 GMT
       Content-Type:
       - application/json
       Transfer-Encoding:
@@ -40,38 +40,38 @@ http_interactions:
       Openai-Organization:
       - user-jxm65ijkzc1qrfhc0ij8moic
       X-Request-Id:
-      - req_52be142fb9ce1bae8d79ae0f3d9ba3ff
+      - req_0adc864b6b6739d738b36b8bd3375e06
       Openai-Processing-Ms:
-      - '176'
+      - '129'
       Strict-Transport-Security:
       - max-age=15552000; includeSubDomains; preload
       Cf-Cache-Status:
       - DYNAMIC
       Set-Cookie:
-      - __cf_bm=ZxtuzH9SeHq35SJ431vDjgJjwDbAoCvsREDnXv526EE-1726766619-1.0.1.1-0dxS.znbBQqICPDPXeLWXToRuyEXiZqbTfy.91MomHdMmUjAJJvRDIUd5nob1xkGNm78MS0ba6ofHvLAaAayNw;
-        path=/; expires=Thu, 19-Sep-24 17:53:39 GMT; domain=.api.openai.com; HttpOnly;
+      - __cf_bm=7ygHvjtRXnRYuxn7QAK6hToXU2ltXoPBz25Grmkqnk8-1726766744-1.0.1.1-zvj2wG0bamsMNEUG8i.DuY3SlVFGxbnfu6AF8v3Kmmo3iaxU71oTZ1mixNc1c_Kw1av13iksPv85l0xRGNRpwg;
+        path=/; expires=Thu, 19-Sep-24 17:55:44 GMT; domain=.api.openai.com; HttpOnly;
         Secure; SameSite=None
-      - _cfuvid=BONZrEtKs7ZSOx_HOo9Qs_WXwbPP2fNT_e_62zg8RXQ-1726766619692-0.0.1.1-604800000;
+      - _cfuvid=52T5mBzuhO9jpjZMV3iYInJwhlpV4ojWLaCWTDduvDY-1726766744805-0.0.1.1-604800000;
         path=/; domain=.api.openai.com; HttpOnly; Secure; SameSite=None
       X-Content-Type-Options:
       - nosniff
       Server:
       - cloudflare
       Cf-Ray:
-      - 8c5b43cacaf660f9-LHR
+      - 8c5b46d93fe67773-LHR
       Alt-Svc:
       - h3=":443"; ma=86400
     body:
       encoding: ASCII-8BIT
       string: |-
         {
-          "id": "asst_o0Un8ZcscIrFSA24sFwxshQ0",
+          "id": "asst_vAiWTWbFT5gKnrjrsESm5F8E",
           "object": "assistant",
-          "created_at": 1726766619,
-          "name": "Reduced",
-          "description": "Reduced",
-          "model": "gpt-4-turbo",
-          "instructions": "cultivate best-of-breed methodologies",
+          "created_at": 1726766744,
+          "name": "Compatible",
+          "description": "Compatible",
+          "model": "gpt-4",
+          "instructions": "target proactive eyeballs",
           "tools": [],
           "top_p": 1.0,
           "temperature": 1.0,
@@ -79,5 +79,5 @@ http_interactions:
           "metadata": {},
           "response_format": "auto"
         }
-  recorded_at: Thu, 19 Sep 2024 17:23:39 GMT
+  recorded_at: Thu, 19 Sep 2024 17:25:44 GMT
 recorded_with: VCR 6.2.0

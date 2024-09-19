@@ -5,21 +5,21 @@ RSpec.describe StorytellersController, type: :request do
   let(:valid_attributes) do
     build(:storyteller).attributes.except("id", "created_at", "updated_at", "remote_id")
   end
-  let(:storyteller) do
-    VCR.use_cassette("requests_storytellers_create") do
-      expect {
-        post storytellers_url, params: {storyteller: valid_attributes}
-      }.to change(Storyteller, :count).by(1)
-    end
-    Storyteller.last
-  end
-
   before do
     sign_in current_user
   end
 
   describe "POST /create" do
     context "with valid parameters" do
+      let(:storyteller) do
+        VCR.use_cassette("requests_storytellers_create") do
+          expect {
+            post storytellers_url, params: {storyteller: valid_attributes}
+          }.to change(Storyteller, :count).by(1)
+        end
+        Storyteller.last
+      end
+
       it "creates a new Storyteller" do
         expect(storyteller.name).to eq(valid_attributes["name"])
         expect(storyteller.user).to eq(current_user)
@@ -32,6 +32,14 @@ RSpec.describe StorytellersController, type: :request do
 
   describe "PATCH /update" do
     context "with valid parameters" do
+      let(:storyteller) do
+        VCR.use_cassette("requests_storytellers_update_create") do
+          expect {
+            post storytellers_url, params: {storyteller: valid_attributes}
+          }.to change(Storyteller, :count).by(1)
+        end
+        Storyteller.last
+      end
       let(:new_attributes) { {instructions: "Design a big hat"} }
 
       it "updates the requested storyteller, locally AND remotely" do
@@ -51,6 +59,14 @@ RSpec.describe StorytellersController, type: :request do
   end
 
   describe "DELETE /destroy" do
+    let(:storyteller) do
+      VCR.use_cassette("requests_storytellers_delete_create") do
+        expect {
+          post storytellers_url, params: {storyteller: valid_attributes}
+        }.to change(Storyteller, :count).by(1)
+      end
+      Storyteller.last
+    end
     it "deletes the requested storyteller and calls the remote delete method" do
       storyteller # Ensure the storyteller is created before attempting to delete it
       assistant = storyteller.assistant
