@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: delete
-    uri: https://api.openai.com/v1/assistants/asst_g6fJKJkLg03CpxxzQb9GaQLA
+    uri: https://api.openai.com/v1/threads/thread_RF3uXSEAX720bhUk71C2gm6l
     body:
       encoding: US-ASCII
       string: ''
@@ -27,7 +27,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Thu, 19 Sep 2024 18:02:32 GMT
+      - Thu, 19 Sep 2024 18:02:19 GMT
       Content-Type:
       - application/json
       Transfer-Encoding:
@@ -39,34 +39,34 @@ http_interactions:
       Openai-Organization:
       - user-jxm65ijkzc1qrfhc0ij8moic
       X-Request-Id:
-      - req_000dea4d07970926061657cea91a8ee8
+      - req_c4bb7c7ee3f7b110d558f008c94a2f02
       Openai-Processing-Ms:
-      - '201'
+      - '52'
       Strict-Transport-Security:
       - max-age=15552000; includeSubDomains; preload
       Cf-Cache-Status:
       - DYNAMIC
       Set-Cookie:
-      - __cf_bm=7v0iN.2XreaUcJ8t0dvRCx1_Osx0cyZS3XjhkhRqNz8-1726768952-1.0.1.1-70aw8ij3rX7Nj.ET4wsgRn37T2SNlUsuv3zy6A9n2QgFSCvqa5zn0JZFVsiPCCVRUIX606ra8jCi2zu_qZOW8w;
-        path=/; expires=Thu, 19-Sep-24 18:32:32 GMT; domain=.api.openai.com; HttpOnly;
+      - __cf_bm=8x7qRRD6rMsnRZnZSyUPjwWsV40_3v5AskiCHDppupk-1726768939-1.0.1.1-WPQ9iPEsy.OqEFTaySvsy4iZzLgYb2toclh1SWDOMRBxaWKktzommAGILh4dc0IDTYPMCwx_wcRWxo8iJpGieQ;
+        path=/; expires=Thu, 19-Sep-24 18:32:19 GMT; domain=.api.openai.com; HttpOnly;
         Secure; SameSite=None
-      - _cfuvid=thLloGqxSBQCz9kWyjxHXfe2w3Lzbd3UrJ83ItiiniQ-1726768952478-0.0.1.1-604800000;
+      - _cfuvid=kjYx_vK3zZpze2HYEENDaKLfqxG.GXrXOF.ThI9Zsoo-1726768939210-0.0.1.1-604800000;
         path=/; domain=.api.openai.com; HttpOnly; Secure; SameSite=None
       X-Content-Type-Options:
       - nosniff
       Server:
       - cloudflare
       Cf-Ray:
-      - 8c5b7cbedf2871f0-LHR
+      - 8c5b7c6c3e23635b-LHR
       Alt-Svc:
       - h3=":443"; ma=86400
     body:
       encoding: ASCII-8BIT
       string: |-
         {
-          "id": "asst_g6fJKJkLg03CpxxzQb9GaQLA",
-          "object": "assistant.deleted",
+          "id": "thread_RF3uXSEAX720bhUk71C2gm6l",
+          "object": "thread.deleted",
           "deleted": true
         }
-  recorded_at: Thu, 19 Sep 2024 18:02:32 GMT
+  recorded_at: Thu, 19 Sep 2024 18:02:19 GMT
 recorded_with: VCR 6.2.0

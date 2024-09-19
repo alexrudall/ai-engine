@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: delete
-    uri: https://api.openai.com/v1/assistants/asst_g6fJKJkLg03CpxxzQb9GaQLA
+    uri: https://api.openai.com/v1/assistants/asst_c3L5UH91fL9uETle7ElOcgsO
     body:
       encoding: US-ASCII
       string: ''
@@ -23,11 +23,11 @@ http_interactions:
       - Ruby
   response:
     status:
-      code: 200
-      message: OK
+      code: 404
+      message: Not Found
     headers:
       Date:
-      - Thu, 19 Sep 2024 18:02:32 GMT
+      - Thu, 19 Sep 2024 18:02:33 GMT
       Content-Type:
       - application/json
       Transfer-Encoding:
@@ -39,34 +39,37 @@ http_interactions:
       Openai-Organization:
       - user-jxm65ijkzc1qrfhc0ij8moic
       X-Request-Id:
-      - req_000dea4d07970926061657cea91a8ee8
+      - req_813c638e88c306d5cbf4568170ce702e
       Openai-Processing-Ms:
-      - '201'
+      - '47'
       Strict-Transport-Security:
       - max-age=15552000; includeSubDomains; preload
       Cf-Cache-Status:
       - DYNAMIC
       Set-Cookie:
-      - __cf_bm=7v0iN.2XreaUcJ8t0dvRCx1_Osx0cyZS3XjhkhRqNz8-1726768952-1.0.1.1-70aw8ij3rX7Nj.ET4wsgRn37T2SNlUsuv3zy6A9n2QgFSCvqa5zn0JZFVsiPCCVRUIX606ra8jCi2zu_qZOW8w;
-        path=/; expires=Thu, 19-Sep-24 18:32:32 GMT; domain=.api.openai.com; HttpOnly;
+      - __cf_bm=j6sDccSFOa3OpFWuMUXZiyTDjCRyrRCaftiwvp_nKxo-1726768953-1.0.1.1-IdsjHAZeCycPUvRot2t0dowmWsQUmOq66i1K9wo4XUOmEx.3ZPacGHkin8O0Gv7zuN3zTc_yqn6p23sls5cOAQ;
+        path=/; expires=Thu, 19-Sep-24 18:32:33 GMT; domain=.api.openai.com; HttpOnly;
         Secure; SameSite=None
-      - _cfuvid=thLloGqxSBQCz9kWyjxHXfe2w3Lzbd3UrJ83ItiiniQ-1726768952478-0.0.1.1-604800000;
+      - _cfuvid=tOtdvj6uEcr0BbM.zdqxjZucj3cq_jnfFE7NfRbqhWM-1726768953710-0.0.1.1-604800000;
         path=/; domain=.api.openai.com; HttpOnly; Secure; SameSite=None
       X-Content-Type-Options:
       - nosniff
       Server:
       - cloudflare
       Cf-Ray:
-      - 8c5b7cbedf2871f0-LHR
+      - 8c5b7cc75da1cdba-LHR
       Alt-Svc:
       - h3=":443"; ma=86400
     body:
       encoding: ASCII-8BIT
       string: |-
         {
-          "id": "asst_g6fJKJkLg03CpxxzQb9GaQLA",
-          "object": "assistant.deleted",
-          "deleted": true
+          "error": {
+            "message": "No assistant found with id 'asst_c3L5UH91fL9uETle7ElOcgsO'.",
+            "type": "invalid_request_error",
+            "param": null,
+            "code": null
+          }
         }
-  recorded_at: Thu, 19 Sep 2024 18:02:32 GMT
+  recorded_at: Thu, 19 Sep 2024 18:02:33 GMT
 recorded_with: VCR 6.2.0

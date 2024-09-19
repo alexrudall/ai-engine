@@ -5,8 +5,8 @@ http_interactions:
     uri: https://api.openai.com/v1/assistants
     body:
       encoding: UTF-8
-      string: '{"name":"interactive","model":"gpt-3.5-turbo","description":"interactive","instructions":"drive
-        sexy methodologies"}'
+      string: '{"name":"optimizing","model":"gpt-4-turbo","description":"optimizing","instructions":"engineer
+        turn-key synergies"}'
     headers:
       Content-Type:
       - application/json
@@ -28,7 +28,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Thu, 19 Sep 2024 17:25:46 GMT
+      - Thu, 19 Sep 2024 18:02:32 GMT
       Content-Type:
       - application/json
       Transfer-Encoding:
@@ -40,38 +40,38 @@ http_interactions:
       Openai-Organization:
       - user-jxm65ijkzc1qrfhc0ij8moic
       X-Request-Id:
-      - req_cb338553417ca5351ee911837e851887
+      - req_ba609f5fd57a34e67e02a9d736b7d9df
       Openai-Processing-Ms:
-      - '118'
+      - '186'
       Strict-Transport-Security:
       - max-age=15552000; includeSubDomains; preload
       Cf-Cache-Status:
       - DYNAMIC
       Set-Cookie:
-      - __cf_bm=e8rk8H9ngzXDU.dgWFqCD58rHUgxi0Nqwby1Nurpgzs-1726766746-1.0.1.1-YztC.rWMBlTX5p130PE3GKtfAW2ImQGZXWopzIqh6W.DOhABP6pAIiP8VvGh1CqHnVD7tMwobyDSgae43YHNfw;
-        path=/; expires=Thu, 19-Sep-24 17:55:46 GMT; domain=.api.openai.com; HttpOnly;
+      - __cf_bm=DjbzQ2cB_..Jn50z0G0j2M6ZikTO29H1SIEUpfCJQWI-1726768952-1.0.1.1-wDS76h1NkCIRca_MxUmOUgiamZM4pOFe1n4fKwlgV7fr3UX48bOn6zMQcUyGEvduOr8OvPmj3zeo5S.kKRyyxw;
+        path=/; expires=Thu, 19-Sep-24 18:32:32 GMT; domain=.api.openai.com; HttpOnly;
         Secure; SameSite=None
-      - _cfuvid=ovm3dih.dO2Al1zRpOCA.ZAeJXB3VfZFSrN55KRXqA0-1726766746555-0.0.1.1-604800000;
+      - _cfuvid=gIk6S0LzpPNen1uQPaIs5RnkHWFz2_w09A0_0ops23c-1726768952071-0.0.1.1-604800000;
         path=/; domain=.api.openai.com; HttpOnly; Secure; SameSite=None
       X-Content-Type-Options:
       - nosniff
       Server:
       - cloudflare
       Cf-Ray:
-      - 8c5b46e44cf77786-LHR
+      - 8c5b7cbc699f639b-LHR
       Alt-Svc:
       - h3=":443"; ma=86400
     body:
       encoding: ASCII-8BIT
       string: |-
         {
-          "id": "asst_jAosvaYvwACfGOaMC2GRAaYu",
+          "id": "asst_g6fJKJkLg03CpxxzQb9GaQLA",
           "object": "assistant",
-          "created_at": 1726766746,
-          "name": "interactive",
-          "description": "interactive",
-          "model": "gpt-3.5-turbo",
-          "instructions": "drive sexy methodologies",
+          "created_at": 1726768951,
+          "name": "optimizing",
+          "description": "optimizing",
+          "model": "gpt-4-turbo",
+          "instructions": "engineer turn-key synergies",
           "tools": [],
           "top_p": 1.0,
           "temperature": 1.0,
@@ -79,5 +79,5 @@ http_interactions:
           "metadata": {},
           "response_format": "auto"
         }
-  recorded_at: Thu, 19 Sep 2024 17:25:46 GMT
+  recorded_at: Thu, 19 Sep 2024 18:02:32 GMT
 recorded_with: VCR 6.2.0

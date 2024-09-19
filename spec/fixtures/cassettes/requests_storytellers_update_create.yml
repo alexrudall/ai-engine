@@ -5,8 +5,8 @@ http_interactions:
     uri: https://api.openai.com/v1/assistants
     body:
       encoding: UTF-8
-      string: '{"name":"Cross-platform","model":"gpt-3.5-turbo","description":"Cross-platform","instructions":"e-enable
-        scalable eyeballs"}'
+      string: '{"name":"Assimilated","model":"gpt-4-turbo","description":"Assimilated","instructions":"incentivize
+        scalable partnerships"}'
     headers:
       Content-Type:
       - application/json
@@ -28,7 +28,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Thu, 19 Sep 2024 17:25:45 GMT
+      - Thu, 19 Sep 2024 18:02:30 GMT
       Content-Type:
       - application/json
       Transfer-Encoding:
@@ -40,38 +40,38 @@ http_interactions:
       Openai-Organization:
       - user-jxm65ijkzc1qrfhc0ij8moic
       X-Request-Id:
-      - req_ca70c3928d630538047ee3cf15a7ce39
+      - req_ed590a99cfcdf451c6c37eac4f8710e8
       Openai-Processing-Ms:
-      - '132'
+      - '109'
       Strict-Transport-Security:
       - max-age=15552000; includeSubDomains; preload
       Cf-Cache-Status:
       - DYNAMIC
       Set-Cookie:
-      - __cf_bm=VeC05STH4WnduVtK3DzKuxCVEFuFjmugNhiB0B0wFgk-1726766745-1.0.1.1-Vfjtqx.DM3KRfEzlRvvJd3vILT9icM371kO.0ay9Dk3xVkq3ZJOBe4aPniPf6QZeLokmCZlhtSfnrD6eHW8vDw;
-        path=/; expires=Thu, 19-Sep-24 17:55:45 GMT; domain=.api.openai.com; HttpOnly;
+      - __cf_bm=eEwQ1Lx2FeiCO4JD6bGzx9jpZlowiCWfhxJ0KkiR.9Y-1726768950-1.0.1.1-kPZQDVCgqg.cUJ8vJ5KC3wN6HI453b8_jjtRW4PxaTz2s4G2flWuH02ZrZmZsX0MGfoNRcdAF2rcmm10oxddzA;
+        path=/; expires=Thu, 19-Sep-24 18:32:30 GMT; domain=.api.openai.com; HttpOnly;
         Secure; SameSite=None
-      - _cfuvid=inln2CD33Bpen_I_hhpYdZJy4p3KKXKjo2wumuAK.xY-1726766745285-0.0.1.1-604800000;
+      - _cfuvid=Vr53dhXsFuVyxFgJYfU42I2NnGyA0cGLU9EzZ.cmlLM-1726768950960-0.0.1.1-604800000;
         path=/; domain=.api.openai.com; HttpOnly; Secure; SameSite=None
       X-Content-Type-Options:
       - nosniff
       Server:
       - cloudflare
       Cf-Ray:
-      - 8c5b46dc489794a8-LHR
+      - 8c5b7cb5eb2f48ce-LHR
       Alt-Svc:
       - h3=":443"; ma=86400
     body:
       encoding: ASCII-8BIT
       string: |-
         {
-          "id": "asst_aNP6iznUZQtY7T20f5zzEmQJ",
+          "id": "asst_nul07MIHPypS8vnnch9X7RfG",
           "object": "assistant",
-          "created_at": 1726766745,
-          "name": "Cross-platform",
-          "description": "Cross-platform",
-          "model": "gpt-3.5-turbo",
-          "instructions": "e-enable scalable eyeballs",
+          "created_at": 1726768950,
+          "name": "Assimilated",
+          "description": "Assimilated",
+          "model": "gpt-4-turbo",
+          "instructions": "incentivize scalable partnerships",
           "tools": [],
           "top_p": 1.0,
           "temperature": 1.0,
@@ -79,5 +79,5 @@ http_interactions:
           "metadata": {},
           "response_format": "auto"
         }
-  recorded_at: Thu, 19 Sep 2024 17:25:45 GMT
+  recorded_at: Thu, 19 Sep 2024 18:02:30 GMT
 recorded_with: VCR 6.2.0

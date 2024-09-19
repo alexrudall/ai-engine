@@ -5,8 +5,8 @@ http_interactions:
     uri: https://api.openai.com/v1/assistants
     body:
       encoding: UTF-8
-      string: '{"name":"Compatible","model":"gpt-4","description":"Compatible","instructions":"target
-        proactive eyeballs"}'
+      string: '{"name":"foreground","model":"gpt-4o","description":"foreground","instructions":"syndicate
+        leading-edge mindshare"}'
     headers:
       Content-Type:
       - application/json
@@ -28,7 +28,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Thu, 19 Sep 2024 17:25:44 GMT
+      - Thu, 19 Sep 2024 18:02:30 GMT
       Content-Type:
       - application/json
       Transfer-Encoding:
@@ -40,38 +40,38 @@ http_interactions:
       Openai-Organization:
       - user-jxm65ijkzc1qrfhc0ij8moic
       X-Request-Id:
-      - req_0adc864b6b6739d738b36b8bd3375e06
+      - req_12b10b63c062e21e06ff8066b46de8d2
       Openai-Processing-Ms:
-      - '129'
+      - '133'
       Strict-Transport-Security:
       - max-age=15552000; includeSubDomains; preload
       Cf-Cache-Status:
       - DYNAMIC
       Set-Cookie:
-      - __cf_bm=7ygHvjtRXnRYuxn7QAK6hToXU2ltXoPBz25Grmkqnk8-1726766744-1.0.1.1-zvj2wG0bamsMNEUG8i.DuY3SlVFGxbnfu6AF8v3Kmmo3iaxU71oTZ1mixNc1c_Kw1av13iksPv85l0xRGNRpwg;
-        path=/; expires=Thu, 19-Sep-24 17:55:44 GMT; domain=.api.openai.com; HttpOnly;
+      - __cf_bm=n.KVAZ73lOCsQbnnHfj2uOH6ZLB0BoByGf8E9sVtzgo-1726768950-1.0.1.1-gOUkSnsA8OVde9MKIVfQcnideFftYG9q_dmZufSTLCfqKTEKXcxmiWUppTGoWn3iENH5caJc18LU3SAswNznKQ;
+        path=/; expires=Thu, 19-Sep-24 18:32:30 GMT; domain=.api.openai.com; HttpOnly;
         Secure; SameSite=None
-      - _cfuvid=52T5mBzuhO9jpjZMV3iYInJwhlpV4ojWLaCWTDduvDY-1726766744805-0.0.1.1-604800000;
+      - _cfuvid=I9yvq1HOK.QuHLb6TY6chRZJ9hSDBPRr3mSYQvQ4Xws-1726768950649-0.0.1.1-604800000;
         path=/; domain=.api.openai.com; HttpOnly; Secure; SameSite=None
       X-Content-Type-Options:
       - nosniff
       Server:
       - cloudflare
       Cf-Ray:
-      - 8c5b46d93fe67773-LHR
+      - 8c5b7cb37bd363e1-LHR
       Alt-Svc:
       - h3=":443"; ma=86400
     body:
       encoding: ASCII-8BIT
       string: |-
         {
-          "id": "asst_vAiWTWbFT5gKnrjrsESm5F8E",
+          "id": "asst_WP61Jnadjua2BxDXCDeuSmcw",
           "object": "assistant",
-          "created_at": 1726766744,
-          "name": "Compatible",
-          "description": "Compatible",
-          "model": "gpt-4",
-          "instructions": "target proactive eyeballs",
+          "created_at": 1726768950,
+          "name": "foreground",
+          "description": "foreground",
+          "model": "gpt-4o",
+          "instructions": "syndicate leading-edge mindshare",
           "tools": [],
           "top_p": 1.0,
           "temperature": 1.0,
@@ -79,5 +79,5 @@ http_interactions:
           "metadata": {},
           "response_format": "auto"
         }
-  recorded_at: Thu, 19 Sep 2024 17:25:44 GMT
+  recorded_at: Thu, 19 Sep 2024 18:02:30 GMT
 recorded_with: VCR 6.2.0

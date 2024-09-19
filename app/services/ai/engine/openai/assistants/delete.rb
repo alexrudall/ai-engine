@@ -2,6 +2,8 @@ class AI::Engine::OpenAI::Assistants::Delete
   # Deletes an OpenAI Assistant by its ID.
   def self.call(remote_id:)
     client.assistants.delete(id: remote_id)
+  rescue Faraday::ResourceNotFound => e
+    Rails.logger.error("#{self} - #{e.response.dig(:body, "error", "message")}")
   end
 
   private_class_method def self.client

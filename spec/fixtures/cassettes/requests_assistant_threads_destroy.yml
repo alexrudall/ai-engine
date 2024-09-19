@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: delete
-    uri: https://api.openai.com/v1/threads/thread_fdiSzRXhf9twSN42CxDEz3AL
+    uri: https://api.openai.com/v1/threads/thread_CxU9IwtvUrb0qD5NOpA8zKwy
     body:
       encoding: US-ASCII
       string: ''
@@ -27,7 +27,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Thu, 19 Sep 2024 17:25:30 GMT
+      - Thu, 19 Sep 2024 18:02:18 GMT
       Content-Type:
       - application/json
       Transfer-Encoding:
@@ -39,32 +39,106 @@ http_interactions:
       Openai-Organization:
       - user-jxm65ijkzc1qrfhc0ij8moic
       X-Request-Id:
-      - req_d7a228a43a45f6e8a86f3bedd547aad0
+      - req_c04e4b997f1843020fc80e641d156e80
       Openai-Processing-Ms:
-      - '1379'
+      - '92'
       Strict-Transport-Security:
       - max-age=15552000; includeSubDomains; preload
       Cf-Cache-Status:
       - DYNAMIC
       Set-Cookie:
-      - __cf_bm=Qwjvz3qLlWs8ZKDgT2nTbWWtBEbHU4LpqeFUJxmKOH8-1726766730-1.0.1.1-NHtKKRAUEgSjVn1BtYbZ_BEaqVsj6ewK9J4VjOho8_yeqiNelrXeh58JD2KOTeTEaMzqn9JaIwhraBOwDffULg;
-        path=/; expires=Thu, 19-Sep-24 17:55:30 GMT; domain=.api.openai.com; HttpOnly;
+      - __cf_bm=va8Mujugg0qBZZXxZlEOi3D.wklUMUTn5a4cMDqgd68-1726768938-1.0.1.1-3VKtt7aNWGBYErm1wEUcZHor0rMFua05.oK_C75ZOdHkHjNV7pZvA5zbCA.uRCNGGZdtb0pa5XuH_ewn3KHWmQ;
+        path=/; expires=Thu, 19-Sep-24 18:32:18 GMT; domain=.api.openai.com; HttpOnly;
         Secure; SameSite=None
-      - _cfuvid=0_MZCAKKWvzrkATREe05i1io96gXFH_VRFpiLgN2aYM-1726766730784-0.0.1.1-604800000;
+      - _cfuvid=WCICUTRDOWuqW2Lf2QkZ5MG52fhZNVcCh9dtICx90OI-1726768938393-0.0.1.1-604800000;
         path=/; domain=.api.openai.com; HttpOnly; Secure; SameSite=None
       X-Content-Type-Options:
       - nosniff
       Server:
       - cloudflare
       Cf-Ray:
-      - 8c5b467738ae94db-LHR
+      - 8c5b7c678c43d1fa-LHR
+      Alt-Svc:
+      - h3=":443"; ma=86400
     body:
       encoding: ASCII-8BIT
       string: |-
         {
-          "id": "thread_fdiSzRXhf9twSN42CxDEz3AL",
+          "id": "thread_CxU9IwtvUrb0qD5NOpA8zKwy",
           "object": "thread.deleted",
           "deleted": true
         }
-  recorded_at: Thu, 19 Sep 2024 17:25:30 GMT
+  recorded_at: Thu, 19 Sep 2024 18:02:18 GMT
+- request:
+    method: delete
+    uri: https://api.openai.com/v1/threads/thread_RF3uXSEAX720bhUk71C2gm6l
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Content-Type:
+      - application/json
+      Authorization:
+      - Bearer <OPENAI_ACCESS_TOKEN>
+      Openai-Organization:
+      - "<OPENAI_ORGANIZATION_ID>"
+      Openai-Beta:
+      - assistants=v2
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 404
+      message: Not Found
+    headers:
+      Date:
+      - Thu, 19 Sep 2024 18:02:20 GMT
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Openai-Version:
+      - '2020-10-01'
+      Openai-Organization:
+      - user-jxm65ijkzc1qrfhc0ij8moic
+      X-Request-Id:
+      - req_4c9f409739e1e6e60eeea4e67173f1fb
+      Openai-Processing-Ms:
+      - '168'
+      Strict-Transport-Security:
+      - max-age=15552000; includeSubDomains; preload
+      Cf-Cache-Status:
+      - DYNAMIC
+      Set-Cookie:
+      - __cf_bm=jyOq_kXLUN87TaLw6vNA67zLVPyeRZqrJn.DoxC5kZA-1726768940-1.0.1.1-WqIO2R08TTYkQGtnuGiGUFIGE5ujNMnZhmw1cax5sS9vIAxl3isDV_cz_VOMPAIH1HdqN1yIXEVjKfOSJfFuEg;
+        path=/; expires=Thu, 19-Sep-24 18:32:20 GMT; domain=.api.openai.com; HttpOnly;
+        Secure; SameSite=None
+      - _cfuvid=YBm2MgxpBUkHwtZtOOK0GcyMRm8UvwTv1z_OrdosaFA-1726768940694-0.0.1.1-604800000;
+        path=/; domain=.api.openai.com; HttpOnly; Secure; SameSite=None
+      X-Content-Type-Options:
+      - nosniff
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 8c5b7c6f999e944f-LHR
+      Alt-Svc:
+      - h3=":443"; ma=86400
+    body:
+      encoding: ASCII-8BIT
+      string: |-
+        {
+          "error": {
+            "message": "No thread found with id 'thread_RF3uXSEAX720bhUk71C2gm6l'.",
+            "type": "invalid_request_error",
+            "param": null,
+            "code": null
+          }
+        }
+  recorded_at: Thu, 19 Sep 2024 18:02:20 GMT
 recorded_with: VCR 6.2.0

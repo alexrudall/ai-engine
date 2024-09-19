@@ -45,4 +45,29 @@ RSpec.describe AssistantThreadsController, type: :request do
       expect(response).to redirect_to(assistant_threads_url)
     end
   end
+
+  context "when the remote Thread has already been deleted" do
+    it "deletes the requested AssistantThread and calls the remote delete method" do
+      assistant_thread # Ensure the thread is created before attempting to delete it
+      remote_id = assistant_thread.remote_id
+
+      # For the test, the remote thread is already deleted:
+      VCR.use_cassette("requests_assistant_threads_predestroy") do
+        AI::Engine::OpenAI::Threads::Delete.call(remote_id: remote_id)
+      end
+
+      VCR.use_cassette("requests_assistant_threads_destroy") do
+        allow(AI::Engine::OpenAI::Threads::Delete).to receive(:call).and_call_original
+
+        expect {
+          delete assistant_thread_url(assistant_thread)
+        }.to change(AI::Engine::AssistantThread, :count).by(-1)
+
+        expect { assistant_thread.reload }.to raise_error(ActiveRecord::RecordNotFound)
+        expect(AI::Engine::OpenAI::Threads::Delete).to have_received(:call).with(remote_id: remote_id)
+      end
+
+      expect(response).to redirect_to(assistant_threads_url)
+    end
+  end
 end
