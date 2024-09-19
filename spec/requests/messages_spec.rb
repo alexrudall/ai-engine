@@ -57,4 +57,64 @@ RSpec.describe MessagesController, type: :request do
       end
     end
   end
+
+  # describe "DELETE /destroy" do
+  #   it "deletes the requested AssistantThread and calls the remote delete method" do
+  #     assistant_thread # Ensure the thread is created before attempting to delete it
+  #     remote_id = assistant_thread.remote_id
+
+  #     VCR.use_cassette("requests_assistant_threads_destroy") do
+  #       allow(AI::Engine::OpenAI::Threads::Delete).to receive(:call).and_call_original
+
+  #       expect {
+  #         delete assistant_thread_url(assistant_thread)
+  #       }.to change(AI::Engine::AssistantThread, :count).by(-1)
+
+  #       expect { assistant_thread.reload }.to raise_error(ActiveRecord::RecordNotFound)
+  #       expect(AI::Engine::OpenAI::Threads::Delete).to have_received(:call).with(remote_id: remote_id)
+  #     end
+
+  #     expect(response).to redirect_to(assistant_threads_url)
+  #   end
+  # end
+
+  describe "Deleting the AssistantThread" do
+    let(:storyteller) do
+      current_user.storytellers << build(:storyteller)
+      current_user.storytellers.last
+    end
+    let(:assistant_thread) { current_user.assistant_threads.create }
+    let(:valid_attributes) { {assistant_thread_id: assistant_thread.id, storyteller_id: storyteller.id, content: "Hi there"} }
+
+    before do
+      # Creates an assistant, thread, run and request and response messages on the OpenAI API.
+      VCR.use_cassette("requests_assistant_messages_create_and_run") do
+        expect {
+          post messages_url, as: :turbo_stream, params: {message: valid_attributes}
+        }.to change(assistant_thread.messages, :count).by(2)
+      end
+    end
+
+    it "deletes the requested AssistantThread, Run and Messages and calls the remote delete method for the Thread (remote Run will remain, remote Message should be deleted by the Thread)" do
+      assistant = storyteller.assistant
+      run = assistant.runs.first
+      request_message = assistant_thread.messages.user.first
+      response_message = assistant_thread.messages.assistant.first
+
+      VCR.use_cassette("requests_assistant_thread_run_message_destroy") do
+        allow(AI::Engine::OpenAI::Threads::Delete).to receive(:call).and_call_original
+
+        expect {
+          delete assistant_thread_url(assistant_thread)
+        }.to change(AI::Engine::AssistantThread, :count).by(-1)
+
+        expect { assistant_thread.reload }.to raise_error(ActiveRecord::RecordNotFound)
+        expect { run.reload }.to raise_error(ActiveRecord::RecordNotFound)
+        expect { request_message.reload }.to raise_error(ActiveRecord::RecordNotFound)
+        expect { response_message.reload }.to raise_error(ActiveRecord::RecordNotFound)
+
+        expect(AI::Engine::OpenAI::Threads::Delete).to have_received(:call).with(remote_id: assistant_thread.remote_id)
+      end
+    end
+  end
 end

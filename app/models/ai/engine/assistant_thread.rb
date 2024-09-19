@@ -3,8 +3,8 @@ module AI::Engine
     include RemoteIdValidatable
 
     belongs_to :threadable, polymorphic: true
-    has_many :runs, class_name: "AI::Engine::Run", foreign_key: "ai_engine_assistant_thread_id", dependent: :nullify
-    has_many :messages, as: :messageable, class_name: "AI::Engine::Message", foreign_key: "messageable_id", dependent: :nullify
+    has_many :runs, class_name: "AI::Engine::Run", foreign_key: "ai_engine_assistant_thread_id", dependent: :destroy
+    has_many :messages, as: :messageable, class_name: "AI::Engine::Message", foreign_key: "messageable_id", dependent: :destroy
 
     before_create :create_openai_thread
     before_destroy :delete_openai_thread
